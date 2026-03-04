@@ -53,4 +53,28 @@ export const projects: Project[] = [
     imageUrl: "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1974&auto=format&fit=crop",
     fullDescription: "Projet universitaire visant à concevoir l'interface d'une application de suivi du bien-être physique et mental."
   },
+  {
+    id: "4",
+    title: "Campagne Social Media",
+    category: "alternance",
+    description: "Visuels pour les réseaux sociaux.",
+    imageUrl: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1974&auto=format&fit=crop",
+    fullDescription: "Création d'une série de visuels cohérents pour une campagne Instagram et LinkedIn."
+  },
+  {
+    id: "5",
+    title: "Illustration Botanique",
+    category: "personnel",
+    description: "Illustration numérique sur Procreate.",
+    imageUrl: "https://images.unsplash.com/photo-1518895949257-7621c3c786d7?q=80&w=1976&auto=format&fit=crop",
+    fullDescription: "Série d'illustrations botaniques explorant le lien entre l'art et le bien-être."
+  },
+  {
+    id: "6",
+    title: "Identité de Marque",
+    category: "universitaire",
+    description: "Projet de branding pour un café local.",
+    imageUrl: "https://images.unsplash.com/photo-1521474332319-72e65a0321aa?q=80&w=2070&auto=format&fit=crop",
+    fullDescription: "Création complète de l'identité d'un café : logo, menu, et packaging."
+  },
 ];
