@@ -17,7 +17,7 @@ export default function MentionsLegales() {
             <h2 className="text-xl font-bold mb-4 text-turquoise">Identité</h2>
             <div className="space-y-2">
               <p><strong>Nom :</strong> Christelle VINCENT</p>
-              <p><strong>Statut :</strong> Étudiante MMI (Métiers du Multimédia et de l'Internet)</p>
+              <p><strong>Statut :</strong> Étudiante MMI (Métiers du Multimédia et de l&apos;Internet)</p>
               <p><strong>Localisation :</strong> Guadeloupe</p>
               <p><strong>Email :</strong> contact@christellevincent.fr</p>
             </div>
