@@ -1,65 +1,125 @@
-import Image from "next/image";
+"use client";
+
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArrowRight, Download } from "lucide-react";
+import { categories } from "@/data/projects";
+
+const fadeIn = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.6 }
+};
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="flex flex-col items-center">
+      {/* Hero Section */}
+      <section className="min-h-[80vh] flex flex-col justify-center items-center text-center px-6">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          className="space-y-4"
+        >
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+            <span className="block text-foreground">VINCENT Christelle</span>
+            <span className="block text-turquoise">Graphiste Digital</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-xl md:text-2xl text-foreground/60 font-light max-w-2xl mx-auto">
+            Bilingue & à l’écoute
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          <p className="text-lg text-foreground/40 mt-8 italic">
+            Bienvenue sur mon portfolio.
+          </p>
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+          className="mt-12 flex flex-col sm:flex-row gap-6"
+        >
+          <Link href="#creations" className="glass px-8 py-4 rounded-full font-medium flex items-center gap-2 hover:bg-turquoise/10 transition-colors">
+            Voir mes projets <ArrowRight size={18} />
+          </Link>
+          <Link href="/contact" className="glass px-8 py-4 rounded-full font-medium flex items-center gap-2 hover:bg-rose/10 transition-colors">
+            Me contacter
+          </Link>
+        </motion.div>
+      </section>
+
+      {/* Presentation Section */}
+      <section className="py-24 px-6 max-w-4xl w-full">
+        <motion.div 
+          {...fadeIn}
+          className="glass p-8 md:p-12 rounded-3xl border border-white/20 shadow-xl"
+        >
+          <h2 className="text-3xl font-bold mb-6 text-turquoise">À propos de moi</h2>
+          <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
+            <p>
+              Je suis <strong>Christelle VINCENT</strong>, étudiante en deuxième année d'MMI en Guadeloupe. 
+              Passionnée par la créativité, la musique et le bien-être physique et mental.
+            </p>
+            <p>
+              J’ai toujours été attirée par le montage photo et vidéo, l’art de créer, l’esthétique des choses. 
+              J’aime exprimer ma créativité, c'est pour cela qu'aujourd'hui je choisis le métier du Design digital.
+            </p>
+          </div>
+
+          <motion.div 
+            whileHover={{ scale: 1.02 }}
+            className="mt-10"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <a 
+              href="/CV_Christelle_VINCENT.pdf" 
+              download 
+              className="glass inline-flex items-center gap-2 px-8 py-4 rounded-xl font-medium border border-turquoise/20 hover:bg-turquoise/10 transition-colors"
+            >
+              <Download size={18} /> Télécharger mon CV (PDF)
+            </a>
+          </motion.div>
+        </motion.div>
+      </section>
+
+      {/* Creations Section */}
+      <section id="creations" className="py-24 px-6 max-w-6xl w-full">
+        <motion.div 
+          {...fadeIn}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl font-bold mb-4">Mes Créations</h2>
+          <p className="text-foreground/60">Découvrez mon univers à travers différentes catégories.</p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {categories.map((category, index) => (
+            <motion.div
+              key={category.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1, duration: 0.6 }}
+            >
+              <Link href={category.path} className="group block h-full">
+                <div className="relative overflow-hidden rounded-2xl h-64 flex flex-col justify-end p-8 border border-border/40 hover:border-turquoise/40 transition-all bg-white/5 shadow-sm group-hover:shadow-md">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <h3 className="text-2xl font-bold text-foreground group-hover:text-turquoise transition-colors z-10">
+                    {category.name}
+                  </h3>
+                  <p className="text-foreground/60 mt-2 text-sm z-10">
+                    {category.description}
+                  </p>
+                  <div className="mt-4 flex items-center text-turquoise text-sm font-medium opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0 z-10">
+                    Découvrir <ArrowRight size={14} className="ml-1" />
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
         </div>
-      </main>
+      </section>
     </div>
   );
 }
