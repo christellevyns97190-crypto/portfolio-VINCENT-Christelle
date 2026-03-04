@@ -59,12 +59,12 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-6 text-turquoise">À propos de moi</h2>
           <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
             <p>
-              Je suis <strong>Christelle VINCENT</strong>, étudiante en deuxième année d'MMI en Guadeloupe. 
+              Je suis <strong>Christelle VINCENT</strong>, étudiante en deuxième année d&apos;MMI en Guadeloupe. 
               Passionnée par la créativité, la musique et le bien-être physique et mental.
             </p>
             <p>
               J’ai toujours été attirée par le montage photo et vidéo, l’art de créer, l’esthétique des choses. 
-              J’aime exprimer ma créativité, c'est pour cela qu'aujourd'hui je choisis le métier du Design digital.
+              J’aime exprimer ma créativité, c&apos;est pour cela qu&apos;aujourd&apos;hui je choisis le métier du Design digital.
             </p>
           </div>
 
