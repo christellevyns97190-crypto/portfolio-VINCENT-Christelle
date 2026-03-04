@@ -51,8 +51,8 @@ export default function Home() {
       </section>
 
       {/* Presentation Section */}
-      <section className="py-24 px-6 max-w-4xl w-full relative">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-rose/10 blur-[100px] -z-10 rounded-full opacity-50" />
+        <section className="py-24 px-6 max-w-4xl w-full relative">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-rose/30 blur-[120px] -z-10 rounded-full opacity-70" />
         <motion.div 
           {...fadeIn}
           className="glass p-8 md:p-12 rounded-3xl border border-white/20 shadow-xl"
