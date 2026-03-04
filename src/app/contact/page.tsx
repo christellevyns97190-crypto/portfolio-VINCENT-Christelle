@@ -17,7 +17,7 @@ export default function Contact() {
         className="text-center mb-12"
       >
         <h1 className="text-4xl md:text-5xl font-bold mb-4">Contactez-moi</h1>
-        <p className="text-foreground/60">Une question ou un projet ? N'hésitez pas à m'écrire.</p>
+        <p className="text-foreground/60">Une question ou un projet ? N&apos;hésitez pas à m&apos;écrire.</p>
       </motion.div>
 
       <motion.div
