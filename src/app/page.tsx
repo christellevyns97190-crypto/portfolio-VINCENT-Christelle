@@ -33,26 +33,26 @@ export default function Home() {
             className="space-y-6 flex flex-col items-center"
           >
             <h1 className="flex flex-col items-center">
-                <span className="block overflow-hidden pb-2">
-                  <motion.span 
-                    className="block text-5xl md:text-8xl font-sans font-bold uppercase tracking-tight text-foreground"
-                    initial={{ y: "100%" }}
-                    animate={{ y: 0 }}
-                    transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-                  >
-                    VINCENT
-                  </motion.span>
-                </span>
-                <span className="block overflow-hidden">
-                  <motion.span 
-                    className="block text-5xl md:text-8xl font-sans font-bold uppercase tracking-tight text-foreground"
-                    initial={{ y: "100%" }}
-                    animate={{ y: 0 }}
-                    transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-                  >
-                    CHRISTELLE
-                  </motion.span>
-                </span>
+                  <span className="block overflow-hidden pb-2">
+                    <motion.span 
+                      className="block text-4xl md:text-7xl font-sans font-medium uppercase tracking-widest text-foreground"
+                      initial={{ y: "100%" }}
+                      animate={{ y: 0 }}
+                      transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+                    >
+                      VINCENT
+                    </motion.span>
+                  </span>
+                  <span className="block overflow-hidden">
+                    <motion.span 
+                      className="block text-4xl md:text-7xl font-sans font-medium uppercase tracking-widest text-foreground"
+                      initial={{ y: "100%" }}
+                      animate={{ y: 0 }}
+                      transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                    >
+                      CHRISTELLE
+                    </motion.span>
+                  </span>
               <motion.span 
                 className="block text-2xl md:text-3xl text-turquoise font-light tracking-[0.3em] mt-4"
                 initial={{ opacity: 0, letterSpacing: "0.5em" }}
