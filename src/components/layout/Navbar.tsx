@@ -21,7 +21,7 @@ export default function Navbar() {
         className="glass px-6 py-2 rounded-full flex gap-8 items-center"
       >
         <Link href="/" className="flex items-center">
-          <img src="/logo.png" alt="Logo" className="h-8 w-auto hover:scale-110 transition-transform" />
+            <img src="/logo.webp" alt="Logo" className="h-10 w-auto hover:scale-110 transition-transform" />
         </Link>
         <div className="h-4 w-px bg-foreground/20 mx-1" />
         {navItems.map((item) => (
