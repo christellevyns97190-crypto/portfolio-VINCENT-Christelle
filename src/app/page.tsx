@@ -97,7 +97,7 @@ export default function Home() {
             <a 
               href="/CV_Christelle_VINCENT.pdf" 
               download 
-              className="glass inline-flex items-center gap-2 px-8 py-4 rounded-xl font-medium border border-rose bg-rose/20 hover:bg-rose/40 transition-colors"
+              className="glass inline-flex items-center gap-2 px-8 py-4 rounded-xl font-medium border border-rose bg-rose/60 hover:bg-rose/80 transition-colors"
             >
               <Download size={18} /> Télécharger mon CV (PDF)
             </a>
