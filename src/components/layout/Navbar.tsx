@@ -18,8 +18,12 @@ export default function Navbar() {
       <motion.div 
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="glass px-6 py-3 rounded-full flex gap-8 items-center"
+        className="glass px-6 py-2 rounded-full flex gap-8 items-center"
       >
+        <Link href="/" className="flex items-center">
+          <img src="/logo.png" alt="Logo" className="h-8 w-auto hover:scale-110 transition-transform" />
+        </Link>
+        <div className="h-4 w-px bg-foreground/20 mx-1" />
         {navItems.map((item) => (
           <Link 
             key={item.name} 
