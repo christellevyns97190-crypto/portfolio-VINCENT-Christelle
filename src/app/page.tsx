@@ -1,9 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Download } from "lucide-react";
 import { categories } from "@/data/projects";
+import { useRef } from "react";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -13,6 +14,14 @@ const fadeIn = {
 };
 
 export default function Home() {
+  const parallaxRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: parallaxRef,
+    offset: ["start end", "end start"]
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
+
   return (
     <div className="flex flex-col items-center">
       {/* Hero Section */}
@@ -50,11 +59,24 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Presentation Section */}
-        <section className="py-24 px-6 max-w-4xl w-full relative">
+      {/* Presentation Section with Parallax */}
+      <section ref={parallaxRef} className="relative py-32 px-6 w-full overflow-hidden flex justify-center">
+        {/* Parallax Background */}
+        <motion.div 
+          style={{ y }}
+          className="absolute inset-0 -z-10 h-[140%] w-full"
+        >
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+            style={{ backgroundImage: "url('/parallax-bg.png')" }}
+          />
+          {/* Overlay to ensure readability */}
+          <div className="absolute inset-0 bg-white/60" />
+        </motion.div>
+
         <motion.div 
           {...fadeIn}
-          className="glass p-8 md:p-12 rounded-3xl border border-white/20 shadow-xl"
+          className="glass p-8 md:p-12 rounded-3xl border border-white/20 shadow-xl max-w-4xl w-full"
         >
           <h2 className="text-3xl font-bold mb-6 text-turquoise">À propos de moi</h2>
           <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
