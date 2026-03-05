@@ -34,10 +34,10 @@ export default function Home() {
         >
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
             <span className="block text-foreground">VINCENT Christelle</span>
-            <span className="block text-turquoise">Graphiste Digital</span>
+            <span className="block text-turquoise">Etudiante BUT3 MMI </span>
           </h1>
           <p className="text-xl md:text-2xl text-foreground/60 font-light max-w-2xl mx-auto">
-            Bilingue & à l’écoute
+            Bachelor univesitaire - métier du multimédia et de l'internet
           </p>
           <p className="text-lg text-foreground/40 mt-8 italic">
             Bienvenue sur mon portfolio.
@@ -81,6 +81,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-6 text-turquoise">À propos de moi</h2>
           <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
             <p>
+              
               Je suis <strong>Christelle VINCENT</strong>, étudiante en deuxième année d&apos;MMI en Guadeloupe. 
               Passionnée par la créativité, la musique et le bien-être physique et mental.
             </p>
