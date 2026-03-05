@@ -33,9 +33,9 @@ export default function RootLayout({
 }>) {
     return (
       <html lang="fr" className="scroll-smooth">
-          <body
-            className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased font-sans bg-white`}
-          >
+            <body
+              className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased font-sans`}
+            >
             <Navbar />
             <main className="min-h-screen pt-24 relative z-10">
               {children}
