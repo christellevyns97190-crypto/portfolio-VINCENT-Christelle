@@ -26,23 +26,49 @@ export default function Home() {
     <div className="flex flex-col items-center">
       {/* Hero Section */}
       <section className="min-h-[80vh] flex flex-col justify-center items-center text-center px-6">
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="space-y-4"
-        >
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-            <span className="block text-foreground">VINCENT Christelle</span>
-            <span className="block text-turquoise">Etudiante BUT3 MMI </span>
-          </h1>
-          <p className="text-xl md:text-2xl text-foreground/60 font-light max-w-2xl mx-auto">
-            Bachelor univesitaire - métier du multimédia et de l'internet
-          </p>
-          <p className="text-lg text-foreground/40 mt-8 italic">
-            Bienvenue sur mon portfolio.
-          </p>
-        </motion.div>
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-6"
+          >
+            <h1 className="flex flex-col items-center">
+              <span className="block overflow-hidden pb-2">
+                <motion.span 
+                  className="block text-6xl md:text-9xl font-playfair font-bold uppercase tracking-widest text-foreground"
+                  initial={{ y: "100%" }}
+                  animate={{ y: 0 }}
+                  transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  VINCENT
+                </motion.span>
+              </span>
+              <span className="block overflow-hidden">
+                <motion.span 
+                  className="block text-6xl md:text-9xl font-playfair font-bold uppercase tracking-widest text-foreground"
+                  initial={{ y: "100%" }}
+                  animate={{ y: 0 }}
+                  transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  CHRISTELLE
+                </motion.span>
+              </span>
+              <motion.span 
+                className="block text-2xl md:text-3xl text-turquoise font-light tracking-[0.3em] mt-4"
+                initial={{ opacity: 0, letterSpacing: "0.5em" }}
+                animate={{ opacity: 1, letterSpacing: "0.3em" }}
+                transition={{ duration: 1, delay: 0.5 }}
+              >
+                Etudiante BUT3 MMI
+              </motion.span>
+            </h1>
+            <p className="text-xl md:text-2xl text-foreground/60 font-light max-w-2xl mx-auto pt-4">
+              Bachelor universitaire - métiers du multimédia et de l'internet
+            </p>
+            <p className="text-lg text-foreground/40 mt-8 italic">
+              Bienvenue sur mon portfolio.
+            </p>
+          </motion.div>
 
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
