@@ -30,8 +30,16 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="space-y-6"
+            className="space-y-6 flex flex-col items-center"
           >
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="mb-8"
+            >
+              <img src="/logo.png" alt="Logo" className="w-24 md:w-32 h-auto" />
+            </motion.div>
             <h1 className="flex flex-col items-center">
                 <span className="block overflow-hidden pb-2">
                   <motion.span 
