@@ -52,7 +52,6 @@ export default function Home() {
 
       {/* Presentation Section */}
         <section className="py-24 px-6 max-w-4xl w-full relative">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-rose/30 blur-[120px] -z-10 rounded-full opacity-70" />
         <motion.div 
           {...fadeIn}
           className="glass p-8 md:p-12 rounded-3xl border border-white/20 shadow-xl"
@@ -76,7 +75,7 @@ export default function Home() {
             <a 
               href="/CV_Christelle_VINCENT.pdf" 
               download 
-              className="glass inline-flex items-center gap-2 px-8 py-4 rounded-xl font-medium border border-turquoise/20 hover:bg-turquoise/10 transition-colors"
+              className="glass inline-flex items-center gap-2 px-8 py-4 rounded-xl font-medium border border-rose bg-rose/20 hover:bg-rose/40 transition-colors"
             >
               <Download size={18} /> Télécharger mon CV (PDF)
             </a>
@@ -90,7 +89,7 @@ export default function Home() {
           {...fadeIn}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4">Mes Créations</h2>
+          <h2 className="text-4xl font-bold mb-4 text-rose">Mes Créations</h2>
           <p className="text-foreground/60">Découvrez mon univers à travers différentes catégories.</p>
         </motion.div>
 
