@@ -96,14 +96,14 @@ export default function Home() {
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
             style={{ backgroundImage: "url('/parallax-bg.png')" }}
           />
-          {/* Overlay to ensure readability */}
-          <div className="absolute inset-0 bg-white/60" />
-        </motion.div>
+            {/* Overlay to ensure readability */}
+            <div className="absolute inset-0 bg-background/60" />
+          </motion.div>
 
-        <motion.div 
-          {...fadeIn}
-          className="glass p-8 md:p-12 rounded-3xl border border-white/20 shadow-xl max-w-4xl w-full"
-        >
+          <motion.div 
+            {...fadeIn}
+            className="glass p-8 md:p-12 rounded-3xl border border-foreground/10 shadow-2xl max-w-4xl w-full"
+          >
           <h2 className="text-3xl font-bold mb-6 text-turquoise">À propos de moi</h2>
           <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
             <p>
