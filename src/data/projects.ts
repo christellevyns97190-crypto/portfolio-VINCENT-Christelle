@@ -2,6 +2,7 @@ export interface Project {
   id: string;
   title: string;
   category: string;
+  subCategory?: string;
   description: string;
   imageUrl: string;
   fullDescription: string;
@@ -49,6 +50,7 @@ export const projects: Project[] = [
     id: "3",
     title: "Interface Mobile App",
     category: "universitaire",
+    subCategory: "concevoir",
     description: "Maquettage UI/UX d&apos;une application de bien-être.",
     imageUrl: "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1974&auto=format&fit=crop",
     fullDescription: "Projet universitaire visant à concevoir l&apos;interface d&apos;une application de suivi du bien-être physique et mental."
@@ -73,8 +75,36 @@ export const projects: Project[] = [
     id: "6",
     title: "Identité de Marque",
     category: "universitaire",
+    subCategory: "exprimer",
     description: "Projet de branding pour un café local.",
     imageUrl: "https://images.unsplash.com/photo-1521474332319-72e65a0321aa?q=80&w=2070&auto=format&fit=crop",
     fullDescription: "Création complète de l&apos;identité d&apos;un café : logo, menu, et packaging."
+  },
+  {
+    id: "7",
+    title: "Stratégie de Communication",
+    category: "universitaire",
+    subCategory: "entreprendre",
+    description: "Élaboration d&apos;un plan de communication pour une association.",
+    imageUrl: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop",
+    fullDescription: "Projet de conception d&apos;une stratégie de communication complète pour une association locale, incluant le budget, les canaux et le calendrier éditorial."
+  },
+  {
+    id: "8",
+    title: "Site Web Vitrine",
+    category: "universitaire",
+    subCategory: "developper",
+    description: "Développement d&apos;un site vitrine en HTML/CSS/JS.",
+    imageUrl: "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2064&auto=format&fit=crop",
+    fullDescription: "Conception et développement d&apos;un site web vitrine responsive pour une PME, en intégrant les bonnes pratiques d&apos;accessibilité et de SEO."
+  },
+  {
+    id: "9",
+    title: "Analyse de Marché",
+    category: "universitaire",
+    subCategory: "apprehender",
+    description: "Étude de marché et veille concurrentielle.",
+    imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+    fullDescription: "Réalisation d&apos;une analyse approfondie d&apos;un marché numérique : identification des tendances, étude des concurrents et recommandations stratégiques."
   },
 ];
