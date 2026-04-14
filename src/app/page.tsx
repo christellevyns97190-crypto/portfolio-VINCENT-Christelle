@@ -117,18 +117,23 @@ export default function Home() {
             </p>
           </div>
 
-          <motion.div 
-            whileHover={{ scale: 1.02 }}
-            className="mt-10"
-          >
-            <a 
-              href="/CV_Christelle_VINCENT.pdf" 
-              download 
+          <div className="mt-10 flex flex-wrap gap-4 justify-center">
+            <motion.a
+              whileHover={{ scale: 1.02 }}
+              href="/CV_Christelle_VINCENT.pdf"
+              download
               className="glass inline-flex items-center gap-2 px-8 py-4 rounded-xl font-medium border border-rose bg-rose/60 hover:bg-rose/80 transition-colors"
             >
               <Download size={18} /> Télécharger mon CV (PDF)
-            </a>
-          </motion.div>
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.02 }}
+              href="#creations"
+              className="glass inline-flex items-center gap-2 px-8 py-4 rounded-xl font-medium border border-white/20 bg-white/10 hover:bg-white/20 transition-colors text-white"
+            >
+              <span>🌍</span> Visualiser monde
+            </motion.a>
+          </div>
         </motion.div>
       </section>
 
