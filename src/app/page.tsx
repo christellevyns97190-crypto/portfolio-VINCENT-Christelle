@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, Download, Eye } from "lucide-react";
 import { categories } from "@/data/projects";
 import { useRef } from "react";
 
@@ -128,10 +128,12 @@ export default function Home() {
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.02 }}
-              href="#creations"
+              href="/CV_Christelle_VINCENT.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="glass inline-flex items-center gap-2 px-8 py-4 rounded-xl font-medium border border-white/20 bg-white/10 hover:bg-white/20 transition-colors text-white"
             >
-              <span>🌍</span> Visualiser monde
+              <Eye size={18} /> Visualiser mon CV
             </motion.a>
           </div>
         </motion.div>
