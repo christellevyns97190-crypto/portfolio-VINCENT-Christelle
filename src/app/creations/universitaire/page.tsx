@@ -72,11 +72,24 @@ export default function UniversitairePage() {
           <motion.div
             key={ue.id}
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
+            animate={{
+              opacity: 1,
+              y: [0, -8 - (index % 3) * 3, 0],
+            }}
+            transition={{
+              opacity: { duration: 0.5, delay: index * 0.1 },
+              y: {
+                delay: index * 0.15,
+                duration: 3 + index * 0.4,
+                repeat: Infinity,
+                repeatType: "loop",
+                ease: "easeInOut",
+              },
+            }}
+            whileHover={{ scale: 1.04, y: -12 }}
           >
             <Link href={`/creations/universitaire/${ue.id}`}>
-              <div className={`group rounded-2xl border ${ue.border} ${ue.hover} bg-gradient-to-br ${ue.color} p-8 h-full flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] cursor-pointer`}>
+              <div className={`group rounded-2xl border ${ue.border} ${ue.hover} bg-gradient-to-br ${ue.color} p-8 h-full flex flex-col justify-between transition-colors duration-300 cursor-pointer`}>
                 <div>
                   <span className="text-4xl mb-4 block">{ue.icon}</span>
                   <h2 className="text-2xl font-bold text-white mb-3">{ue.label}</h2>
