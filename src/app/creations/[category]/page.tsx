@@ -53,6 +53,10 @@ const UE_LIST = [
 export default function CategoryPage({ params }: CategoryPageProps) {
   const { category: categoryId } = use(params);
 
+  if (categoryId === "universitaire") {
+    notFound();
+  }
+
   const category = categories.find(c => c.id === categoryId);
   if (!category) {
     notFound();
