@@ -34,21 +34,37 @@ export default function Home() {
           >
             <h1 className="flex flex-col items-center">
                   <span className="block overflow-hidden pb-2">
-                    <motion.span 
-                      className="block text-4xl md:text-7xl font-sans font-medium uppercase tracking-widest text-foreground"
+                    <motion.span
+                      className="block text-3xl md:text-5xl font-sans font-medium uppercase tracking-widest text-foreground"
                       initial={{ y: "100%" }}
-                      animate={{ y: 0 }}
-                      transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+                      animate={{ y: [0, -7, 0] }}
+                      transition={{
+                        y: {
+                          delay: 1,
+                          duration: 3.5,
+                          repeat: Infinity,
+                          repeatType: "loop",
+                          ease: "easeInOut",
+                        }
+                      }}
                     >
                       VINCENT
                     </motion.span>
                   </span>
                   <span className="block overflow-hidden">
-                    <motion.span 
-                      className="block text-4xl md:text-7xl font-sans font-medium uppercase tracking-widest text-foreground"
+                    <motion.span
+                      className="block text-3xl md:text-5xl font-sans font-medium uppercase tracking-widest text-foreground"
                       initial={{ y: "100%" }}
-                      animate={{ y: 0 }}
-                      transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                      animate={{ y: [0, -7, 0] }}
+                      transition={{
+                        y: {
+                          delay: 1.2,
+                          duration: 3.5,
+                          repeat: Infinity,
+                          repeatType: "loop",
+                          ease: "easeInOut",
+                        }
+                      }}
                     >
                       CHRISTELLE
                     </motion.span>
