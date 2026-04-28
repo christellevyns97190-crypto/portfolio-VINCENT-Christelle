@@ -25,8 +25,40 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center">
       {/* Hero Section */}
-      <section className="min-h-[80vh] flex flex-col justify-center items-center text-center px-6">
-          <motion.div 
+      <section className="relative min-h-[80vh] flex flex-col justify-center items-center text-center px-6 overflow-hidden w-full">
+        {/* Cheetah background */}
+        <div
+          className="absolute inset-0 -z-10"
+          style={{
+            backgroundImage: "url('/blackchettahp.png')",
+            backgroundSize: "400px auto",
+            backgroundRepeat: "repeat",
+            opacity: 0.55,
+          }}
+        />
+        {/* Subtle vignette overlay for depth */}
+        <div
+          className="absolute inset-0 -z-10 pointer-events-none"
+          style={{ background: "radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.55) 100%)" }}
+        />
+
+        {/* LEFT stickers */}
+        <div className="absolute left-0 top-0 h-full w-[18%] pointer-events-none hidden md:block">
+          <img src="/sticker-bag.png" alt="" className="absolute w-20 opacity-80" style={{ top: "12%", left: "18%", transform: "rotate(-12deg)" }} />
+          <img src="/sticker-notebook.png" alt="" className="absolute w-24 opacity-75" style={{ top: "42%", left: "4%", transform: "rotate(8deg)" }} />
+          <img src="/sticker-pen.png" alt="" className="absolute w-14 opacity-70" style={{ top: "68%", left: "22%", transform: "rotate(-20deg)" }} />
+          <img src="/sticker-heart.png" alt="" className="absolute w-10 opacity-65" style={{ top: "82%", left: "8%", transform: "rotate(5deg)" }} />
+        </div>
+
+        {/* RIGHT stickers */}
+        <div className="absolute right-0 top-0 h-full w-[18%] pointer-events-none hidden md:block">
+          <img src="/sticker-laptop.png" alt="" className="absolute w-24 opacity-80" style={{ top: "8%", right: "10%", transform: "rotate(10deg)" }} />
+          <img src="/sticker-cup.png" alt="" className="absolute w-16 opacity-75" style={{ top: "38%", right: "5%", transform: "rotate(-8deg)" }} />
+          <img src="/sticker-donut.png" alt="" className="absolute w-16 opacity-70" style={{ top: "62%", right: "16%", transform: "rotate(15deg)" }} />
+          <img src="/sticker-heart.png" alt="" className="absolute w-9 opacity-60" style={{ top: "85%", right: "6%", transform: "rotate(-5deg)" }} />
+        </div>
+
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
