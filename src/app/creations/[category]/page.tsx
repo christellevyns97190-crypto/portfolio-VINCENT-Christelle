@@ -43,8 +43,8 @@ const UE_LIST = [
   },
   {
     id: "apprehender",
-    label: "UE Appréhender",
-    description: "Analyse critique, veille et culture numérique.",
+    label: "UE Comprendre",
+    description: "Analyser un besoin, un contexte, une cible.",
     color: "from-violet-200/20 to-violet-300/10",
     border: "border-violet-300/30",
   },

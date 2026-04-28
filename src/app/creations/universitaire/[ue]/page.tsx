@@ -34,8 +34,8 @@ const UE_META: Record<string, { label: string; description: string; icon: string
     icon: "💻",
   },
   apprehender: {
-    label: "UE Appréhender",
-    description: "Veille, analyse critique, culture numérique et environnement professionnel.",
+    label: "UE Comprendre",
+    description: "Analyser un besoin, un contexte, une cible.",
     icon: "🔍",
   },
 };
