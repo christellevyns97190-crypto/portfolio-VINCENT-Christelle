@@ -31,7 +31,7 @@ export default function Home() {
           className="absolute inset-0 -z-10"
           style={{
             backgroundImage: "url('/blackchettahp.png')",
-            backgroundSize: "700px auto",
+            backgroundSize: "1400px auto",
             backgroundRepeat: "repeat",
             opacity: 0.75,
           }}
@@ -42,21 +42,6 @@ export default function Home() {
           style={{ background: "radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.55) 100%)" }}
         />
 
-        {/* LEFT stickers */}
-        <div className="absolute left-0 top-0 h-full w-[18%] pointer-events-none hidden md:block">
-          <img src="/sticker-bag.png" alt="" className="absolute w-auto opacity-90" style={{ height: "300px", top: "10%", left: "10%", transform: "rotate(-12deg)" }} />
-          <img src="/sticker-notebook.png" alt="" className="absolute w-auto opacity-90" style={{ height: "300px", top: "38%", left: "0%", transform: "rotate(8deg)" }} />
-          <img src="/sticker-pen.png" alt="" className="absolute w-auto opacity-85" style={{ height: "300px", top: "66%", left: "14%", transform: "rotate(-20deg)" }} />
-          <img src="/sticker-heart.png" alt="" className="absolute w-auto opacity-80" style={{ height: "300px", top: "83%", left: "2%", transform: "rotate(5deg)" }} />
-        </div>
-
-        {/* RIGHT stickers */}
-        <div className="absolute right-0 top-0 h-full w-[18%] pointer-events-none hidden md:block">
-          <img src="/sticker-laptop.png" alt="" className="absolute w-auto opacity-90" style={{ height: "300px", top: "7%", right: "4%", transform: "rotate(10deg)" }} />
-          <img src="/sticker-cup.png" alt="" className="absolute w-auto opacity-90" style={{ height: "300px", top: "36%", right: "2%", transform: "rotate(-8deg)" }} />
-          <img src="/sticker-donut.png" alt="" className="absolute w-auto opacity-85" style={{ height: "300px", top: "60%", right: "10%", transform: "rotate(15deg)" }} />
-          <img src="/sticker-heart.png" alt="" className="absolute w-auto opacity-80" style={{ height: "300px", top: "84%", right: "2%", transform: "rotate(-5deg)" }} />
-        </div>
 
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
