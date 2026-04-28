@@ -75,7 +75,7 @@ export default function Home() {
                 animate={{ opacity: 1, letterSpacing: "0.3em" }}
                 transition={{ duration: 1, delay: 0.5 }}
               >
-                Etudiante BUT3 MMI
+                Graphiste Digital
               </motion.span>
             </h1>
             <p className="text-xl md:text-2xl text-foreground/60 font-light max-w-2xl mx-auto pt-4">
