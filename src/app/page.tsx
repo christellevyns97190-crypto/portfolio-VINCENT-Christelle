@@ -42,6 +42,17 @@ export default function Home() {
           style={{ background: "radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.55) 100%)" }}
         />
 
+        {/* Stickers */}
+        <div className="absolute inset-0 pointer-events-none hidden md:block">
+          <img src="/s-camera.png"  alt="" style={{ position:"absolute", height:"140px", width:"auto", top:"8%",  left:"12%",  transform:"rotate(-8deg)"  }} />
+          <img src="/s-bag.png"     alt="" style={{ position:"absolute", height:"130px", width:"auto", top:"6%",  right:"10%", transform:"rotate(10deg)"  }} />
+          <img src="/s-coffee.png"  alt="" style={{ position:"absolute", height:"150px", width:"auto", top:"38%", left:"3%",   transform:"rotate(-6deg)"  }} />
+          <img src="/s-donut.png"   alt="" style={{ position:"absolute", height:"130px", width:"auto", top:"56%", left:"18%",  transform:"rotate(8deg)"   }} />
+          <img src="/s-cup.png"     alt="" style={{ position:"absolute", height:"150px", width:"auto", top:"40%", right:"6%",  transform:"rotate(-10deg)" }} />
+          <img src="/s-laptop.png"  alt="" style={{ position:"absolute", height:"140px", width:"auto", top:"72%", left:"4%",   transform:"rotate(6deg)"   }} />
+          <img src="/s-diamond.png" alt="" style={{ position:"absolute", height:"110px", width:"auto", top:"60%", left:"55%",  transform:"rotate(-5deg)"  }} />
+          <img src="/s-phone.png"   alt="" style={{ position:"absolute", height:"140px", width:"auto", top:"68%", right:"5%",  transform:"rotate(12deg)"  }} />
+        </div>
 
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
