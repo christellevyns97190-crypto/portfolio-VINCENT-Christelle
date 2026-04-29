@@ -44,12 +44,12 @@ export default function Home() {
 
         {/* Stickers */}
         <div className="absolute inset-0 pointer-events-none hidden md:block">
-          <img src="/s-camera.png"  alt="" style={{ position:"absolute", height:"160px", width:"auto", top:"10%", left:"11%",  transform:"rotate(-12deg)" }} />
+          <img src="/s-camera.png"  alt="" style={{ position:"absolute", height:"160px", width:"auto", top:"4%",  left:"11%",  transform:"rotate(-12deg)" }} />
           <img src="/s-bag.png"     alt="" style={{ position:"absolute", height:"170px", width:"auto", top:"5%",  right:"2%",  transform:"rotate(10deg)"  }} />
-          <img src="/s-coffee.png"  alt="" style={{ position:"absolute", height:"185px", width:"auto", top:"38%", left:"1%",   transform:"rotate(-3deg)"  }} />
-          <img src="/s-donut.png"   alt="" style={{ position:"absolute", height:"165px", width:"auto", top:"50%", left:"15%",  transform:"rotate(8deg)"   }} />
+          <img src="/s-coffee.png"  alt="" style={{ position:"absolute", height:"185px", width:"auto", top:"29%", left:"1%",   transform:"rotate(-3deg)"  }} />
+          <img src="/s-donut.png"   alt="" style={{ position:"absolute", height:"165px", width:"auto", top:"43%", left:"15%",  transform:"rotate(8deg)"   }} />
           <img src="/s-cup.png"     alt="" style={{ position:"absolute", height:"190px", width:"auto", top:"38%", right:"1%",  transform:"rotate(-6deg)"  }} />
-          <img src="/s-laptop.png"  alt="" style={{ position:"absolute", height:"155px", width:"auto", top:"69%", left:"2%",   transform:"rotate(5deg)"   }} />
+          <img src="/s-laptop.png"  alt="" style={{ position:"absolute", height:"175px", width:"auto", top:"69%", left:"2%",   transform:"rotate(5deg)"   }} />
           <img src="/s-diamond.png" alt="" style={{ position:"absolute", height:"120px", width:"auto", top:"54%", right:"15%", transform:"rotate(-5deg)"  }} />
           <img src="/s-phone.png"   alt="" style={{ position:"absolute", height:"165px", width:"auto", top:"65%", right:"2%",  transform:"rotate(14deg)"  }} />
         </div>
