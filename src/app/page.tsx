@@ -44,14 +44,25 @@ export default function Home() {
 
         {/* Stickers */}
         <div className="absolute inset-0 pointer-events-none hidden md:block">
-          <img src="/s-camera.png"  alt="" style={{ position:"absolute", height:"160px", width:"auto", top:"4%",  left:"11%",  transform:"rotate(-12deg)" }} />
-          <img src="/s-bag.png"     alt="" style={{ position:"absolute", height:"170px", width:"auto", top:"7%",  right:"14%", transform:"rotate(10deg)"  }} />
-          <img src="/s-coffee.png"  alt="" style={{ position:"absolute", height:"185px", width:"auto", top:"29%", left:"1%",   transform:"rotate(-3deg)"  }} />
-          <img src="/s-donut.png"   alt="" style={{ position:"absolute", height:"165px", width:"auto", top:"43%", left:"15%",  transform:"rotate(8deg)"   }} />
-          <img src="/s-cup.png"     alt="" style={{ position:"absolute", height:"190px", width:"auto", top:"28%", right:"2%",  transform:"rotate(-6deg)"  }} />
-          <img src="/s-laptop.png"  alt="" style={{ position:"absolute", height:"175px", width:"auto", top:"69%", left:"2%",   transform:"rotate(5deg)"   }} />
-          <img src="/s-diamond.png" alt="" style={{ position:"absolute", height:"120px", width:"auto", top:"49%", right:"20%", transform:"rotate(-5deg)"  }} />
-          <img src="/s-phone.png"   alt="" style={{ position:"absolute", height:"165px", width:"auto", top:"65%", right:"6%",  transform:"rotate(14deg)"  }} />
+          {[
+            { src:"/s-camera.png",  h:160, top:"4%",  left:"11%",  rot:-12, dur:4.2, dy:12 },
+            { src:"/s-bag.png",     h:170, top:"7%",  right:"14%", rot:10,  dur:5.1, dy:10 },
+            { src:"/s-coffee.png",  h:185, top:"29%", left:"1%",   rot:-3,  dur:6.0, dy:14 },
+            { src:"/s-donut.png",   h:165, top:"43%", left:"15%",  rot:8,   dur:4.7, dy:11 },
+            { src:"/s-cup.png",     h:190, top:"28%", right:"2%",  rot:-6,  dur:5.5, dy:13 },
+            { src:"/s-laptop.png",  h:175, top:"69%", left:"2%",   rot:5,   dur:4.9, dy:10 },
+            { src:"/s-diamond.png", h:120, top:"49%", right:"20%", rot:-5,  dur:3.8, dy:8  },
+            { src:"/s-phone.png",   h:165, top:"65%", right:"6%",  rot:14,  dur:5.3, dy:12 },
+          ].map((s, i) => (
+            <motion.img
+              key={s.src}
+              src={s.src}
+              alt=""
+              style={{ position:"absolute", height:`${s.h}px`, width:"auto", top:s.top, left:(s as any).left, right:(s as any).right }}
+              animate={{ y: [0, -s.dy, 0], rotate: [s.rot, s.rot + 3, s.rot] }}
+              transition={{ duration: s.dur, repeat: Infinity, ease: "easeInOut", delay: i * 0.4 }}
+            />
+          ))}
         </div>
 
           <motion.div
