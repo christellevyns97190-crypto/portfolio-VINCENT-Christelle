@@ -110,9 +110,13 @@ export default function Home() {
             <p className="text-xl md:text-2xl text-foreground/60 font-light max-w-2xl mx-auto pt-4">
               Bachelor universitaire - métiers du multimédia et de l'internet
             </p>
-            <p className="text-lg text-foreground/40 mt-8 italic">
+            <motion.p
+              className="text-lg text-foreground/40 mt-8 italic"
+              animate={{ scale: [1, 1.06, 1] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            >
               Bienvenue sur mon portfolio.
-            </p>
+            </motion.p>
           </motion.div>
 
         <motion.div 
