@@ -94,11 +94,11 @@ export default function Home() {
                   </span>
               <motion.span
                 className="block text-2xl md:text-3xl text-turquoise font-light tracking-[0.3em] mt-4"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: [0, -6, 0] }}
+                initial={{ opacity: 0, scale: 1 }}
+                animate={{ opacity: 1, scale: [1, 1.08, 1] }}
                 transition={{
                   opacity: { duration: 0.6, delay: 0.4 },
-                  y: { duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }
+                  scale: { duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1 }
                 }}
               >
                 Graphiste Digital
