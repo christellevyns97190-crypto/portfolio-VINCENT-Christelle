@@ -112,7 +112,7 @@ export default function Home() {
             </p>
             <motion.p
               className="text-lg text-foreground/40 mt-8 italic"
-              animate={{ scale: [1, 1.06, 1] }}
+              animate={{ scale: [1, 1.18, 1] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             >
               Bienvenue sur mon portfolio.
