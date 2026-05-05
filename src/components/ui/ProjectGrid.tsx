@@ -85,13 +85,13 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
                     muted
                     playsInline
                     controls
-                    className="w-full aspect-video object-cover"
+                    className="w-full object-contain max-h-[70vh]"
                   />
                 ) : (
                   <img
                     src={selectedProject.imageUrl}
                     alt={selectedProject.title}
-                    className="w-full aspect-video object-cover"
+                    className="w-full object-contain max-h-[70vh]"
                   />
                 )}
               </div>
