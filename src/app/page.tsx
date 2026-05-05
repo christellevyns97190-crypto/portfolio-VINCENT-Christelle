@@ -74,7 +74,7 @@ export default function Home() {
             <h1 className="flex flex-col items-center gap-2">
               <motion.span
                 className="block text-center font-sans font-medium uppercase tracking-widest text-foreground"
-                style={{ fontSize: "clamp(1.4rem, 4vw, 2.8rem)" }}
+                style={{ fontSize: "clamp(1.9rem, 5.5vw, 3.8rem)" }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.7 }}
