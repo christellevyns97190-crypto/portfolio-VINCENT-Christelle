@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Dancing_Script } from "next/font/google";
 import "./globals.css";
 import { VisualEditsMessenger } from "orchids-visual-edits";
 
@@ -16,6 +16,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const dancingScript = Dancing_Script({
+  variable: "--font-dancing-script",
+  subsets: ["latin"],
+  weight: ["400", "600"],
+});
+
 
 export const metadata: Metadata = {
   title: "Christelle VINCENT | Graphiste Digital",
@@ -30,7 +36,7 @@ export default function RootLayout({
     return (
       <html lang="fr" className="scroll-smooth">
             <body
-              className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans`}
+              className={`${geistSans.variable} ${geistMono.variable} ${dancingScript.variable} antialiased font-sans`}
             >
             <Navbar />
             <main className="min-h-screen pt-32 relative z-10">

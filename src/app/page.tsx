@@ -93,13 +93,16 @@ export default function Home() {
                     </motion.span>
                   </span>
               <motion.span
-                className="block text-2xl md:text-3xl text-turquoise font-light tracking-[0.3em] mt-4"
-                initial={{ opacity: 0, scale: 1 }}
-                animate={{ opacity: 1, scale: [1, 1.04, 1] }}
-                transition={{
-                  opacity: { duration: 0.6, delay: 0.4 },
-                  scale: { duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }
+                className="block text-turquoise mt-4"
+                style={{
+                  fontFamily: "var(--font-dancing-script)",
+                  fontSize: "clamp(1.6rem, 4vw, 2.6rem)",
+                  fontWeight: 400,
+                  letterSpacing: "0.04em",
                 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
               >
                 Graphiste Digital
               </motion.span>
