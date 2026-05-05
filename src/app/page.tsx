@@ -71,45 +71,29 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="space-y-6 flex flex-col items-center"
           >
-            <h1 className="flex flex-col items-center">
-                  <span className="block overflow-hidden pb-2">
-                    <motion.span
-                      className="block text-3xl md:text-5xl font-sans font-medium uppercase tracking-widest text-foreground"
-                      initial={{ y: "100%" }}
-                      animate={{ y: 0 }}
-                      transition={{ duration: 0.7, ease: "easeOut" }}
-                    >
-                      VINCENT
-                    </motion.span>
-                  </span>
-                  <span className="block overflow-hidden">
-                    <motion.span
-                      className="block text-3xl md:text-5xl font-sans font-medium uppercase tracking-widest text-foreground"
-                      initial={{ y: "100%" }}
-                      animate={{ y: 0 }}
-                      transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
-                    >
-                      CHRISTELLE
-                    </motion.span>
-                  </span>
+            <h1 className="flex flex-col items-center gap-2">
               <motion.span
-                className="block text-turquoise mt-4"
+                className="block text-center font-sans font-medium uppercase tracking-widest text-foreground"
+                style={{ fontSize: "clamp(2.4rem, 7vw, 5rem)" }}
+                animate={{ scale: [1, 1.08, 1] }}
+                transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
+              >
+                VINCENT CHRISTELLE
+              </motion.span>
+              <motion.span
+                className="block text-center text-turquoise"
                 style={{
                   fontFamily: "var(--font-dancing-script)",
-                  fontSize: "clamp(1.6rem, 4vw, 2.6rem)",
+                  fontSize: "clamp(1.8rem, 5vw, 3.2rem)",
                   fontWeight: 400,
                   letterSpacing: "0.04em",
                 }}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                animate={{ scale: [1, 1.08, 1] }}
+                transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
               >
                 Graphiste Digital
               </motion.span>
             </h1>
-            <p className="text-xl md:text-2xl text-foreground/60 font-light max-w-2xl mx-auto pt-4">
-              Bachelor universitaire - métiers du multimédia et de l'internet
-            </p>
             <motion.p
               className="text-lg text-foreground/40 mt-8 italic"
               animate={{ scale: [1, 1.18, 1] }}
