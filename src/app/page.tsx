@@ -74,9 +74,10 @@ export default function Home() {
             <h1 className="flex flex-col items-center gap-2">
               <motion.span
                 className="block text-center font-sans font-medium uppercase tracking-widest text-foreground"
-                style={{ fontSize: "clamp(2.4rem, 7vw, 5rem)" }}
-                animate={{ scale: [1, 1.08, 1] }}
-                transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
+                style={{ fontSize: "clamp(1.4rem, 4vw, 2.8rem)" }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.7 }}
               >
                 VINCENT CHRISTELLE
               </motion.span>
@@ -88,8 +89,9 @@ export default function Home() {
                   fontWeight: 400,
                   letterSpacing: "0.04em",
                 }}
-                animate={{ scale: [1, 1.08, 1] }}
-                transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
               >
                 Graphiste Digital
               </motion.span>
