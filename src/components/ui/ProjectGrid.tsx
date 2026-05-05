@@ -26,11 +26,22 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
             className="group cursor-pointer"
           >
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-muted">
-              <img 
-                src={project.imageUrl} 
-                alt={project.title}
-                className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
-              />
+              {project.videoUrl ? (
+                <video
+                  src={project.videoUrl}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+                />
+              ) : (
+                <img
+                  src={project.imageUrl}
+                  alt={project.title}
+                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+                />
+              )}
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                 <span className="text-white font-medium px-6 py-2 glass rounded-full">Voir le projet</span>
               </div>
@@ -66,11 +77,23 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
                 >
                   <X size={24} />
                 </button>
-                <img 
-                  src={selectedProject.imageUrl} 
-                  alt={selectedProject.title}
-                  className="w-full aspect-video object-cover"
-                />
+                {selectedProject.videoUrl ? (
+                  <video
+                    src={selectedProject.videoUrl}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    controls
+                    className="w-full aspect-video object-cover"
+                  />
+                ) : (
+                  <img
+                    src={selectedProject.imageUrl}
+                    alt={selectedProject.title}
+                    className="w-full aspect-video object-cover"
+                  />
+                )}
               </div>
               <div className="p-8 md:p-12">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">{selectedProject.title}</h2>

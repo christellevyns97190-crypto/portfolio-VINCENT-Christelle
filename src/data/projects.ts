@@ -5,6 +5,7 @@ export interface Project {
   subCategory?: string;
   description: string;
   imageUrl: string;
+  videoUrl?: string;
   fullDescription: string;
 }
 
@@ -40,11 +41,11 @@ export const projects: Project[] = [
   },
   {
     id: "2",
-    title: "Affiche Événementielle",
+    title: "Vente Privée – Génération Mélodie",
     category: "personnel",
-    description: "Design d&apos;une affiche pour un festival de musique.",
-    imageUrl: "https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=1964&auto=format&fit=crop",
-    fullDescription: "Affiche réalisée pour un festival de musique imaginaire. L&apos;objectif était d&apos;utiliser des couleurs vives et une typographie dynamique."
+    description: "Affiche promotionnelle pour une vente privée.",
+    imageUrl: "/perso1.png",
+    fullDescription: "Création d'une affiche pour la vente privée de Génération Mélodie, boutique santé, bien-être & accessoires. Design mettant en avant la réduction de -30% et les informations clés de l'événement."
   },
   {
     id: "3",
@@ -65,11 +66,20 @@ export const projects: Project[] = [
   },
   {
     id: "5",
-    title: "Illustration Botanique",
+    title: "Projet Vidéo",
     category: "personnel",
-    description: "Illustration numérique sur Procreate.",
-    imageUrl: "https://images.unsplash.com/photo-1518895949257-7621c3c786d7?q=80&w=1976&auto=format&fit=crop",
-    fullDescription: "Série d&apos;illustrations botaniques explorant le lien entre l&apos;art et le bien-être."
+    description: "Création vidéo personnelle.",
+    imageUrl: "/perso1.png",
+    videoUrl: "/perso2.mp4",
+    fullDescription: "Réalisation d'un projet vidéo personnel explorant la créativité graphique en mouvement."
+  },
+  {
+    id: "5b",
+    title: "Rencontre Human Design & Hypersensibilité",
+    category: "personnel",
+    description: "Affiche événementielle pour un atelier bien-être.",
+    imageUrl: "/perso3.png",
+    fullDescription: "Création d'une affiche pour la rencontre Human Design & Hypersensibilité organisée par MP Consulting au Salon de Thé Paris."
   },
   {
     id: "6",
