@@ -76,16 +76,8 @@ export default function Home() {
                     <motion.span
                       className="block text-3xl md:text-5xl font-sans font-medium uppercase tracking-widest text-foreground"
                       initial={{ y: "100%" }}
-                      animate={{ y: [0, -7, 0] }}
-                      transition={{
-                        y: {
-                          delay: 1,
-                          duration: 3.5,
-                          repeat: Infinity,
-                          repeatType: "loop",
-                          ease: "easeInOut",
-                        }
-                      }}
+                      animate={{ y: 0 }}
+                      transition={{ duration: 0.7, ease: "easeOut" }}
                     >
                       VINCENT
                     </motion.span>
@@ -94,25 +86,20 @@ export default function Home() {
                     <motion.span
                       className="block text-3xl md:text-5xl font-sans font-medium uppercase tracking-widest text-foreground"
                       initial={{ y: "100%" }}
-                      animate={{ y: [0, -7, 0] }}
-                      transition={{
-                        y: {
-                          delay: 1.2,
-                          duration: 3.5,
-                          repeat: Infinity,
-                          repeatType: "loop",
-                          ease: "easeInOut",
-                        }
-                      }}
+                      animate={{ y: 0 }}
+                      transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
                     >
                       CHRISTELLE
                     </motion.span>
                   </span>
-              <motion.span 
+              <motion.span
                 className="block text-2xl md:text-3xl text-turquoise font-light tracking-[0.3em] mt-4"
-                initial={{ opacity: 0, letterSpacing: "0.5em" }}
-                animate={{ opacity: 1, letterSpacing: "0.3em" }}
-                transition={{ duration: 1, delay: 0.5 }}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: [0, -6, 0] }}
+                transition={{
+                  opacity: { duration: 0.6, delay: 0.4 },
+                  y: { duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }
+                }}
               >
                 Graphiste Digital
               </motion.span>
