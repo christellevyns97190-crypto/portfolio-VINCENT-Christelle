@@ -66,7 +66,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
   const isUniversitaire = categoryId === "universitaire";
 
   return (
-    <div className="container mx-auto px-6 pt-40 pb-12">
+    <div className="container mx-auto px-6 py-12">
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
