@@ -192,6 +192,8 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.95 }}
             >
               <Link href={category.path} className="group block h-full">
                 <div className="relative overflow-hidden rounded-2xl h-64 flex flex-col justify-end p-8 border border-border/40 hover:border-turquoise/40 transition-all bg-white/5 shadow-sm group-hover:shadow-md">
