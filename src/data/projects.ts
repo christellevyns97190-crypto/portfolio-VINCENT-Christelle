@@ -6,6 +6,7 @@ export interface Project {
   description: string;
   imageUrl: string;
   videoUrl?: string;
+  externalUrl?: string;
   fullDescription: string;
 }
 
@@ -31,6 +32,15 @@ export const categories = [
 ];
 
 export const projects: Project[] = [
+  {
+    id: "savi",
+    title: "Site Web – Savi Bureautique",
+    category: "alternance",
+    description: "Création du site vitrine de Savi Bureautique.",
+    imageUrl: "/savi-bureautique.webp",
+    externalUrl: "https://www.savibureautique.fr",
+    fullDescription: "Conception et développement du site vitrine de Savi Bureautique, entreprise de services administratifs et bureautiques fondée en 1999. Le site présente les services proposés aux particuliers et professionnels avec une approche moderne et accessible."
+  },
   {
     id: "1",
     title: "Logo Design",
