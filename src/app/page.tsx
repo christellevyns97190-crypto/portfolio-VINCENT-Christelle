@@ -25,13 +25,13 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center">
       {/* Hero Section */}
-      <section className="relative min-h-[100svh] flex flex-col justify-center items-center text-center px-5 overflow-hidden w-full pt-20">
+      <section className="relative min-h-[100svh] md:min-h-[80vh] flex flex-col justify-center items-center text-center px-5 md:px-6 overflow-hidden w-full pt-20 md:pt-0">
         {/* Cheetah background */}
         <div
           className="absolute inset-0 -z-10"
           style={{
             backgroundImage: "url('/blackchettahback2.png')",
-            backgroundSize: "clamp(600px, 120vw, 1400px) auto",
+            backgroundSize: "1400px auto",
             backgroundRepeat: "repeat",
             opacity: 0.75,
           }}
@@ -96,9 +96,9 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="space-y-4 flex flex-col items-center"
+          className="space-y-4 md:space-y-6 flex flex-col items-center"
         >
-          <h1 className="flex flex-col items-center gap-1">
+          <h1 className="flex flex-col items-center gap-1 md:gap-2">
             <motion.span
               className="block text-center font-sans font-medium uppercase tracking-widest text-foreground"
               style={{ fontSize: "clamp(1.5rem, 7vw, 3.8rem)" }}
@@ -132,12 +132,12 @@ export default function Home() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="mt-10 flex flex-col sm:flex-row gap-4 w-full max-w-xs sm:max-w-none sm:w-auto"
+          className="mt-10 md:mt-12 flex flex-col sm:flex-row gap-4 md:gap-6 w-full max-w-xs sm:max-w-none sm:w-auto"
         >
-          <Link href="#creations" className="glass px-6 py-3 sm:px-8 sm:py-4 rounded-full font-medium flex items-center justify-center gap-2 transition-all duration-300 hover:bg-rose/10 hover:text-rose hover:[box-shadow:0_0_18px_4px_rgba(255,20,147,0.6),0_0_40px_10px_rgba(255,20,147,0.3)] text-sm sm:text-base">
-            Voir mes projets <ArrowRight size={16} />
+          <Link href="#creations" className="glass px-6 py-3 md:px-8 md:py-4 rounded-full font-medium flex items-center justify-center gap-2 transition-all duration-300 hover:bg-rose/10 hover:text-rose hover:[box-shadow:0_0_18px_4px_rgba(255,20,147,0.6),0_0_40px_10px_rgba(255,20,147,0.3)] text-sm md:text-base">
+            Voir mes projets <ArrowRight size={18} />
           </Link>
-          <Link href="/contact" className="glass px-6 py-3 sm:px-8 sm:py-4 rounded-full font-medium flex items-center justify-center gap-2 transition-all duration-300 hover:bg-rose/10 hover:text-rose hover:[box-shadow:0_0_18px_4px_rgba(255,20,147,0.6),0_0_40px_10px_rgba(255,20,147,0.3)] text-sm sm:text-base">
+          <Link href="/contact" className="glass px-6 py-3 md:px-8 md:py-4 rounded-full font-medium flex items-center justify-center gap-2 transition-all duration-300 hover:bg-rose/10 hover:text-rose hover:[box-shadow:0_0_18px_4px_rgba(255,20,147,0.6),0_0_40px_10px_rgba(255,20,147,0.3)] text-sm md:text-base">
             Me contacter
           </Link>
         </motion.div>
