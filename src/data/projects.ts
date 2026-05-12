@@ -58,14 +58,6 @@ export const projects: Project[] = [
     fullDescription: "Création d'un visuel pour la campagne Noël de Coco Rent Guadeloupe, mettant en avant le code promo NOËL25, valable jusqu'au 31 décembre pour les réservations 2025 à 2026."
   },
   {
-    id: "1",
-    title: "Logo Design",
-    category: "alternance",
-    description: "Création d&apos;une identité visuelle moderne.",
-    imageUrl: "https://images.unsplash.com/photo-1572044162444-ad60f128bde2?q=80&w=2070&auto=format&fit=crop",
-    fullDescription: "Ce projet consistait à créer une nouvelle identité visuelle pour une startup. J&apos;ai travaillé sur le logo, la palette de couleurs et la typographie."
-  },
-  {
     id: "2",
     title: "Vente Privée – Génération Mélodie",
     category: "personnel",
@@ -81,14 +73,6 @@ export const projects: Project[] = [
     description: "Maquettage UI/UX d&apos;une application de bien-être.",
     imageUrl: "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1974&auto=format&fit=crop",
     fullDescription: "Projet universitaire visant à concevoir l&apos;interface d&apos;une application de suivi du bien-être physique et mental."
-  },
-  {
-    id: "4",
-    title: "Campagne Social Media",
-    category: "alternance",
-    description: "Visuels pour les réseaux sociaux.",
-    imageUrl: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1974&auto=format&fit=crop",
-    fullDescription: "Création d&apos;une série de visuels cohérents pour une campagne Instagram et LinkedIn."
   },
   {
     id: "5",
