@@ -66,7 +66,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
   const isUniversitaire = categoryId === "universitaire";
 
   return (
-    <div className="container mx-auto px-6 py-12">
+    <div className="container mx-auto px-5 py-10 md:py-12">
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
@@ -75,8 +75,8 @@ export default function CategoryPage({ params }: CategoryPageProps) {
         <Link href="/#creations" className="text-foreground/40 hover:text-turquoise flex items-center gap-2 transition-colors mb-6 group">
           <ArrowLeft size={18} className="transition-transform group-hover:-translate-x-1" /> Retour aux catégories
         </Link>
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">{category.name}</h1>
-        <p className="text-xl text-foreground/60">{category.description}</p>
+        <h1 className="text-3xl md:text-5xl font-bold mb-3">{category.name}</h1>
+        <p className="text-base md:text-xl text-foreground/60">{category.description}</p>
       </motion.div>
 
       {isUniversitaire ? (

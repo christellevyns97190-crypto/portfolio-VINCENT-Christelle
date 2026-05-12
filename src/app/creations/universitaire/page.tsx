@@ -54,7 +54,7 @@ const UE_LIST = [
 
 export default function UniversitairePage() {
   return (
-    <div className="container mx-auto px-6 py-12">
+    <div className="container mx-auto px-5 py-10 md:py-12">
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
@@ -63,8 +63,8 @@ export default function UniversitairePage() {
         <Link href="/#creations" className="text-foreground/40 hover:text-[#FFE0E7] flex items-center gap-2 transition-colors mb-6 group">
           <ArrowLeft size={18} className="transition-transform group-hover:-translate-x-1" /> Retour aux catégories
         </Link>
-        <h1 className="text-4xl md:text-5xl font-bold mb-3">Universitaire</h1>
-        <p className="text-xl text-foreground/50">Travaux réalisés durant mon cursus BUT MMI</p>
+        <h1 className="text-3xl md:text-5xl font-bold mb-3">Universitaire</h1>
+        <p className="text-base md:text-xl text-foreground/50">Travaux réalisés durant mon cursus BUT MMI</p>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

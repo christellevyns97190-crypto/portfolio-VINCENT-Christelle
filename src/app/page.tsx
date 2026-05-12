@@ -25,24 +25,24 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center">
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex flex-col justify-center items-center text-center px-6 overflow-hidden w-full">
+      <section className="relative min-h-[100svh] flex flex-col justify-center items-center text-center px-5 overflow-hidden w-full pt-20">
         {/* Cheetah background */}
         <div
           className="absolute inset-0 -z-10"
           style={{
             backgroundImage: "url('/blackchettahback2.png')",
-            backgroundSize: "1400px auto",
+            backgroundSize: "clamp(600px, 120vw, 1400px) auto",
             backgroundRepeat: "repeat",
             opacity: 0.75,
           }}
         />
-        {/* Subtle vignette overlay for depth */}
+        {/* Vignette */}
         <div
           className="absolute inset-0 -z-10 pointer-events-none"
           style={{ background: "radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.55) 100%)" }}
         />
 
-        {/* Stickers */}
+        {/* Stickers — desktop only */}
         <div className="absolute inset-0 pointer-events-none hidden md:block">
           {[
             { src:"/s-camera.png",  h:160, top:"4%",  left:"11%",  rot:-12, dur:4.2, dy:12 },
@@ -62,7 +62,7 @@ export default function Home() {
               transition={{ duration: s.dur, repeat: Infinity, ease: "easeInOut", delay: i * 0.4 }}
             />
           ))}
-          {/* Phone sticker — cliquable, lueur rose toutes les 2s */}
+          {/* Phone sticker cliquable */}
           <Link href="/contact" style={{ position:"absolute", top:"65%", right:"6%", pointerEvents:"auto", display:"block" }}>
             <motion.img
               src="/s-phone.png"
@@ -92,122 +92,120 @@ export default function Home() {
           </Link>
         </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-6 flex flex-col items-center"
-          >
-            <h1 className="flex flex-col items-center gap-2">
-              <motion.span
-                className="block text-center font-sans font-medium uppercase tracking-widest text-foreground"
-                style={{ fontSize: "clamp(1.9rem, 5.5vw, 3.8rem)" }}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.7 }}
-              >
-                VINCENT CHRISTELLE
-              </motion.span>
-              <motion.span
-                className="block text-center text-turquoise"
-                style={{
-                  fontFamily: "var(--font-dancing-script)",
-                  fontSize: "clamp(1.8rem, 5vw, 3.2rem)",
-                  fontWeight: 400,
-                  letterSpacing: "0.04em",
-                }}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              >
-                Graphiste Digital
-              </motion.span>
-            </h1>
-            <p className="text-2xl text-foreground/40 mt-8 italic">
-              Bienvenue sur mon portfolio.
-            </p>
-          </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          className="space-y-4 flex flex-col items-center"
+        >
+          <h1 className="flex flex-col items-center gap-1">
+            <motion.span
+              className="block text-center font-sans font-medium uppercase tracking-widest text-foreground"
+              style={{ fontSize: "clamp(1.5rem, 7vw, 3.8rem)" }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.7 }}
+            >
+              VINCENT CHRISTELLE
+            </motion.span>
+            <motion.span
+              className="block text-center text-turquoise"
+              style={{
+                fontFamily: "var(--font-dancing-script)",
+                fontSize: "clamp(1.4rem, 6.5vw, 3.2rem)",
+                fontWeight: 400,
+                letterSpacing: "0.04em",
+              }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Graphiste Digital
+            </motion.span>
+          </h1>
+          <p className="text-foreground/40 mt-4 italic" style={{ fontSize: "clamp(1rem, 4vw, 1.5rem)" }}>
+            Bienvenue sur mon portfolio.
+          </p>
+        </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="mt-12 flex flex-col sm:flex-row gap-6"
+          className="mt-10 flex flex-col sm:flex-row gap-4 w-full max-w-xs sm:max-w-none sm:w-auto"
         >
-          <Link href="#creations" className="glass px-8 py-4 rounded-full font-medium flex items-center gap-2 transition-all duration-300 hover:bg-rose/10 hover:text-rose hover:[box-shadow:0_0_18px_4px_rgba(255,20,147,0.6),0_0_40px_10px_rgba(255,20,147,0.3)]">
-            Voir mes projets <ArrowRight size={18} />
+          <Link href="#creations" className="glass px-6 py-3 sm:px-8 sm:py-4 rounded-full font-medium flex items-center justify-center gap-2 transition-all duration-300 hover:bg-rose/10 hover:text-rose hover:[box-shadow:0_0_18px_4px_rgba(255,20,147,0.6),0_0_40px_10px_rgba(255,20,147,0.3)] text-sm sm:text-base">
+            Voir mes projets <ArrowRight size={16} />
           </Link>
-          <Link href="/contact" className="glass px-8 py-4 rounded-full font-medium flex items-center gap-2 transition-all duration-300 hover:bg-rose/10 hover:text-rose hover:[box-shadow:0_0_18px_4px_rgba(255,20,147,0.6),0_0_40px_10px_rgba(255,20,147,0.3)]">
+          <Link href="/contact" className="glass px-6 py-3 sm:px-8 sm:py-4 rounded-full font-medium flex items-center justify-center gap-2 transition-all duration-300 hover:bg-rose/10 hover:text-rose hover:[box-shadow:0_0_18px_4px_rgba(255,20,147,0.6),0_0_40px_10px_rgba(255,20,147,0.3)] text-sm sm:text-base">
             Me contacter
           </Link>
         </motion.div>
       </section>
 
       {/* Presentation Section with Parallax */}
-      <section ref={parallaxRef} className="relative py-32 px-6 w-full overflow-hidden flex justify-center">
+      <section ref={parallaxRef} className="relative py-16 md:py-32 px-5 w-full overflow-hidden flex justify-center">
         {/* Parallax Background */}
-        <motion.div 
+        <motion.div
           style={{ y }}
           className="absolute inset-0 -z-10 h-[140%] w-full"
         >
-          <div 
+          <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
             style={{ backgroundImage: "url('/parallax-bg.png')" }}
           />
-            {/* Overlay to ensure readability */}
-            <div className="absolute inset-0 bg-background/60" />
-          </motion.div>
+          <div className="absolute inset-0 bg-background/60" />
+        </motion.div>
 
-          <motion.div 
-            {...fadeIn}
-            className="glass p-8 md:p-12 rounded-3xl border border-foreground/10 shadow-2xl max-w-4xl w-full"
-          >
-          <h2 className="text-3xl font-bold mb-6 text-turquoise">À propos de moi</h2>
-          <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
+        <motion.div
+          {...fadeIn}
+          className="glass p-6 md:p-12 rounded-3xl border border-foreground/10 shadow-2xl max-w-4xl w-full"
+        >
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-turquoise">À propos de moi</h2>
+          <div className="space-y-4 text-base md:text-lg text-foreground/80 leading-relaxed">
             <p>
-              
-              Je suis <strong>Christelle VINCENT</strong>, étudiante en deuxième année d&apos;MMI en Guadeloupe. 
+              Je suis <strong>Christelle VINCENT</strong>, étudiante en deuxième année d&apos;MMI en Guadeloupe.
               Passionnée par la créativité, la musique et le bien-être physique et mental.
             </p>
             <p>
-              J’ai toujours été attirée par le montage photo et vidéo, l’art de créer, l’esthétique des choses. 
-              J’aime exprimer ma créativité, c&apos;est pour cela qu&apos;aujourd&apos;hui je choisis le métier du Design digital.
+              J'ai toujours été attirée par le montage photo et vidéo, l'art de créer, l'esthétique des choses.
+              J'aime exprimer ma créativité, c&apos;est pour cela qu&apos;aujourd&apos;hui je choisis le métier du Design digital.
             </p>
           </div>
 
-          <div className="mt-10 flex flex-wrap gap-4 justify-center">
+          <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
             <motion.a
               whileHover={{ scale: 1.02 }}
               href="/CV_Christelle_VINCENT.pdf"
               download
-              className="glass inline-flex items-center gap-2 px-8 py-4 rounded-xl font-medium border border-rose bg-rose/60 hover:bg-rose/80 transition-colors"
+              className="glass inline-flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-xl font-medium border border-rose bg-rose/60 hover:bg-rose/80 transition-colors text-sm md:text-base"
             >
-              <Download size={18} /> Télécharger mon CV (PDF)
+              <Download size={16} /> Télécharger mon CV (PDF)
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.02 }}
               href="/CV_Christelle_VINCENT.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="glass inline-flex items-center gap-2 px-8 py-4 rounded-xl font-medium border border-white/20 bg-white/10 hover:bg-white/20 transition-colors text-white"
+              className="glass inline-flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-xl font-medium border border-white/20 bg-white/10 hover:bg-white/20 transition-colors text-white text-sm md:text-base"
             >
-              <Eye size={18} /> Visualiser mon CV
+              <Eye size={16} /> Visualiser mon CV
             </motion.a>
           </div>
         </motion.div>
       </section>
 
       {/* Creations Section */}
-      <section id="creations" className="py-24 px-6 max-w-6xl w-full">
-        <motion.div 
+      <section id="creations" className="py-16 md:py-24 px-5 max-w-6xl w-full">
+        <motion.div
           {...fadeIn}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4 text-rose">Mes Créations</h2>
-          <p className="text-foreground/60">Découvrez mon univers à travers différentes catégories.</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-rose">Mes Créations</h2>
+          <p className="text-foreground/60 text-sm md:text-base">Découvrez mon univers à travers différentes catégories.</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-8">
           {categories.map((category, index) => (
             <motion.div
               key={category.id}
@@ -219,15 +217,15 @@ export default function Home() {
               whileTap={{ scale: 0.95 }}
             >
               <Link href={category.path} className="group block h-full">
-                <div className="relative overflow-hidden rounded-2xl h-64 flex flex-col justify-end p-8 border border-border/40 hover:border-turquoise/40 transition-all bg-white/5 shadow-sm group-hover:shadow-md">
+                <div className="relative overflow-hidden rounded-2xl h-48 md:h-64 flex flex-col justify-end p-6 md:p-8 border border-border/40 hover:border-turquoise/40 transition-all bg-white/5 shadow-sm group-hover:shadow-md">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <h3 className="text-2xl font-bold text-foreground group-hover:text-turquoise transition-colors z-10">
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-turquoise transition-colors z-10">
                     {category.name}
                   </h3>
-                  <p className="text-foreground/60 mt-2 text-sm z-10">
+                  <p className="text-foreground/60 mt-1 text-xs md:text-sm z-10">
                     {category.description}
                   </p>
-                  <div className="mt-4 flex items-center text-turquoise text-sm font-medium opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0 z-10">
+                  <div className="mt-3 flex items-center text-turquoise text-sm font-medium opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0 z-10">
                     Découvrir <ArrowRight size={14} className="ml-1" />
                   </div>
                 </div>

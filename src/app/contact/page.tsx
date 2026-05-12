@@ -35,7 +35,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="container mx-auto px-6 py-12 max-w-2xl">
+    <div className="container mx-auto px-5 py-10 md:py-12 max-w-2xl">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -49,7 +49,7 @@ export default function Contact() {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.2 }}
-        className="glass p-8 md:p-12 rounded-3xl"
+        className="glass p-5 md:p-12 rounded-3xl"
       >
         {status === 'success' ? (
           <motion.div
