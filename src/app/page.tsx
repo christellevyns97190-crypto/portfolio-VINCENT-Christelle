@@ -123,7 +123,7 @@ export default function Home() {
                 Graphiste Digital
               </motion.span>
             </h1>
-            <p className="text-lg text-foreground/40 mt-8 italic">
+            <p className="text-2xl text-foreground/40 mt-8 italic">
               Bienvenue sur mon portfolio.
             </p>
           </motion.div>
