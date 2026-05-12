@@ -96,13 +96,9 @@ export default function Home() {
                 Graphiste Digital
               </motion.span>
             </h1>
-            <motion.p
-              className="text-lg text-foreground/40 mt-8 italic"
-              animate={{ scale: [1, 1.18, 1] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            >
+            <p className="text-lg text-foreground/40 mt-8 italic">
               Bienvenue sur mon portfolio.
-            </motion.p>
+            </p>
           </motion.div>
 
         <motion.div 
@@ -111,10 +107,10 @@ export default function Home() {
           transition={{ delay: 0.4, duration: 0.6 }}
           className="mt-12 flex flex-col sm:flex-row gap-6"
         >
-          <Link href="#creations" className="glass px-8 py-4 rounded-full font-medium flex items-center gap-2 hover:bg-turquoise/10 transition-colors">
+          <Link href="#creations" className="glass px-8 py-4 rounded-full font-medium flex items-center gap-2 transition-all duration-300 hover:bg-rose/10 hover:text-rose hover:[box-shadow:0_0_18px_4px_rgba(255,20,147,0.6),0_0_40px_10px_rgba(255,20,147,0.3)]">
             Voir mes projets <ArrowRight size={18} />
           </Link>
-          <Link href="/contact" className="glass px-8 py-4 rounded-full font-medium flex items-center gap-2 hover:bg-rose/10 transition-colors">
+          <Link href="/contact" className="glass px-8 py-4 rounded-full font-medium flex items-center gap-2 transition-all duration-300 hover:bg-rose/10 hover:text-rose hover:[box-shadow:0_0_18px_4px_rgba(255,20,147,0.6),0_0_40px_10px_rgba(255,20,147,0.3)]">
             Me contacter
           </Link>
         </motion.div>
