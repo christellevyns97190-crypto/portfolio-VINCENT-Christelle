@@ -52,7 +52,6 @@ export default function Home() {
             { src:"/s-cup.png",     h:190, top:"28%", right:"2%",  rot:-6,  dur:5.5, dy:13 },
             { src:"/s-laptop.png",  h:175, top:"69%", left:"2%",   rot:5,   dur:4.9, dy:10 },
             { src:"/s-diamond.png", h:120, top:"49%", right:"20%", rot:-5,  dur:3.8, dy:8  },
-            { src:"/s-phone.png",   h:165, top:"65%", right:"6%",  rot:14,  dur:5.3, dy:12 },
           ].map((s, i) => (
             <motion.img
               key={s.src}
@@ -63,6 +62,31 @@ export default function Home() {
               transition={{ duration: s.dur, repeat: Infinity, ease: "easeInOut", delay: i * 0.4 }}
             />
           ))}
+          {/* Phone sticker — cliquable, lueur rose toutes les 2s */}
+          <Link href="/contact" style={{ position:"absolute", top:"65%", right:"6%", pointerEvents:"auto", display:"block" }}>
+            <motion.img
+              src="/s-phone.png"
+              alt="Me contacter"
+              style={{ height:"165px", width:"auto", cursor:"pointer" }}
+              animate={{
+                y: [0, -12, 0],
+                rotate: [14, 17, 14],
+                filter: [
+                  "drop-shadow(0 0 0px rgba(255,20,147,0))",
+                  "drop-shadow(0 0 0px rgba(255,20,147,0))",
+                  "drop-shadow(0 0 18px rgba(255,20,147,0.95)) drop-shadow(0 0 40px rgba(255,20,147,0.6))",
+                  "drop-shadow(0 0 0px rgba(255,20,147,0))",
+                ],
+              }}
+              transition={{
+                y: { duration: 5.3, repeat: Infinity, ease: "easeInOut", delay: 7 * 0.4 },
+                rotate: { duration: 5.3, repeat: Infinity, ease: "easeInOut", delay: 7 * 0.4 },
+                filter: { duration: 2, repeat: Infinity, ease: "easeInOut", repeatDelay: 0 },
+              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.93 }}
+            />
+          </Link>
         </div>
 
           <motion.div
