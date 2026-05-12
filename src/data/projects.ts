@@ -42,6 +42,22 @@ export const projects: Project[] = [
     fullDescription: "Conception et développement du site vitrine de Savi Bureautique, entreprise de services administratifs et bureautiques fondée en 1999. Le site présente les services proposés aux particuliers et professionnels avec une approche moderne et accessible."
   },
   {
+    id: "alt-casablanca",
+    title: "Flyer – Casa Blanca La Nuit Blanche",
+    category: "alternance",
+    description: "Flyer événementiel pour une soirée We Love Toubana.",
+    imageUrl: "/alt-flyer-casablanca.jpg",
+    fullDescription: "Création d'un flyer pour la soirée Casa Blanca – La Nuit Blanche organisée par We Love Toubana à La Palmeraie. Visuel orientaliste avec DJ lineup, date et prévente sur Bizouk."
+  },
+  {
+    id: "alt-noel-cocorent",
+    title: "Flyer Noël – Coco Rent Guadeloupe",
+    category: "alternance",
+    description: "Visuel promotionnel code promo de Noël.",
+    imageUrl: "/alt-flyer-noel-cocorent.png",
+    fullDescription: "Création d'un visuel pour la campagne Noël de Coco Rent Guadeloupe, mettant en avant le code promo NOËL25, valable jusqu'au 31 décembre pour les réservations 2025 à 2026."
+  },
+  {
     id: "1",
     title: "Logo Design",
     category: "alternance",
