@@ -5,6 +5,7 @@ export interface Project {
   subCategory?: string;
   description: string;
   imageUrl: string;
+  detailImageUrl?: string;
   videoUrl?: string;
   externalUrl?: string;
   fullDescription: string;
@@ -38,6 +39,7 @@ export const projects: Project[] = [
     category: "alternance",
     description: "Création du site vitrine de Savi Bureautique.",
     imageUrl: "/savi-bureautique.gif",
+    detailImageUrl: "/savi-bureautique.webp",
     externalUrl: "https://www.savibureautique.fr",
     fullDescription: "Conception et développement du site vitrine de Savi Bureautique, entreprise de services administratifs et bureautiques fondée en 1999. Le site présente les services proposés aux particuliers et professionnels avec une approche moderne et accessible."
   },
@@ -47,6 +49,7 @@ export const projects: Project[] = [
     category: "alternance",
     description: "Flyer événementiel pour une soirée We Love Toubana.",
     imageUrl: "/alt-flyer-casablanca.gif",
+    detailImageUrl: "/alt-flyer-casablanca.jpg",
     fullDescription: "Création d'un flyer pour la soirée Casa Blanca – La Nuit Blanche organisée par We Love Toubana à La Palmeraie. Visuel orientaliste avec DJ lineup, date et prévente sur Bizouk."
   },
   {
@@ -55,6 +58,7 @@ export const projects: Project[] = [
     category: "alternance",
     description: "Visuel promotionnel code promo de Noël.",
     imageUrl: "/alt-flyer-noel-cocorent.gif",
+    detailImageUrl: "/alt-flyer-noel-cocorent.png",
     fullDescription: "Création d'un visuel pour la campagne Noël de Coco Rent Guadeloupe, mettant en avant le code promo NOËL25, valable jusqu'au 31 décembre pour les réservations 2025 à 2026."
   },
   {

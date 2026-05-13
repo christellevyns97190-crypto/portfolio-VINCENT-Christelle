@@ -51,7 +51,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             />
           ) : (
             <img
-              src={project.imageUrl}
+              src={project.detailImageUrl ?? project.imageUrl}
               alt={project.title}
               className="w-full object-contain max-h-[80vh]"
             />
