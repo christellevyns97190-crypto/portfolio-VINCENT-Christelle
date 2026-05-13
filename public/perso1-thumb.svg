@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <radialGradient id="bg1" cx="35%" cy="35%" r="80%" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFAE40"/>
+      <stop offset="100%" stop-color="#E05000"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bg1)"/>
+
+  <!-- Decorative soft circle -->
+  <circle cx="590" cy="290" r="230" fill="rgba(255,255,255,0.05)"/>
+
+  <!-- Christmas tree — right side, geometric minimal -->
+  <polygon points="582,170 508,305 656,305" fill="#3ECDB0"/>
+  <polygon points="582,120 482,280 682,280" fill="#45DFC0"/>
+  <polygon points="582,78 462,240 702,240" fill="#50EDCE"/>
+  <!-- Trunk -->
+  <rect x="564" y="370" width="36" height="52" rx="6" fill="#7B4E2C"/>
+  <!-- Star -->
+  <polygon points="582,52 589,72 611,72 595,84 601,104 582,92 563,104 569,84 553,72 575,72" fill="#FFE34A"/>
+
+  <!-- -30% badge -->
+  <circle cx="215" cy="315" r="118" fill="#CC2A2A"/>
+  <circle cx="215" cy="315" r="105" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+  <text x="215" y="300" font-family="Arial Black, sans-serif" font-size="56" font-weight="900" fill="white" text-anchor="middle" dominant-baseline="middle">-30%</text>
+  <text x="215" y="350" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="rgba(255,255,255,0.88)" text-anchor="middle" letter-spacing="2">SUR TOUT LE MAGASIN</text>
+
+  <!-- Title -->
+  <text x="72" y="132" font-family="Arial Black, sans-serif" font-size="60" font-weight="900" fill="white" letter-spacing="-1">VENTE</text>
+  <text x="72" y="188" font-family="Georgia, serif" font-size="50" font-style="italic" fill="#3ECDB0">privée</text>
+
+  <!-- Thin divider -->
+  <line x1="72" y1="530" x2="300" y2="530" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  <!-- Bottom label -->
+  <text x="72" y="555" font-family="Arial, sans-serif" font-size="13" fill="rgba(255,255,255,0.6)" letter-spacing="4">GÉNÉRATION MÉLODIE</text>
+</svg>
