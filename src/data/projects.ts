@@ -66,7 +66,7 @@ export const projects: Project[] = [
     title: "Vente Privée – Génération Mélodie",
     category: "personnel",
     description: "Affiche promotionnelle pour une vente privée.",
-    imageUrl: "/perso1-thumb.svg",
+    imageUrl: "/perso1-thumb.gif",
     detailImageUrl: "/perso1.png",
     fullDescription: "Création d'une affiche pour la vente privée de Génération Mélodie, boutique santé, bien-être & accessoires. Design mettant en avant la réduction de -30% et les informations clés de l'événement."
   },
@@ -93,7 +93,7 @@ export const projects: Project[] = [
     title: "Rencontre Human Design & Hypersensibilité",
     category: "personnel",
     description: "Affiche événementielle pour un atelier bien-être.",
-    imageUrl: "/perso3-thumb.svg",
+    imageUrl: "/perso3-thumb.gif",
     detailImageUrl: "/perso3.png",
     fullDescription: "Création d'une affiche pour la rencontre Human Design & Hypersensibilité organisée par MP Consulting au Salon de Thé Paris."
   },
