@@ -6,6 +6,7 @@ import { ArrowRight, Download, Eye } from "lucide-react";
 import { categories } from "@/data/projects";
 import { useRef } from "react";
 import { useTranslation } from "@/i18n/I18nProvider";
+import { useTheme } from "@/theme/ThemeProvider";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -23,6 +24,7 @@ export default function Home() {
 
   const y = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
   const { t } = useTranslation();
+  const { theme } = useTheme();
 
   return (
     <div className="flex flex-col items-center">
@@ -32,16 +34,16 @@ export default function Home() {
         <div
           className="absolute inset-0 -z-10"
           style={{
-            backgroundImage: "url('/blackchettahback2.png')",
+            backgroundImage: theme === "dark" ? "url('/blackchettahback2.png')" : "url('/leopardpink.png')",
             backgroundSize: "1400px auto",
             backgroundRepeat: "repeat",
-            opacity: 0.75,
+            opacity: theme === "dark" ? 0.75 : 1,
           }}
         />
         {/* Vignette */}
         <div
           className="absolute inset-0 -z-10 pointer-events-none"
-          style={{ background: "radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.55) 100%)" }}
+          style={{ background: theme === "dark" ? "radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.55) 100%)" : "radial-gradient(ellipse at center, transparent 30%, rgba(255,255,255,0.3) 100%)" }}
         />
 
         {/* Stickers — desktop only */}
@@ -111,7 +113,7 @@ export default function Home() {
               VINCENT CHRISTELLE
             </motion.span>
             <motion.span
-              className="block text-center text-turquoise"
+              className={`block text-center ${theme === "dark" ? "text-turquoise" : "text-foreground"}`}
               style={{
                 fontFamily: "var(--font-dancing-script)",
                 fontSize: "clamp(1.4rem, 6.5vw, 3.2rem)",
