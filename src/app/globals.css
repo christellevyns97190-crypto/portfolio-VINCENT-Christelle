@@ -167,19 +167,18 @@
 .light .hero-vignette {
   background: radial-gradient(ellipse at center, transparent 30%, rgba(255,255,255,0.3) 100%);
 }
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: -9;
-  pointer-events: none;
-  display: none;
-}
-.light .hero-overlay {
-  display: block;
-  background: rgba(0, 0, 0, 0.12);
-}
 .light .hero-subtitle {
   color: var(--color-turquoise);
+}
+
+/* Light mode — glass card behind hero text */
+.light .hero-text-glass {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 90vw;
 }
 
 /* Light mode — CV button text */

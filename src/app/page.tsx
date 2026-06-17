@@ -31,8 +31,6 @@ export default function Home() {
         <div className="absolute inset-0 -z-10 hero-bg" />
         {/* Vignette */}
         <div className="absolute inset-0 -z-10 pointer-events-none hero-vignette" />
-        {/* Light mode dark overlay (improves readability) */}
-        <div className="hero-overlay" />
 
         {/* Stickers — desktop only */}
         <div className="absolute inset-0 pointer-events-none hidden md:block">
@@ -84,6 +82,7 @@ export default function Home() {
           </Link>
         </div>
 
+        <div className="hero-text-glass">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -119,6 +118,7 @@ export default function Home() {
             {t("home.welcome")}
           </p>
         </motion.div>
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
