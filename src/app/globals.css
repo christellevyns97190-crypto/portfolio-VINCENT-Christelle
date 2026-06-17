@@ -145,30 +145,25 @@
   background: rgba(245, 245, 250, 0.97);
 }
 
-/* Hero section — dark mode (default) */
+/* Hero section */
 .hero-bg {
-  background-image: url('/blackchettahback2.png');
-  background-size: 1400px auto;
-  background-repeat: repeat;
-  opacity: 0.75;
+  background-image: url('/leopardpinklight.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .hero-vignette {
-  background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.55) 100%);
+  background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.3) 100%);
 }
 .hero-subtitle {
   color: var(--color-turquoise);
 }
 
-/* Hero section — light mode (.light on <html>) */
-.light .hero-bg {
-  background-image: url('/leopardpinklight.png');
-  opacity: 1;
+/* CV button — default (dark mode) */
+.btn-view-cv {
+  color: white;
 }
-.light .hero-subtitle {
-  color: var(--color-turquoise);
-}
-
-/* Light mode — CV button text */
+/* CV button — light mode */
 .light .btn-view-cv {
   color: #1a1a1a;
   border-color: rgba(0, 0, 0, 0.2);

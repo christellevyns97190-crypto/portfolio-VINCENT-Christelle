@@ -171,7 +171,7 @@ export default function Home() {
               href="/CV_Christelle_VINCENT.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-view-cv glass inline-flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-xl font-medium border border-white/20 bg-white/10 hover:bg-white/20 transition-colors text-white text-sm md:text-base"
+              className="btn-view-cv glass inline-flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-xl font-medium border border-white/20 bg-white/10 hover:bg-white/20 transition-colors text-sm md:text-base"
             >
               <Eye size={16} /> {t("home.viewCV")}
             </motion.a>
