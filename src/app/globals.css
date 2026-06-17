@@ -167,6 +167,17 @@
 .light .hero-vignette {
   background: radial-gradient(ellipse at center, transparent 30%, rgba(255,255,255,0.3) 100%);
 }
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -9;
+  pointer-events: none;
+  display: none;
+}
+.light .hero-overlay {
+  display: block;
+  background: rgba(0, 0, 0, 0.12);
+}
 .light .hero-subtitle {
   color: var(--color-turquoise);
 }

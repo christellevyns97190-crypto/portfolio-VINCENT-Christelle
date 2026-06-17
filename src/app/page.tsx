@@ -31,6 +31,8 @@ export default function Home() {
         <div className="absolute inset-0 -z-10 hero-bg" />
         {/* Vignette */}
         <div className="absolute inset-0 -z-10 pointer-events-none hero-vignette" />
+        {/* Light mode dark overlay (improves readability) */}
+        <div className="hero-overlay" />
 
         {/* Stickers — desktop only */}
         <div className="absolute inset-0 pointer-events-none hidden md:block">
