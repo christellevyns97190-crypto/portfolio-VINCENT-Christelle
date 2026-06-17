@@ -6,11 +6,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "@/i18n/I18nProvider";
+import { useTheme } from "@/theme/ThemeProvider";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const { t, lang, toggleLang } = useTranslation();
+  const { theme, toggleTheme } = useTheme();
 
   // Close on route change
   useEffect(() => { setOpen(false); }, [pathname]);
@@ -62,9 +64,17 @@ export default function Navbar() {
             >
               {lang === "fr" ? "EN" : "FR"}
             </button>
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="text-base px-2 py-1 rounded-full border border-foreground/20 hover:border-turquoise transition-all"
+              aria-label="Toggle theme"
+            >
+              {theme === "dark" ? "☀️" : "🌙"}
+            </button>
           </div>
 
-          {/* Mobile hamburger + lang */}
+          {/* Mobile hamburger + lang + theme */}
           <div className="md:hidden flex items-center gap-2">
             <button
               onClick={toggleLang}
@@ -72,6 +82,13 @@ export default function Navbar() {
               aria-label="Toggle language"
             >
               {lang === "fr" ? "EN" : "FR"}
+            </button>
+            <button
+              onClick={toggleTheme}
+              className="text-base px-2 py-1 rounded-full border border-foreground/20 hover:border-turquoise transition-all"
+              aria-label="Toggle theme"
+            >
+              {theme === "dark" ? "☀️" : "🌙"}
             </button>
             <button
               className="flex items-center justify-center w-8 h-8 text-foreground/80 hover:text-turquoise transition-colors"
@@ -92,8 +109,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.22 }}
-            className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-10 md:hidden"
-            style={{ background: "rgba(10,10,18,0.97)", backdropFilter: "blur(18px)" }}
+            className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-10 md:hidden mobile-overlay"
           >
             {navItems.map((item, i) => (
               <motion.div
