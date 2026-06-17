@@ -82,7 +82,6 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="hero-text-glass">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -118,7 +117,6 @@ export default function Home() {
             {t("home.welcome")}
           </p>
         </motion.div>
-        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
