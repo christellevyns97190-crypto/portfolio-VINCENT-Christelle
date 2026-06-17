@@ -171,7 +171,7 @@ export default function Home() {
               href="/CV_Christelle_VINCENT.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="glass inline-flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-xl font-medium border border-white/20 bg-white/10 hover:bg-white/20 transition-colors text-white text-sm md:text-base"
+              className="btn-view-cv glass inline-flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-xl font-medium border border-white/20 bg-white/10 hover:bg-white/20 transition-colors text-white text-sm md:text-base"
             >
               <Eye size={16} /> {t("home.viewCV")}
             </motion.a>
@@ -185,7 +185,7 @@ export default function Home() {
           {...fadeIn}
           className="text-center mb-10 md:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-rose">{t("home.creationsTitle")}</h2>
+          <h2 className="creations-title text-3xl md:text-4xl font-bold mb-3 text-rose">{t("home.creationsTitle")}</h2>
           <p className="text-foreground/60 text-sm md:text-base">{t("home.creationsDesc")}</p>
         </motion.div>
 

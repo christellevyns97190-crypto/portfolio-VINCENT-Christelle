@@ -168,7 +168,22 @@
   background: radial-gradient(ellipse at center, transparent 30%, rgba(255,255,255,0.3) 100%);
 }
 .light .hero-subtitle {
-  color: var(--foreground);
+  color: var(--color-turquoise);
+}
+
+/* Light mode — CV button text */
+.light .btn-view-cv {
+  color: #1a1a1a;
+  border-color: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.05);
+}
+.light .btn-view-cv:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Light mode — "Mes Créations" title */
+.light .creations-title {
+  color: var(--color-turquoise);
 }
 
 ::selection {
