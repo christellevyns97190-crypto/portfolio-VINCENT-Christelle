@@ -145,7 +145,7 @@
   background: rgba(245, 245, 250, 0.97);
 }
 
-/* Hero section */
+/* Hero section — dark mode (default) */
 .hero-bg {
   background-image: url('/blackchettahback2.png');
   background-size: 1400px auto;
@@ -160,6 +160,24 @@
 }
 .hero-name {
   color: white;
+}
+
+/* Hero section — light mode */
+.light .hero-bg {
+  background-image: url('/leopardpinklight.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+.light .hero-vignette {
+  background: none;
+}
+.light .hero-name {
+  color: #1a1a1a;
+}
+.light .hero-subtitle {
+  color: var(--color-turquoise);
 }
 
 /* CV button — default (dark mode) */
