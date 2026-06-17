@@ -5,10 +5,12 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { useTranslation } from "@/i18n/I18nProvider";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const { t, lang, toggleLang } = useTranslation();
 
   // Close on route change
   useEffect(() => { setOpen(false); }, [pathname]);
@@ -20,9 +22,9 @@ export default function Navbar() {
   }, [open]);
 
   const navItems = [
-    { name: "Accueil", path: "/" },
-    { name: "Créations", path: "/#creations" },
-    { name: "Contact", path: "/contact" },
+    { name: t("nav.accueil"), path: "/" },
+    { name: t("nav.creations"), path: "/#creations" },
+    { name: t("nav.contact"), path: "/contact" },
   ];
 
   return (
@@ -51,16 +53,34 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
+
+            {/* Language Toggle */}
+            <button
+              onClick={toggleLang}
+              className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-foreground/20 hover:border-turquoise hover:text-turquoise transition-all"
+              aria-label="Toggle language"
+            >
+              {lang === "fr" ? "EN" : "FR"}
+            </button>
           </div>
 
-          {/* Mobile hamburger */}
-          <button
-            className="md:hidden flex items-center justify-center w-8 h-8 text-foreground/80 hover:text-turquoise transition-colors"
-            onClick={() => setOpen((v) => !v)}
-            aria-label="Menu"
-          >
-            {open ? <X size={20} /> : <Menu size={20} />}
-          </button>
+          {/* Mobile hamburger + lang */}
+          <div className="md:hidden flex items-center gap-2">
+            <button
+              onClick={toggleLang}
+              className="text-xs font-bold uppercase tracking-wider px-2 py-1 rounded-full border border-foreground/20 hover:border-turquoise hover:text-turquoise transition-all"
+              aria-label="Toggle language"
+            >
+              {lang === "fr" ? "EN" : "FR"}
+            </button>
+            <button
+              className="flex items-center justify-center w-8 h-8 text-foreground/80 hover:text-turquoise transition-colors"
+              onClick={() => setOpen((v) => !v)}
+              aria-label="Menu"
+            >
+              {open ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
         </motion.div>
       </nav>
 

@@ -3,10 +3,12 @@
 import { motion } from "framer-motion";
 import { Send, CheckCircle, AlertCircle } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "@/i18n/I18nProvider";
 
 export default function Contact() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [form, setForm] = useState({ nom: '', prenom: '', email: '', sujet: '', message: '' });
+  const { t } = useTranslation();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.id]: e.target.value });
@@ -41,8 +43,8 @@ export default function Contact() {
         animate={{ opacity: 1, y: 0 }}
         className="text-center mb-12"
       >
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Contactez-moi</h1>
-        <p className="text-foreground/60">Une question ou un projet ? N&apos;hésitez pas à m&apos;écrire.</p>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">{t("contact.title")}</h1>
+        <p className="text-foreground/60">{t("contact.subtitle")}</p>
       </motion.div>
 
       <motion.div
@@ -58,20 +60,20 @@ export default function Contact() {
             className="flex flex-col items-center justify-center gap-4 py-12 text-center"
           >
             <CheckCircle size={56} className="text-[#FFE0E7]" />
-            <h2 className="text-2xl font-bold">Message envoyé !</h2>
-            <p className="text-foreground/60">Merci, je vous répondrai dans les plus brefs délais.</p>
+            <h2 className="text-2xl font-bold">{t("contact.successTitle")}</h2>
+            <p className="text-foreground/60">{t("contact.successText")}</p>
             <button
               onClick={() => setStatus('idle')}
               className="mt-4 px-6 py-2 rounded-xl border border-[#FFE0E7]/40 text-[#FFE0E7] hover:bg-[#FFE0E7]/10 transition-colors"
             >
-              Envoyer un autre message
+              {t("contact.sendAnother")}
             </button>
           </motion.div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label htmlFor="nom" className="text-sm font-medium">Nom</label>
+                <label htmlFor="nom" className="text-sm font-medium">{t("contact.nom")}</label>
                 <input
                   type="text"
                   id="nom"
@@ -79,11 +81,11 @@ export default function Contact() {
                   value={form.nom}
                   onChange={handleChange}
                   className="w-full bg-white/5 border border-border/40 rounded-xl px-4 py-3 focus:outline-none focus:border-[#FFE0E7] transition-colors"
-                  placeholder="Votre nom"
+                  placeholder={t("contact.nomPlaceholder")}
                 />
               </div>
               <div className="space-y-2">
-                <label htmlFor="prenom" className="text-sm font-medium">Prénom</label>
+                <label htmlFor="prenom" className="text-sm font-medium">{t("contact.prenom")}</label>
                 <input
                   type="text"
                   id="prenom"
@@ -91,12 +93,12 @@ export default function Contact() {
                   value={form.prenom}
                   onChange={handleChange}
                   className="w-full bg-white/5 border border-border/40 rounded-xl px-4 py-3 focus:outline-none focus:border-[#FFE0E7] transition-colors"
-                  placeholder="Votre prénom"
+                  placeholder={t("contact.prenomPlaceholder")}
                 />
               </div>
             </div>
             <div className="space-y-2">
-              <label htmlFor="email" className="text-sm font-medium">Email</label>
+              <label htmlFor="email" className="text-sm font-medium">{t("contact.email")}</label>
               <input
                 type="email"
                 id="email"
@@ -104,11 +106,11 @@ export default function Contact() {
                 value={form.email}
                 onChange={handleChange}
                 className="w-full bg-white/5 border border-border/40 rounded-xl px-4 py-3 focus:outline-none focus:border-[#FFE0E7] transition-colors"
-                placeholder="votre@email.com"
+                placeholder={t("contact.emailPlaceholder")}
               />
             </div>
             <div className="space-y-2">
-              <label htmlFor="sujet" className="text-sm font-medium">Sujet</label>
+              <label htmlFor="sujet" className="text-sm font-medium">{t("contact.sujet")}</label>
               <input
                 type="text"
                 id="sujet"
@@ -116,11 +118,11 @@ export default function Contact() {
                 value={form.sujet}
                 onChange={handleChange}
                 className="w-full bg-white/5 border border-border/40 rounded-xl px-4 py-3 focus:outline-none focus:border-[#FFE0E7] transition-colors"
-                placeholder="Objet de votre message"
+                placeholder={t("contact.sujetPlaceholder")}
               />
             </div>
             <div className="space-y-2">
-              <label htmlFor="message" className="text-sm font-medium">Message</label>
+              <label htmlFor="message" className="text-sm font-medium">{t("contact.message")}</label>
               <textarea
                 id="message"
                 required
@@ -128,14 +130,14 @@ export default function Contact() {
                 value={form.message}
                 onChange={handleChange}
                 className="w-full bg-white/5 border border-border/40 rounded-xl px-4 py-3 focus:outline-none focus:border-[#FFE0E7] transition-colors resize-none"
-                placeholder="Comment puis-je vous aider ?"
+                placeholder={t("contact.messagePlaceholder")}
               />
             </div>
 
             {status === 'error' && (
               <div className="flex items-center gap-2 text-red-400 text-sm">
                 <AlertCircle size={16} />
-                <span>Une erreur est survenue. Veuillez réessayer.</span>
+                <span>{t("contact.error")}</span>
               </div>
             )}
 
@@ -144,10 +146,10 @@ export default function Contact() {
               disabled={status === 'loading'}
               className="w-full py-4 rounded-xl font-bold flex items-center justify-center gap-2 bg-[#FFE0E7]/10 border border-[#FFE0E7]/40 text-[#FFE0E7] hover:bg-[#FFE0E7]/20 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {status === 'loading' ? 'Envoi en cours...' : <>Envoyer le message <Send size={18} /></>}
+              {status === 'loading' ? t("contact.sending") : <>{t("contact.send")} <Send size={18} /></>}
             </button>
             <p className="text-sm text-center text-foreground/40 mt-4">
-              Je vous répondrai dans les plus brefs délais.
+              {t("contact.footerHint")}
             </p>
           </form>
         )}

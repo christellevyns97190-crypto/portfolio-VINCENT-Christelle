@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight, Download, Eye } from "lucide-react";
 import { categories } from "@/data/projects";
 import { useRef } from "react";
+import { useTranslation } from "@/i18n/I18nProvider";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -21,6 +22,7 @@ export default function Home() {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
+  const { t } = useTranslation();
 
   return (
     <div className="flex flex-col items-center">
@@ -120,11 +122,11 @@ export default function Home() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Graphiste Digital
+              {t("home.subtitle")}
             </motion.span>
           </h1>
           <p className="text-foreground/40 mt-4 italic" style={{ fontSize: "clamp(1rem, 4vw, 1.5rem)" }}>
-            Bienvenue sur mon portfolio.
+            {t("home.welcome")}
           </p>
         </motion.div>
 
@@ -135,10 +137,10 @@ export default function Home() {
           className="mt-10 md:mt-12 flex flex-col sm:flex-row gap-4 md:gap-6 w-full max-w-xs sm:max-w-none sm:w-auto"
         >
           <Link href="#creations" className="glass px-6 py-3 md:px-8 md:py-4 rounded-full font-medium flex items-center justify-center gap-2 transition-all duration-300 hover:bg-rose/10 hover:text-rose hover:[box-shadow:0_0_18px_4px_rgba(255,20,147,0.6),0_0_40px_10px_rgba(255,20,147,0.3)] text-sm md:text-base">
-            Voir mes projets <ArrowRight size={18} />
+            {t("home.voirProjets")} <ArrowRight size={18} />
           </Link>
           <Link href="/contact" className="glass px-6 py-3 md:px-8 md:py-4 rounded-full font-medium flex items-center justify-center gap-2 transition-all duration-300 hover:bg-rose/10 hover:text-rose hover:[box-shadow:0_0_18px_4px_rgba(255,20,147,0.6),0_0_40px_10px_rgba(255,20,147,0.3)] text-sm md:text-base">
-            Me contacter
+            {t("home.meContacter")}
           </Link>
         </motion.div>
       </section>
@@ -161,16 +163,10 @@ export default function Home() {
           {...fadeIn}
           className="glass p-6 md:p-12 rounded-3xl border border-foreground/10 shadow-2xl max-w-4xl w-full"
         >
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-turquoise">À propos de moi</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-turquoise">{t("home.aboutTitle")}</h2>
           <div className="space-y-4 text-base md:text-lg text-foreground/80 leading-relaxed">
-            <p>
-              Je suis <strong>Christelle VINCENT</strong>, étudiante en deuxième année d&apos;MMI en Guadeloupe.
-              Passionnée par la créativité, la musique et le bien-être physique et mental.
-            </p>
-            <p>
-              J'ai toujours été attirée par le montage photo et vidéo, l'art de créer, l'esthétique des choses.
-              J'aime exprimer ma créativité, c&apos;est pour cela qu&apos;aujourd&apos;hui je choisis le métier du Design digital.
-            </p>
+            <p dangerouslySetInnerHTML={{ __html: t("home.aboutP1") }} />
+            <p>{t("home.aboutP2")}</p>
           </div>
 
           <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
@@ -180,7 +176,7 @@ export default function Home() {
               download
               className="glass inline-flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-xl font-medium border border-rose bg-rose/60 hover:bg-rose/80 transition-colors text-sm md:text-base"
             >
-              <Download size={16} /> Télécharger mon CV (PDF)
+              <Download size={16} /> {t("home.downloadCV")}
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.02 }}
@@ -189,7 +185,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="glass inline-flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-xl font-medium border border-white/20 bg-white/10 hover:bg-white/20 transition-colors text-white text-sm md:text-base"
             >
-              <Eye size={16} /> Visualiser mon CV
+              <Eye size={16} /> {t("home.viewCV")}
             </motion.a>
           </div>
         </motion.div>
@@ -201,8 +197,8 @@ export default function Home() {
           {...fadeIn}
           className="text-center mb-10 md:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-rose">Mes Créations</h2>
-          <p className="text-foreground/60 text-sm md:text-base">Découvrez mon univers à travers différentes catégories.</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-rose">{t("home.creationsTitle")}</h2>
+          <p className="text-foreground/60 text-sm md:text-base">{t("home.creationsDesc")}</p>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-8">
@@ -220,13 +216,13 @@ export default function Home() {
                 <div className="relative overflow-hidden rounded-2xl h-48 md:h-64 flex flex-col justify-end p-6 md:p-8 border border-border/40 hover:border-turquoise/40 transition-all bg-white/5 shadow-sm group-hover:shadow-md">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   <h3 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-turquoise transition-colors z-10">
-                    {category.name}
+                    {t(`cat.${category.id}`)}
                   </h3>
                   <p className="text-foreground/60 mt-1 text-xs md:text-sm z-10">
-                    {category.description}
+                    {t(`cat.${category.id}.desc`)}
                   </p>
                   <div className="mt-3 flex items-center text-turquoise text-sm font-medium opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0 z-10">
-                    Découvrir <ArrowRight size={14} className="ml-1" />
+                    {t("home.decouvrir")} <ArrowRight size={14} className="ml-1" />
                   </div>
                 </div>
               </Link>

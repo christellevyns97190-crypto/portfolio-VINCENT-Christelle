@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { useTranslation } from "@/i18n/I18nProvider";
 
 interface ProjectPageProps {
   params: Promise<{ id: string }>;
@@ -14,6 +15,7 @@ interface ProjectPageProps {
 export default function ProjectPage({ params }: ProjectPageProps) {
   const { id } = use(params);
   const project = projects.find(p => p.id === id);
+  const { t } = useTranslation();
 
   if (!project) notFound();
 
@@ -29,7 +31,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           className="text-foreground/40 hover:text-turquoise flex items-center gap-2 transition-colors group"
         >
           <ArrowLeft size={18} className="transition-transform group-hover:-translate-x-1" />
-          Retour aux projets
+          {t("project.back")}
         </Link>
       </motion.div>
 
@@ -61,7 +63,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         <h1 className="text-3xl md:text-4xl font-bold mb-3">{project.title}</h1>
         <div className="flex gap-2 mb-6">
           <span className="px-3 py-1 bg-turquoise/10 text-turquoise text-xs font-bold rounded-full uppercase tracking-wider">
-            {project.category}
+            {t(`cat.${project.category}`)}
           </span>
         </div>
         <p className="text-foreground/70 leading-relaxed text-lg">{project.fullDescription}</p>

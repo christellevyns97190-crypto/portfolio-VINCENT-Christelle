@@ -2,8 +2,10 @@
 
 import Link from "next/link";
 import { Instagram, Linkedin } from "lucide-react";
+import { useTranslation } from "@/i18n/I18nProvider";
 
 export default function Footer() {
+  const { t } = useTranslation();
   return (
     <footer className="py-12 border-t border-border/40">
       <div className="container mx-auto px-6 flex flex-col items-center gap-6">
@@ -30,7 +32,7 @@ export default function Footer() {
           href="/mentions-legales"
           className="text-sm text-foreground/40 hover:text-foreground/60 transition-colors"
         >
-          © 2026 Christelle VINCENT
+          {t("footer.copyright")}
         </Link>
       </div>
     </footer>

@@ -3,12 +3,14 @@
 import { motion } from "framer-motion";
 import { Project } from "@/data/projects";
 import Link from "next/link";
+import { useTranslation } from "@/i18n/I18nProvider";
 
 interface ProjectGridProps {
   projects: Project[];
 }
 
 export default function ProjectGrid({ projects }: ProjectGridProps) {
+  const { t } = useTranslation();
   return (
     <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">
       {projects.map((project, index) => (
@@ -29,7 +31,7 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
                   className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <span className="text-white font-medium px-4 py-2 glass rounded-full text-xs md:text-sm">Voir le site</span>
+                  <span className="text-white font-medium px-4 py-2 glass rounded-full text-xs md:text-sm">{t("grid.voirSite")}</span>
                 </div>
               </div>
               <div className="mt-2 md:mt-3">
@@ -57,7 +59,7 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
                   />
                 )}
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <span className="text-white font-medium px-4 py-2 glass rounded-full text-xs md:text-sm">Voir le projet</span>
+                  <span className="text-white font-medium px-4 py-2 glass rounded-full text-xs md:text-sm">{t("grid.voirProjet")}</span>
                 </div>
               </div>
               <div className="mt-2 md:mt-3">

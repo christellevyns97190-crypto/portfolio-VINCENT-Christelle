@@ -5,6 +5,7 @@ import { VisualEditsMessenger } from "orchids-visual-edits";
 
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { I18nProvider } from "@/i18n/I18nProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,11 +39,13 @@ export default function RootLayout({
             <body
               className={`${geistSans.variable} ${geistMono.variable} ${dancingScript.variable} antialiased font-sans`}
             >
+            <I18nProvider>
             <Navbar />
             <main className="min-h-screen pt-32 relative z-10">
               {children}
             </main>
             <Footer />
+            </I18nProvider>
             <VisualEditsMessenger />
           </body>
       </html>
