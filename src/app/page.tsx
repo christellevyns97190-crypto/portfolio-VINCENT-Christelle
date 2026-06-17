@@ -6,8 +6,6 @@ import { ArrowRight, Download, Eye } from "lucide-react";
 import { categories } from "@/data/projects";
 import { useRef } from "react";
 import { useTranslation } from "@/i18n/I18nProvider";
-import { useTheme } from "@/theme/ThemeProvider";
-
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
   whileInView: { opacity: 1, y: 0 },
@@ -24,27 +22,15 @@ export default function Home() {
 
   const y = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
   const { t } = useTranslation();
-  const { theme } = useTheme();
 
   return (
     <div className="flex flex-col items-center">
       {/* Hero Section */}
       <section className="relative min-h-[100svh] md:min-h-[80vh] flex flex-col justify-center items-center text-center px-5 md:px-6 overflow-hidden w-full pt-20 md:pt-0">
         {/* Cheetah background */}
-        <div
-          className="absolute inset-0 -z-10"
-          style={{
-            backgroundImage: theme === "dark" ? "url('/blackchettahback2.png')" : "url('/leopardpink.png')",
-            backgroundSize: "1400px auto",
-            backgroundRepeat: "repeat",
-            opacity: theme === "dark" ? 0.75 : 1,
-          }}
-        />
+        <div className="absolute inset-0 -z-10 hero-bg" />
         {/* Vignette */}
-        <div
-          className="absolute inset-0 -z-10 pointer-events-none"
-          style={{ background: theme === "dark" ? "radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.55) 100%)" : "radial-gradient(ellipse at center, transparent 30%, rgba(255,255,255,0.3) 100%)" }}
-        />
+        <div className="absolute inset-0 -z-10 pointer-events-none hero-vignette" />
 
         {/* Stickers — desktop only */}
         <div className="absolute inset-0 pointer-events-none hidden md:block">
@@ -113,7 +99,7 @@ export default function Home() {
               VINCENT CHRISTELLE
             </motion.span>
             <motion.span
-              className={`block text-center ${theme === "dark" ? "text-turquoise" : "text-foreground"}`}
+              className="block text-center hero-subtitle"
               style={{
                 fontFamily: "var(--font-dancing-script)",
                 fontSize: "clamp(1.4rem, 6.5vw, 3.2rem)",
