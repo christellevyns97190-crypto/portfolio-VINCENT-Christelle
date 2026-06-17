@@ -147,16 +147,19 @@
 
 /* Hero section */
 .hero-bg {
-  background-image: url('/leopardpinklight.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url('/blackchettahback2.png');
+  background-size: 1400px auto;
+  background-repeat: repeat;
+  opacity: 0.75;
 }
 .hero-vignette {
-  background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.3) 100%);
+  background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.55) 100%);
 }
 .hero-subtitle {
   color: var(--color-turquoise);
+}
+.hero-name {
+  color: white;
 }
 
 /* CV button — default (dark mode) */
