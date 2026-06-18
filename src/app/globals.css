@@ -159,7 +159,7 @@
   color: var(--color-turquoise);
 }
 .hero-name {
-  color: white;
+  color: #ff66ac;
 }
 
 /* Hero section — light mode */
@@ -175,7 +175,7 @@
   background: none;
 }
 .light .hero-name {
-  color: #1a1a1a;
+  color: #ff66ac;
 }
 .light .hero-subtitle {
   color: var(--color-turquoise);
