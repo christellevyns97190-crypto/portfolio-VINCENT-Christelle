@@ -233,7 +233,7 @@ export default function Home() {
           <p className="text-foreground/60 text-sm md:text-base">{t("home.creationsDesc")}</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-8">
+        <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-12">
           {categories.map((category, index) => (
             <motion.div
               key={category.id}
@@ -245,16 +245,16 @@ export default function Home() {
               whileTap={{ scale: 0.95 }}
             >
               <Link href={category.path} className="group block h-full">
-                <div className="relative overflow-hidden rounded-2xl h-56 md:h-72 flex flex-col justify-end p-6 md:p-8 border border-border/40 hover:border-turquoise/40 transition-all bg-white/5 shadow-sm group-hover:shadow-md">
+                <div className="relative overflow-hidden rounded-2xl w-full md:w-80 h-64 md:h-80 flex flex-col justify-end p-6 md:p-8 border border-border/40 hover:border-turquoise/40 transition-all bg-white/5 shadow-sm group-hover:shadow-md">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-turquoise transition-colors z-10">
+                  <h3 className="text-3xl md:text-4xl font-bold text-foreground group-hover:text-turquoise transition-colors z-10">
                     {t(`cat.${category.id}`)}
                   </h3>
-                  <p className="text-foreground/60 mt-1 text-sm md:text-base z-10">
+                  <p className="text-foreground/60 mt-2 text-base md:text-lg z-10">
                     {t(`cat.${category.id}.desc`)}
                   </p>
-                  <div className="mt-3 flex items-center text-turquoise text-sm font-medium opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0 z-10">
-                    {t("home.decouvrir")} <ArrowRight size={14} className="ml-1" />
+                  <div className="mt-4 flex items-center text-turquoise text-base md:text-lg font-medium opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0 z-10">
+                    {t("home.decouvrir")} <ArrowRight size={18} className="ml-1" />
                   </div>
                 </div>
               </Link>
