@@ -10,7 +10,7 @@ const softwareIcons = [
   { src: "/softwares/photoshop.png", name: "Photoshop" },
   { src: "/softwares/canva.png", name: "Canva" },
   { src: "/softwares/capcut.png", name: "CapCut" },
-  { src: "/softwares/davinci-resolve.jpg", name: "DaVinci Resolve" },
+  { src: "/softwares/davinci-resolve.png", name: "DaVinci Resolve" },
   { src: "/softwares/illustrator.png", name: "Illustrator" },
   { src: "/softwares/final-cut-pro.png", name: "Final Cut Pro" },
   { src: "/softwares/visual-studio-code.png", name: "VS Code" },
@@ -143,40 +143,6 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Software Skills Section — Infinite Scroll */}
-      <section className="w-full py-12 md:py-16 overflow-hidden">
-        <div className="relative">
-          <div className="software-track mx-auto">
-            {/* First set */}
-            {softwareIcons.map((s, i) => (
-              <div key={`a-${i}`} className="flex flex-col items-center gap-2 shrink-0">
-                <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center">
-                  <img
-                    src={s.src}
-                    alt={s.name}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <span className="text-xs text-foreground/60 font-medium whitespace-nowrap">{s.name}</span>
-              </div>
-            ))}
-            {/* Duplicate for seamless loop */}
-            {softwareIcons.map((s, i) => (
-              <div key={`b-${i}`} className="flex flex-col items-center gap-2 shrink-0">
-                <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center">
-                  <img
-                    src={s.src}
-                    alt={s.name}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <span className="text-xs text-foreground/60 font-medium whitespace-nowrap">{s.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Presentation Section with Parallax */}
       <section ref={parallaxRef} className="relative py-16 md:py-32 px-5 w-full overflow-hidden flex justify-center">
         {/* Parallax Background */}
@@ -221,6 +187,40 @@ export default function Home() {
             </motion.a>
           </div>
         </motion.div>
+      </section>
+
+      {/* Software Skills Section — Infinite Scroll */}
+      <section className="w-full py-12 md:py-16 overflow-hidden">
+        <div className="relative">
+          <div className="software-track mx-auto">
+            {/* First set */}
+            {softwareIcons.map((s, i) => (
+              <div key={`a-${i}`} className="flex flex-col items-center gap-2 shrink-0">
+                <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center">
+                  <img
+                    src={s.src}
+                    alt={s.name}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <span className="text-xs text-foreground/60 font-medium whitespace-nowrap">{s.name}</span>
+              </div>
+            ))}
+            {/* Duplicate for seamless loop */}
+            {softwareIcons.map((s, i) => (
+              <div key={`b-${i}`} className="flex flex-col items-center gap-2 shrink-0">
+                <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center">
+                  <img
+                    src={s.src}
+                    alt={s.name}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <span className="text-xs text-foreground/60 font-medium whitespace-nowrap">{s.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Creations Section */}
