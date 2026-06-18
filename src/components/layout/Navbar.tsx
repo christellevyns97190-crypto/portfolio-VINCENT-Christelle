@@ -38,7 +38,7 @@ export default function Navbar() {
           className="glass px-4 md:px-6 py-2 rounded-full flex gap-4 md:gap-8 items-center"
         >
           <Link href="/" className="flex items-center">
-            <img src="/logo.webp" alt="Logo" className="h-7 md:h-10 w-auto hover:scale-110 transition-transform" />
+            <img src="/logo.webp" alt="Logo" className="navbar-logo h-7 md:h-10 w-auto hover:scale-110 transition-transform" />
           </Link>
           <div className="h-4 w-px bg-foreground/20 mx-1" />
 
