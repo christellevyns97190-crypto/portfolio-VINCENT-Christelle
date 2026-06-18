@@ -102,7 +102,7 @@ export default function Home() {
               className="block text-center hero-subtitle"
               style={{
                 fontFamily: "var(--font-dancing-script)",
-                fontSize: "clamp(1.4rem, 6.5vw, 3.2rem)",
+                fontSize: "clamp(1.8rem, 8vw, 4rem)",
                 fontWeight: 400,
                 letterSpacing: "0.04em",
               }}
