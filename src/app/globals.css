@@ -205,6 +205,21 @@
   color: var(--color-turquoise);
 }
 
+/* Infinite scroll animation for software skills */
+@keyframes scroll-softwares {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.software-track {
+  display: flex;
+  gap: 4rem;
+  width: max-content;
+  animation: scroll-softwares 30s linear infinite;
+}
+.software-track:hover {
+  animation-play-state: paused;
+}
+
 ::selection {
   background-color: var(--color-turquoise);
   color: white;
