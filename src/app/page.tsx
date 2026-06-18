@@ -7,13 +7,13 @@ import { categories } from "@/data/projects";
 import { useRef } from "react";
 import { useTranslation } from "@/i18n/I18nProvider";
 const softwareIcons = [
-  { id: "adobephotoshop", name: "Photoshop", color: "#31A8FF" },
-  { id: "canva", name: "Canva", color: "#00C4CC" },
-  { id: "capcut", name: "CapCut", color: "#1C9CEA" },
-  { id: "davinciresolve", name: "DaVinci Resolve", color: "#6A56FF" },
-  { id: "adobeillustrator", name: "Illustrator", color: "#FF9A00" },
-  { id: "finalcutpro", name: "Final Cut Pro", color: "#33CCFF" },
-  { id: "visualstudiocode", name: "VS Code", color: "#007ACC" },
+  { src: "/softwares/photoshop.png", name: "Photoshop" },
+  { src: "/softwares/canva.png", name: "Canva" },
+  { src: "/softwares/capcut.png", name: "CapCut" },
+  { src: "/softwares/davinci-resolve.jpg", name: "DaVinci Resolve" },
+  { src: "/softwares/illustrator.png", name: "Illustrator" },
+  { src: "/softwares/final-cut-pro.png", name: "Final Cut Pro" },
+  { src: "/softwares/visual-studio-code.png", name: "VS Code" },
 ];
 
 const fadeIn = {
@@ -152,10 +152,9 @@ export default function Home() {
               <div key={`a-${i}`} className="flex flex-col items-center gap-2 shrink-0">
                 <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center">
                   <img
-                    src={`https://cdn.simpleicons.org/${s.id}/${s.color.replace('#', '')}`}
+                    src={s.src}
                     alt={s.name}
                     className="w-full h-full object-contain"
-                    loading="lazy"
                   />
                 </div>
                 <span className="text-xs text-foreground/60 font-medium whitespace-nowrap">{s.name}</span>
@@ -166,10 +165,9 @@ export default function Home() {
               <div key={`b-${i}`} className="flex flex-col items-center gap-2 shrink-0">
                 <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center">
                   <img
-                    src={`https://cdn.simpleicons.org/${s.id}/${s.color.replace('#', '')}`}
+                    src={s.src}
                     alt={s.name}
                     className="w-full h-full object-contain"
-                    loading="lazy"
                   />
                 </div>
                 <span className="text-xs text-foreground/60 font-medium whitespace-nowrap">{s.name}</span>
