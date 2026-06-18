@@ -212,9 +212,9 @@
 }
 .software-track {
   display: flex;
-  gap: 4rem;
+  gap: 5rem;
   width: max-content;
-  animation: scroll-softwares 30s linear infinite;
+  animation: scroll-softwares 35s linear infinite;
 }
 .software-track:hover {
   animation-play-state: paused;

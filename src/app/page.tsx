@@ -190,33 +190,33 @@ export default function Home() {
       </section>
 
       {/* Software Skills Section — Infinite Scroll */}
-      <section className="w-full py-12 md:py-16 overflow-hidden">
+      <section className="w-full py-16 md:py-24 overflow-hidden">
         <div className="relative">
           <div className="software-track mx-auto">
             {/* First set */}
             {softwareIcons.map((s, i) => (
-              <div key={`a-${i}`} className="flex flex-col items-center gap-2 shrink-0">
-                <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center">
+              <div key={`a-${i}`} className="flex flex-col items-center gap-3 shrink-0">
+                <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center">
                   <img
                     src={s.src}
                     alt={s.name}
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <span className="text-xs text-foreground/60 font-medium whitespace-nowrap">{s.name}</span>
+                <span className="text-sm text-foreground/60 font-medium whitespace-nowrap">{s.name}</span>
               </div>
             ))}
             {/* Duplicate for seamless loop */}
             {softwareIcons.map((s, i) => (
               <div key={`b-${i}`} className="flex flex-col items-center gap-2 shrink-0">
-                <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center">
+                <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center">
                   <img
                     src={s.src}
                     alt={s.name}
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <span className="text-xs text-foreground/60 font-medium whitespace-nowrap">{s.name}</span>
+                <span className="text-sm text-foreground/60 font-medium whitespace-nowrap">{s.name}</span>
               </div>
             ))}
           </div>
