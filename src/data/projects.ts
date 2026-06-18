@@ -12,21 +12,15 @@ export interface Project {
 }
 
 export const categories = [
-  { 
-    id: "alternance", 
-    name: "Alternance", 
-    path: "/creations/alternance",
-    description: "Projets réalisés dans le cadre de mon alternance."
-  },
-  { 
-    id: "personnel", 
-    name: "Projet personnel", 
+  {
+    id: "personnel",
+    name: "Projet personnel",
     path: "/creations/personnel",
     description: "Créations libres et expérimentations graphiques."
   },
-  { 
-    id: "universitaire", 
-    name: "Universitaire", 
+  {
+    id: "universitaire",
+    name: "Universitaire",
     path: "/creations/universitaire",
     description: "Travaux réalisés durant mon cursus MMI."
   },

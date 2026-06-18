@@ -245,12 +245,12 @@ export default function Home() {
               whileTap={{ scale: 0.95 }}
             >
               <Link href={category.path} className="group block h-full">
-                <div className="relative overflow-hidden rounded-2xl h-48 md:h-64 flex flex-col justify-end p-6 md:p-8 border border-border/40 hover:border-turquoise/40 transition-all bg-white/5 shadow-sm group-hover:shadow-md">
+                <div className="relative overflow-hidden rounded-2xl h-56 md:h-72 flex flex-col justify-end p-6 md:p-8 border border-border/40 hover:border-turquoise/40 transition-all bg-white/5 shadow-sm group-hover:shadow-md">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-turquoise transition-colors z-10">
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-turquoise transition-colors z-10">
                     {t(`cat.${category.id}`)}
                   </h3>
-                  <p className="text-foreground/60 mt-1 text-xs md:text-sm z-10">
+                  <p className="text-foreground/60 mt-1 text-sm md:text-base z-10">
                     {t(`cat.${category.id}.desc`)}
                   </p>
                   <div className="mt-3 flex items-center text-turquoise text-sm font-medium opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0 z-10">
