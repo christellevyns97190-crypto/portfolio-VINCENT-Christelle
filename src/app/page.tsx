@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center">
       {/* Hero Section */}
-      <section className="relative min-h-[100svh] md:min-h-[80vh] flex flex-col justify-center items-center text-center px-5 md:px-6 overflow-hidden w-full pt-20 md:pt-0">
+      <section className="relative min-h-[130svh] md:min-h-[110vh] flex flex-col justify-center items-center text-center px-5 md:px-6 overflow-hidden w-full pt-20 md:pt-0">
         {/* Cheetah background */}
         <div className="absolute inset-0 -z-10 hero-bg" />
         {/* Vignette */}
