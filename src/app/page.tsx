@@ -256,7 +256,7 @@ export default function Home() {
           {...fadeIn}
           className="text-center mb-10 md:mb-16"
         >
-          <h2 className="creations-title text-3xl md:text-4xl font-bold mb-3 text-rose">{t("home.creationsTitle")}</h2>
+          <h2 className="creations-title text-3xl md:text-4xl font-bold mb-3">{t("home.creationsTitle")}</h2>
           <p className="text-foreground/60 text-sm md:text-base">{t("home.creationsDesc")}</p>
         </motion.div>
 
