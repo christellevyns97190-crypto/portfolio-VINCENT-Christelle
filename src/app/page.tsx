@@ -249,10 +249,13 @@ export default function Home() {
             <div className="absolute w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-turquoise/40 bottom-[18%] left-[12%]" />
             <div className="absolute w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-turquoise/40 bottom-[18%] right-[12%]" />
             {/* Figurine */}
-            <img
-              src="/serenityfigurine1.png"
-              alt="Figurine"
-              className="w-56 md:w-72 h-auto object-contain relative z-10 drop-shadow-lg"
+            <video
+              src="/figurine.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-56 md:w-72 h-auto object-contain relative z-10 drop-shadow-lg rounded-2xl"
             />
           </motion.div>
         </Link>
