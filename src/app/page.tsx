@@ -264,7 +264,7 @@ export default function Home() {
       </section>
 
       {/* Creations Section */}
-      <section id="creations" className="py-16 md:py-24 px-5 max-w-6xl w-full">
+      <section id="creations" className="py-16 md:py-24 px-5 max-w-6xl w-full mx-auto">
         <motion.div
           {...fadeIn}
           className="text-center mb-10 md:mb-16"
