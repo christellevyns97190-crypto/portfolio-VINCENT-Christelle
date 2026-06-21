@@ -227,6 +227,8 @@ export default function Home() {
         </Link>
       </section>
 
+      {/* Black background from tools to bottom */}
+      <div className="w-full bg-black">
       {/* Software Skills Section — Infinite Scroll */}
       <section className="w-full py-16 md:py-24 overflow-hidden">
         <div className="relative">
@@ -300,6 +302,7 @@ export default function Home() {
           ))}
         </div>
       </section>
+      </div>
     </div>
   );
 }
