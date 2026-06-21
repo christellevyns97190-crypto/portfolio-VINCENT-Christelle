@@ -278,12 +278,9 @@ export default function Home() {
             className="relative flex items-center justify-center cursor-pointer"
           >
             {/* Figurine */}
-            <video
-              src="/figurine.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
+            <img
+              src="/figurine-off.png"
+              alt="Figurine"
               className="w-40 md:w-56 h-auto object-contain drop-shadow-lg rounded-2xl"
             />
           </motion.div>
