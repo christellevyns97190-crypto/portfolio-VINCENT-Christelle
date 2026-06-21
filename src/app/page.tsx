@@ -159,7 +159,7 @@ export default function Home() {
 
         <motion.div
           {...fadeIn}
-          className="glass p-6 md:p-12 rounded-3xl border border-foreground/10 shadow-2xl max-w-4xl w-full ml-auto md:mr-16 flex flex-col md:flex-row gap-6 md:gap-10 items-center"
+          className="glass p-6 md:p-12 rounded-3xl border border-foreground/10 shadow-2xl max-w-4xl w-full flex flex-col md:flex-row gap-6 md:gap-10 items-center"
         >
           <div className="flex-1">
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-turquoise">{t("home.aboutTitle")}</h2>
