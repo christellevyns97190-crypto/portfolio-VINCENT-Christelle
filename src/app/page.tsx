@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center">
       {/* Hero Section */}
-      <section className="relative min-h-[100svh] md:min-h-[80vh] flex flex-col justify-center items-center text-center px-5 md:px-6 w-full pt-20 md:pt-0">
+      <section className="relative min-h-[100svh] md:min-h-[80vh] flex flex-col justify-center items-center text-center px-5 md:px-6 overflow-hidden w-full pt-20 md:pt-0">
         {/* Cheetah background */}
         <div className="absolute inset-0 -z-10 hero-bg" />
         {/* Vignette */}
@@ -45,15 +45,13 @@ export default function Home() {
         {/* Stickers — desktop only */}
         <div className="absolute inset-0 pointer-events-none hidden md:block">
           {[
-            /* Left column */
-            { src:"/s-camera.png",  h:95,  top:"3%",  left:"5%",   rot:-10, dur:4.8, dy:10 },
-            { src:"/s-donut.png",   h:95,  top:"40%", left:"3%",   rot:7,   dur:5.2, dy:9 },
-            { src:"/s-laptop.png",  h:100, top:"72%", left:"5%",   rot:4,   dur:5.5, dy:8  },
-            /* Right column */
-            { src:"/s-bag.png",     h:100, top:"3%",  right:"6%",  rot:8,   dur:5.4, dy:9  },
-            { src:"/s-diamond.png", h:75,  top:"35%", right:"10%", rot:-4,  dur:4.2, dy:7  },
-            { src:"/s-cup.png",     h:105, top:"53%", right:"4%",  rot:-5,  dur:5.8, dy:11 },
-            { src:"/s-coffee.png",  h:105, top:"28%", left:"12%",  rot:-2,  dur:6.2, dy:12 },
+            { src:"/s-camera.png",  h:160, top:"4%",  left:"11%",  rot:-12, dur:4.2, dy:12 },
+            { src:"/s-bag.png",     h:170, top:"7%",  right:"14%", rot:10,  dur:5.1, dy:10 },
+            { src:"/s-coffee.png",  h:185, top:"29%", left:"1%",   rot:-3,  dur:6.0, dy:14 },
+            { src:"/s-donut.png",   h:165, top:"43%", left:"15%",  rot:8,   dur:4.7, dy:11 },
+            { src:"/s-cup.png",     h:190, top:"28%", right:"2%",  rot:-6,  dur:5.5, dy:13 },
+            { src:"/s-laptop.png",  h:175, top:"69%", left:"2%",   rot:5,   dur:4.9, dy:10 },
+            { src:"/s-diamond.png", h:120, top:"49%", right:"20%", rot:-5,  dur:3.8, dy:8  },
           ].map((s, i) => (
             <motion.img
               key={s.src}
@@ -64,15 +62,15 @@ export default function Home() {
               transition={{ duration: s.dur, repeat: Infinity, ease: "easeInOut", delay: i * 0.4 }}
             />
           ))}
-          {/* Phone sticker cliquable — bottom right */}
-          <Link href="/contact" style={{ position:"absolute", top:"60%", right:"5%", pointerEvents:"auto", display:"block" }}>
+          {/* Phone sticker cliquable */}
+          <Link href="/contact" style={{ position:"absolute", top:"65%", right:"6%", pointerEvents:"auto", display:"block" }}>
             <motion.img
               src="/s-phone.png"
               alt="Me contacter"
-              style={{ height:"95px", width:"auto", cursor:"pointer" }}
+              style={{ height:"165px", width:"auto", cursor:"pointer" }}
               animate={{
-                y: [0, -10, 0],
-                rotate: [12, 15, 12],
+                y: [0, -12, 0],
+                rotate: [14, 17, 14],
                 filter: [
                   "drop-shadow(0 0 0px rgba(255,20,147,0))",
                   "drop-shadow(0 0 5px rgba(255,20,147,0.5))",
