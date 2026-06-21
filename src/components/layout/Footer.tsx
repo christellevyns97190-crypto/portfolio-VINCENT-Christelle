@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="container mx-auto px-6 flex flex-col items-center gap-6">
           <div className="flex gap-6">
             <a 
-              href="https://instagram.com" 
+              href="https://www.instagram.com/serenitys_artwork?igsh=ZXJ6MHZ6aTNxaDlp&utm_source=qr" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-rose hover:text-turquoise transition-colors"
