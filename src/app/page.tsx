@@ -159,33 +159,48 @@ export default function Home() {
 
         <motion.div
           {...fadeIn}
-          className="glass p-6 md:p-12 rounded-3xl border border-foreground/10 shadow-2xl max-w-4xl w-full"
+          className="glass p-6 md:p-12 rounded-3xl border border-foreground/10 shadow-2xl max-w-5xl w-full flex flex-col md:flex-row gap-6 md:gap-10 items-center"
         >
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-turquoise">{t("home.aboutTitle")}</h2>
-          <div className="space-y-4 text-base md:text-lg text-foreground/80 leading-relaxed">
-            <p dangerouslySetInnerHTML={{ __html: t("home.aboutP1") }} />
-            <p>{t("home.aboutP2")}</p>
+          <div className="flex-1">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-turquoise">{t("home.aboutTitle")}</h2>
+            <div className="space-y-4 text-base md:text-lg text-foreground/80 leading-relaxed">
+              <p dangerouslySetInnerHTML={{ __html: t("home.aboutP1") }} />
+              <p>{t("home.aboutP2")}</p>
+            </div>
+
+            <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
+              <motion.a
+                whileHover={{ scale: 1.02 }}
+                href="/CV_Christelle_VINCENT.pdf"
+                download
+                className="glass inline-flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-xl font-medium border border-rose bg-rose/60 hover:bg-rose/80 transition-colors text-sm md:text-base"
+              >
+                <Download size={16} /> {t("home.downloadCV")}
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.02 }}
+                href="/CV_Christelle_VINCENT.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-view-cv glass inline-flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-xl font-medium border border-white/20 bg-white/10 hover:bg-white/20 transition-colors text-sm md:text-base"
+              >
+                <Eye size={16} /> {t("home.viewCV")}
+              </motion.a>
+            </div>
           </div>
 
-          <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
-            <motion.a
-              whileHover={{ scale: 1.02 }}
-              href="/CV_Christelle_VINCENT.pdf"
-              download
-              className="glass inline-flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-xl font-medium border border-rose bg-rose/60 hover:bg-rose/80 transition-colors text-sm md:text-base"
-            >
-              <Download size={16} /> {t("home.downloadCV")}
-            </motion.a>
-            <motion.a
-              whileHover={{ scale: 1.02 }}
-              href="/CV_Christelle_VINCENT.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-view-cv glass inline-flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-xl font-medium border border-white/20 bg-white/10 hover:bg-white/20 transition-colors text-sm md:text-base"
-            >
-              <Eye size={16} /> {t("home.viewCV")}
-            </motion.a>
-          </div>
+          <motion.div
+            className="shrink-0"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+          >
+            <img
+              src="/serenityfigurine1.png"
+              alt="Figurine"
+              className="w-40 md:w-56 h-auto object-contain"
+            />
+          </motion.div>
         </motion.div>
       </section>
 
