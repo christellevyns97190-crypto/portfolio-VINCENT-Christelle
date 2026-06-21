@@ -73,11 +73,11 @@ export default function Home() {
                 rotate: [14, 17, 14],
                 filter: [
                   "drop-shadow(0 0 0px rgba(255,20,147,0))",
-                  "drop-shadow(0 0 5px rgba(255,20,147,0.5))",
-                  "drop-shadow(0 0 10px rgba(255,20,147,0.8))",
-                  "drop-shadow(0 0 16px rgba(255,20,147,1))",
-                  "drop-shadow(0 0 10px rgba(255,20,147,0.8))",
-                  "drop-shadow(0 0 5px rgba(255,20,147,0.5))",
+                  "drop-shadow(0 0 8px rgba(255,20,147,0.4))",
+                  "drop-shadow(0 0 18px rgba(255,20,147,0.7))",
+                  "drop-shadow(0 0 32px rgba(255,20,147,1))",
+                  "drop-shadow(0 0 18px rgba(255,20,147,0.7))",
+                  "drop-shadow(0 0 8px rgba(255,20,147,0.4))",
                   "drop-shadow(0 0 0px rgba(255,20,147,0))",
                 ],
               }}
