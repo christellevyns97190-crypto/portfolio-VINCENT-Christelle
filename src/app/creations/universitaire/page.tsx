@@ -6,11 +6,11 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useTranslation } from "@/i18n/I18nProvider";
 
 const UE_LIST = [
-  { id: "concevoir",    icon: "✏️", bg: "linear-gradient(135deg, #f82f8b, #05ffe1, #f82f8b)" },
-  { id: "exprimer",     icon: "🎨", bg: "linear-gradient(135deg, #05ffe1, #f82f8b, #05ffe1)" },
-  { id: "entreprendre", icon: "💼", bg: "linear-gradient(135deg, #f82f8b, #05ffe1, #111)" },
-  { id: "developper",   icon: "💻", bg: "linear-gradient(135deg, #05ffe1, #111, #f82f8b)" },
-  { id: "apprehender",  icon: "🔍", bg: "linear-gradient(135deg, #111, #f82f8b, #05ffe1)" },
+  { id: "concevoir",    icon: "✏️", bg: "linear-gradient(135deg, #f82f8b, #05ffe1, #ff1493)" },
+  { id: "exprimer",     icon: "🎨", bg: "linear-gradient(135deg, #05ffe1, #ff1493, #f82f8b)" },
+  { id: "entreprendre", icon: "💼", bg: "linear-gradient(135deg, #ff1493, #f82f8b, #05ffe1)" },
+  { id: "developper",   icon: "💻", bg: "linear-gradient(135deg, #f82f8b, #05ffe1, #ff1493)" },
+  { id: "apprehender",  icon: "🔍", bg: "linear-gradient(135deg, #05ffe1, #ff1493, #f82f8b)" },
 ];
 
 export default function UniversitairePage() {
