@@ -96,7 +96,7 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="space-y-4 md:space-y-6 flex flex-col items-center"
+          className="space-y-4 md:space-y-6 flex flex-col items-center -mt-16 md:-mt-32"
         >
           <h1 className="flex flex-col items-center gap-1 md:gap-2">
             <motion.span
