@@ -50,7 +50,7 @@ export default function Home() {
             { src:"/s-coffee.png",  h:185, top:"29%", left:"1%",   rot:-3,  dur:6.0, dy:14 },
             { src:"/s-donut.png",   h:165, top:"43%", left:"15%",  rot:8,   dur:4.7, dy:11 },
             { src:"/s-cup.png",     h:190, top:"28%", right:"2%",  rot:-6,  dur:5.5, dy:13 },
-            { src:"/s-laptop.png",  h:175, top:"69%", left:"2%",   rot:5,   dur:4.9, dy:10 },
+            { src:"/s-laptop.png",  h:175, top:"62%", left:"2%",   rot:5,   dur:4.9, dy:10 },
             { src:"/s-diamond.png", h:120, top:"49%", right:"20%", rot:-5,  dur:3.8, dy:8  },
           ].map((s, i) => (
             <motion.img
@@ -63,7 +63,7 @@ export default function Home() {
             />
           ))}
           {/* Phone sticker cliquable */}
-          <Link href="/contact" style={{ position:"absolute", top:"65%", right:"6%", pointerEvents:"auto", display:"block" }}>
+          <Link href="/contact" style={{ position:"absolute", top:"58%", right:"6%", pointerEvents:"auto", display:"block" }}>
             <motion.img
               src="/s-phone.png"
               alt="Me contacter"
