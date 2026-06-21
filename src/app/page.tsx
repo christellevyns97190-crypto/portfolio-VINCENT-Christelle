@@ -144,7 +144,7 @@ export default function Home() {
       </section>
 
       {/* Presentation Section with Parallax */}
-      <section ref={parallaxRef} className="relative py-16 md:py-32 px-5 w-full flex justify-center">
+      <section ref={parallaxRef} className="relative py-16 md:py-32 px-5 w-full flex flex-col md:flex-row justify-center items-center">
         {/* Parallax Background */}
         <motion.div
           style={{ y }}
