@@ -205,6 +205,14 @@
   color: var(--color-turquoise);
 }
 
+/* Section background — tools & creations area */
+.section-tools-bg {
+  background-color: #000;
+}
+.light .section-tools-bg {
+  background-color: #ffffff;
+}
+
 /* Infinite scroll animation for software skills */
 @keyframes scroll-softwares {
   0% { transform: translateX(0); }

@@ -228,7 +228,7 @@ export default function Home() {
       </section>
 
       {/* Black background from tools to bottom */}
-      <div className="w-full bg-black">
+      <div className="w-full section-tools-bg">
       {/* Software Skills Section — Infinite Scroll */}
       <section className="w-full py-16 md:py-24 overflow-hidden">
         <div className="relative">
