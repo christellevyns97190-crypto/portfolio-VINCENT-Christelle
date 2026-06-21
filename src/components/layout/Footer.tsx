@@ -19,7 +19,7 @@ export default function Footer() {
               <Instagram size={20} />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/christelle-vincent-50b0152bb/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-rose hover:text-turquoise transition-colors"
