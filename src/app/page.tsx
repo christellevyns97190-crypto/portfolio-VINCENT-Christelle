@@ -144,7 +144,7 @@ export default function Home() {
       </section>
 
       {/* Presentation Section with Parallax */}
-      <section ref={parallaxRef} className="relative py-16 md:py-32 px-5 w-full overflow-hidden flex justify-center">
+      <section ref={parallaxRef} className="relative py-16 md:py-32 px-5 w-full flex justify-center">
         {/* Parallax Background */}
         <motion.div
           style={{ y }}
@@ -190,6 +190,39 @@ export default function Home() {
           </div>
 
           </motion.div>
+
+          {/* Figurine — overlapping on the right */}
+          <Link href="/creations/universitaire" className="absolute right-0 md:right-4 top-1/2 -translate-y-1/2 z-20 hidden md:block">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              whileHover={{ scale: 1.06 }}
+              className="cursor-pointer"
+            >
+              <img
+                src="/figurine-off.png"
+                alt="Figurine"
+                className="w-56 h-auto object-contain drop-shadow-lg rounded-2xl"
+              />
+            </motion.div>
+          </Link>
+          {/* Mobile figurine — centered below card */}
+          <Link href="/creations/universitaire" className="block md:hidden mt-6">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.06 }}
+              className="flex justify-center cursor-pointer"
+            >
+              <img
+                src="/figurine-off.png"
+                alt="Figurine"
+                className="w-40 h-auto object-contain drop-shadow-lg rounded-2xl"
+              />
+            </motion.div>
+          </Link>
       </section>
 
       {/* Software Skills Section — Infinite Scroll */}
@@ -264,27 +297,6 @@ export default function Home() {
             </motion.div>
           ))}
         </div>
-      </section>
-
-      {/* Figurine Section */}
-      <section className="w-full py-16 md:py-24 px-5 flex justify-center">
-        <Link href="/creations/universitaire" className="block">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            whileHover={{ scale: 1.06 }}
-            transition={{ duration: 0.6 }}
-            className="relative flex items-center justify-center cursor-pointer"
-          >
-            {/* Figurine */}
-            <img
-              src="/figurine-off.png"
-              alt="Figurine"
-              className="w-40 md:w-56 h-auto object-contain drop-shadow-lg rounded-2xl"
-            />
-          </motion.div>
-        </Link>
       </section>
     </div>
   );
