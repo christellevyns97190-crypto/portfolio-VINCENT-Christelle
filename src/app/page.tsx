@@ -221,7 +221,7 @@ export default function Home() {
             <img
               src="/figurine-off.png"
               alt="Figurine"
-              className="w-40 h-auto object-contain drop-shadow-lg rounded-2xl"
+              className="w-52 h-auto object-contain drop-shadow-lg rounded-2xl"
             />
           </motion.div>
         </Link>
