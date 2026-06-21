@@ -6,11 +6,11 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useTranslation } from "@/i18n/I18nProvider";
 
 const UE_LIST = [
-  { id: "concevoir", icon: "✏️", color: "from-[#FFE0E7]/20 to-[#FFE0E7]/5", border: "border-[#FFE0E7]/30", hover: "hover:border-[#FFE0E7]/60" },
-  { id: "exprimer", icon: "🎨", color: "from-pink-300/20 to-pink-200/5", border: "border-pink-300/30", hover: "hover:border-pink-300/60" },
-  { id: "entreprendre", icon: "💼", color: "from-fuchsia-300/20 to-fuchsia-200/5", border: "border-fuchsia-300/30", hover: "hover:border-fuchsia-300/60" },
-  { id: "developper", icon: "💻", color: "from-purple-300/20 to-purple-200/5", border: "border-purple-300/30", hover: "hover:border-purple-300/60" },
-  { id: "apprehender", icon: "🔍", color: "from-violet-300/20 to-violet-200/5", border: "border-violet-300/30", hover: "hover:border-violet-300/60" },
+  { id: "concevoir",    icon: "✏️", bg: "linear-gradient(135deg, #fda4af, #fecdd3, #FFE0E7)" },
+  { id: "exprimer",     icon: "🎨", bg: "linear-gradient(135deg, #f9a8d4, #f0abfc, #e879f9)" },
+  { id: "entreprendre", icon: "💼", bg: "linear-gradient(135deg, #d946ef, #c084fc, #a855f7)" },
+  { id: "developper",   icon: "💻", bg: "linear-gradient(135deg, #a855f7, #a78bfa, #8b5cf6)" },
+  { id: "apprehender",  icon: "🔍", bg: "linear-gradient(135deg, #8b5cf6, #7c3aed, #6d28d9)" },
 ];
 
 export default function UniversitairePage() {
@@ -52,13 +52,30 @@ export default function UniversitairePage() {
             whileHover={{ scale: 1.04, y: -12 }}
           >
             <Link href={`/creations/universitaire/${ue.id}`}>
-              <div className={`group rounded-2xl border ${ue.border} ${ue.hover} bg-gradient-to-br ${ue.color} p-8 h-full flex flex-col justify-between transition-colors duration-300 cursor-pointer`}>
-                <div>
+              <div
+                className="group relative rounded-2xl border border-white/10 p-8 h-full flex flex-col justify-between transition-all duration-500 cursor-pointer overflow-hidden"
+                style={{
+                  animation: `border-glow 4s ease-in-out infinite`,
+                  animationDelay: `${index * -1.2}s`,
+                }}
+              >
+                {/* Animated gradient background */}
+                <div
+                  className="absolute inset-0 opacity-50 ue-card"
+                  style={{
+                    backgroundImage: ue.bg,
+                    animationDelay: `${index * -1.2}s`,
+                  }}
+                />
+                {/* Dark overlay for text readability */}
+                <div className="absolute inset-0 bg-black/20" />
+                {/* Content */}
+                <div className="relative z-10">
                   <span className="text-4xl mb-4 block">{ue.icon}</span>
                   <h2 className="text-2xl font-bold text-white mb-3">{t(`ue.${ue.id}`)}</h2>
-                  <p className="text-foreground/50 text-sm leading-relaxed">{t(`ue.${ue.id}.desc`)}</p>
+                  <p className="text-white/60 text-sm leading-relaxed">{t(`ue.${ue.id}.desc`)}</p>
                 </div>
-                <div className="mt-6 flex items-center gap-2 text-[#FFE0E7]/70 text-sm font-medium group-hover:gap-3 transition-all">
+                <div className="relative z-10 mt-6 flex items-center gap-2 text-[#FFE0E7]/70 text-sm font-medium group-hover:gap-3 transition-all">
                   {t("univ.voir")} <ArrowRight size={16} />
                 </div>
               </div>

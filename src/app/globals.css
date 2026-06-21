@@ -250,3 +250,20 @@
 nextjs-portal {
   display: none !important;
 }
+
+/* Color flow animation for UE cards */
+@keyframes color-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes border-glow {
+  0%, 100% { border-color: rgba(255, 255, 255, 0.1); }
+  50% { border-color: rgba(255, 224, 231, 0.4); }
+}
+
+.ue-card {
+  background-size: 200% 200%;
+  animation: color-flow 6s ease-in-out infinite;
+}
