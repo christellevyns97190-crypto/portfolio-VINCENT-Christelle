@@ -226,30 +226,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Figurine Section */}
-      <section className="w-full py-16 md:py-24 px-5 flex justify-center">
-        <Link href="/creations/universitaire" className="block">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            whileHover={{ scale: 1.06 }}
-            transition={{ duration: 0.6 }}
-            className="relative flex items-center justify-center cursor-pointer"
-          >
-            {/* Figurine */}
-            <video
-              src="/figurine.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-40 md:w-56 h-auto object-contain drop-shadow-lg rounded-2xl"
-            />
-          </motion.div>
-        </Link>
-      </section>
-
       {/* Creations Section */}
       <section id="creations" className="py-16 md:py-24 px-5 max-w-6xl w-full">
         <motion.div
@@ -288,6 +264,30 @@ export default function Home() {
             </motion.div>
           ))}
         </div>
+      </section>
+
+      {/* Figurine Section */}
+      <section className="w-full py-16 md:py-24 px-5 flex justify-center">
+        <Link href="/creations/universitaire" className="block">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.06 }}
+            transition={{ duration: 0.6 }}
+            className="relative flex items-center justify-center cursor-pointer"
+          >
+            {/* Figurine */}
+            <video
+              src="/figurine.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-40 md:w-56 h-auto object-contain drop-shadow-lg rounded-2xl"
+            />
+          </motion.div>
+        </Link>
       </section>
     </div>
   );
