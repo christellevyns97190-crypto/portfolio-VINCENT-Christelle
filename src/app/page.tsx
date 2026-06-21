@@ -238,11 +238,11 @@ export default function Home() {
             className="relative flex items-center justify-center cursor-pointer"
           >
             {/* Outer glow */}
-            <div className="absolute w-56 h-56 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-turquoise/15 via-rose/10 to-transparent blur-md" />
+            <div className="absolute w-48 h-48 md:w-72 md:h-72 rounded-full bg-gradient-to-br from-turquoise/15 via-rose/10 to-transparent blur-md" />
             {/* Middle ring */}
-            <div className="absolute w-48 h-48 md:w-64 md:h-64 rounded-full border border-turquoise/20 bg-gradient-to-b from-turquoise/8 to-rose/8" />
+            <div className="absolute w-40 h-40 md:w-60 md:h-60 rounded-full border border-turquoise/20 bg-gradient-to-b from-turquoise/8 to-rose/8" />
             {/* Inner decorative ring */}
-            <div className="absolute w-40 h-40 md:w-56 md:h-56 rounded-full border border-turquoise/30" />
+            <div className="absolute w-32 h-32 md:w-48 md:h-48 rounded-full border border-turquoise/30" />
             {/* Decorative dots */}
             <div className="absolute w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-turquoise/40 top-[16%] left-[22%]" />
             <div className="absolute w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-turquoise/40 top-[16%] right-[22%]" />
@@ -255,7 +255,7 @@ export default function Home() {
               loop
               muted
               playsInline
-              className="w-56 md:w-72 h-auto object-contain relative z-10 drop-shadow-lg rounded-2xl"
+              className="w-40 md:w-56 h-auto object-contain relative z-10 drop-shadow-lg rounded-2xl"
             />
           </motion.div>
         </Link>
