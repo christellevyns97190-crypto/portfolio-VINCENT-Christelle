@@ -157,10 +157,11 @@ export default function Home() {
           <div className="absolute inset-0 bg-background/60" />
         </motion.div>
 
-        <motion.div
-          {...fadeIn}
-          className="glass p-6 md:p-12 rounded-3xl border border-foreground/10 shadow-2xl max-w-4xl w-full flex flex-col md:flex-row gap-6 md:gap-10 items-center"
-        >
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 w-full">
+          <motion.div
+            {...fadeIn}
+            className="glass p-6 md:p-12 rounded-3xl border border-foreground/10 shadow-2xl max-w-2xl flex-1 flex flex-col md:flex-row gap-6 md:gap-10 items-center"
+          >
           <div className="flex-1">
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-turquoise">{t("home.aboutTitle")}</h2>
             <div className="space-y-4 text-base md:text-lg text-foreground/80 leading-relaxed">
@@ -191,8 +192,8 @@ export default function Home() {
 
           </motion.div>
 
-          {/* Figurine — overlapping on the left */}
-          <Link href="/creations/universitaire" className="absolute left-0 md:left-8 top-1/2 -translate-y-1/2 z-20 hidden md:block">
+          {/* Figurine — desktop, side by side */}
+          <Link href="/creations/universitaire" className="shrink-0 hidden md:block">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -207,22 +208,23 @@ export default function Home() {
               />
             </motion.div>
           </Link>
-          {/* Mobile figurine — centered below card */}
-          <Link href="/creations/universitaire" className="block md:hidden mt-6">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.06 }}
-              className="flex justify-center cursor-pointer"
-            >
-              <img
-                src="/figurine-off.png"
-                alt="Figurine"
-                className="w-40 h-auto object-contain drop-shadow-lg rounded-2xl"
-              />
-            </motion.div>
-          </Link>
+        </div>
+        {/* Mobile figurine — centered below card */}
+        <Link href="/creations/universitaire" className="block md:hidden mt-6">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.06 }}
+            className="flex justify-center cursor-pointer"
+          >
+            <img
+              src="/figurine-off.png"
+              alt="Figurine"
+              className="w-40 h-auto object-contain drop-shadow-lg rounded-2xl"
+            />
+          </motion.div>
+        </Link>
       </section>
 
       {/* Software Skills Section — Infinite Scroll */}
