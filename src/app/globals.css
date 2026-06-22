@@ -164,12 +164,11 @@
 
 /* Hero section — light mode */
 .light .hero-bg {
-  background-image: url('/lighterpinkleopard.png') !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
+  background-image: url('/blackchettahback2.png') !important;
+  background-size: 1400px auto !important;
+  background-repeat: repeat !important;
   background-color: #ffffff !important;
-  opacity: 1 !important;
+  opacity: 0.75 !important;
 }
 .light .hero-vignette {
   background: none;
