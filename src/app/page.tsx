@@ -200,12 +200,22 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
               whileHover={{ scale: 1.06 }}
-              className="cursor-pointer"
+              className="cursor-pointer relative"
             >
+              {/* Video — dark mode only */}
+              <video
+                src="/figurine-dark.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-96 h-auto object-contain drop-shadow-lg rounded-2xl figurine-dark-video"
+              />
+              {/* Image — light mode only */}
               <img
                 src="/figurine-off.png"
                 alt="Figurine"
-                className="w-96 h-auto object-contain drop-shadow-lg rounded-2xl"
+                className="w-96 h-auto object-contain drop-shadow-lg rounded-2xl figurine-light-img"
               />
             </motion.div>
           </Link>

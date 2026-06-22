@@ -203,6 +203,17 @@
   content: url('/serenitynoap-02.png');
 }
 
+/* Figurine — dark mode video, light mode image */
+.figurine-light-img {
+  display: none;
+}
+.light .figurine-light-img {
+  display: block;
+}
+.light .figurine-dark-video {
+  display: none;
+}
+
 /* "Mes Créations" title — turquoise in both light and dark mode */
 .creations-title {
   color: var(--color-turquoise);
