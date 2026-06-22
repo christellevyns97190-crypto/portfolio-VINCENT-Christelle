@@ -9,6 +9,8 @@ export interface Project {
   videoUrl?: string;
   externalUrl?: string;
   fullDescription: string;
+  pdfUrl?: string;
+  mediaGallery?: string[];
 }
 
 export const categories = [
@@ -126,5 +128,22 @@ export const projects: Project[] = [
     description: "Étude de marché et veille concurrentielle.",
     imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
     fullDescription: "Réalisation d&apos;une analyse approfondie d&apos;un marché numérique : identification des tendances, étude des concurrents et recommandations stratégiques."
+  },
+  {
+    id: "demo-pdf",
+    title: "Projet PDF + Galerie (Démo)",
+    category: "universitaire",
+    subCategory: "concevoir",
+    description: "Exemple de projet avec PDF preview et galerie d'images.",
+    imageUrl: "/softwares/photoshop.png",
+    pdfUrl: "/CV_Christelle_VINCENT.pdf",
+    mediaGallery: [
+      "/softwares/photoshop.png",
+      "/softwares/illustrator.png",
+      "/softwares/canva.png",
+      "/softwares/capcut.png",
+      "/softwares/davinci-resolve.png",
+    ],
+    fullDescription: "Ce projet est une démonstration de l&apos;aperçu PDF avec galerie d&apos;images. Le PDF s&apos;affiche directement dans la page avec un aperçu défilable, et les images supplémentaires apparaissent en grille en dessous."
   },
 ];
