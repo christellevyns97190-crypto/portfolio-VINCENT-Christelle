@@ -101,7 +101,7 @@ export default function Home() {
           <h1 className="flex flex-col items-center gap-1 md:gap-2">
             <motion.span
               className="block text-center font-sans font-extrabold uppercase tracking-widest hero-name"
-              style={{ fontSize: "clamp(1.8rem, 7vw, 3.8rem)" }}
+              style={{ fontSize: "clamp(1.8rem, 7vw, 4.8rem)" }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7 }}
