@@ -180,6 +180,9 @@
 .light .hero-subtitle {
   color: var(--color-turquoise);
 }
+.light .about-dark-overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
 
 /* CV button — default (dark mode) */
 .btn-view-cv {
