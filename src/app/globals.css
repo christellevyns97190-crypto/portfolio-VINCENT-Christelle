@@ -181,7 +181,7 @@
   color: var(--color-turquoise);
 }
 .light .about-dark-overlay {
-  background: rgba(248, 47, 139, 0.25);
+  background: rgba(248, 47, 139, 0.55) !important;
 }
 
 /* CV button — default (dark mode) */
