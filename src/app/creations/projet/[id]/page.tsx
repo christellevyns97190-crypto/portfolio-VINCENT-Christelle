@@ -40,8 +40,21 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
       >
-        {/* PDF Preview */}
-        {project.pdfUrl ? (
+        {/* YouTube Embed */}
+        {project.youtubeUrl ? (
+          <div className="mb-8">
+            <h2 className="text-lg font-semibold text-foreground/70 mb-4">Vidéo</h2>
+            <div className="rounded-2xl overflow-hidden border border-white/10 bg-muted aspect-video">
+              <iframe
+                src={project.youtubeUrl}
+                className="w-full h-full"
+                title={project.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        ) : project.pdfUrl ? (
           <div className="mb-8">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-lg font-semibold text-foreground/70">PDF — Aperçu</h2>

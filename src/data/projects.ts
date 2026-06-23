@@ -10,6 +10,7 @@ export interface Project {
   externalUrl?: string;
   fullDescription: string;
   pdfUrl?: string;
+  youtubeUrl?: string;
   pdfCover?: boolean;
   mediaGallery?: string[];
 }
@@ -149,6 +150,16 @@ export const projects: Project[] = [
     imageUrl: "/projets/identite-visuelle-cocorent.pdf",
     pdfUrl: "/projets/identite-visuelle-cocorent.pdf",
     fullDescription: "Création de l&apos;identité visuelle pour l&apos;agence Coco Rent : logo, charte graphique, palette de couleurs, typographies et déclinaisons sur supports de communication."
+  },
+  {
+    id: "vivre-avec-la-mer",
+    title: "Documentaire – Vivre avec la Mer",
+    category: "universitaire",
+    subCategory: "exprimer",
+    description: "Documentaire réalisé en 2026 avec un iPhone 14 Pro Max.",
+    imageUrl: "https://img.youtube.com/vi/1w7oSRg1dE4/maxresdefault.jpg",
+    youtubeUrl: "https://www.youtube.com/embed/1w7oSRg1dE4",
+    fullDescription: "Documentaire « Vivre avec la mer » réalisé en 2026 avec un iPhone 14 Pro Max. Un projet de conception et de réalisation audiovisuelle explorant le lien entre l'homme et l'environnement maritime."
   },
     {
     id: "business-plan-charmy-gps",
