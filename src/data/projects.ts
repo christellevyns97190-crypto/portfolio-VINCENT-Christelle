@@ -201,6 +201,16 @@ export const projects: Project[] = [
     imageUrl: "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2064&auto=format&fit=crop",
     fullDescription: "Conception et développement d&apos;un site web vitrine responsive pour une PME, en intégrant les bonnes pratiques d&apos;accessibilité et de SEO."
   },
+  {
+    id: "ancien-portfolio",
+    title: "Ancien Portfolio",
+    category: "universitaire",
+    subCategory: "developper",
+    description: "Ancienne version du portfolio - projet Pong.",
+    imageUrl: "/projets/pong-cover.png",
+    pdfUrl: "/projets/ancien-portfolio.pdf",
+    fullDescription: "Ancienne version du portfolio réalisée en développement, illustrée par un projet Pong. Travail de conception et d'intégration web."
+  },
     {
     id: "maquette-jeu",
     title: "Maquette – Jeu",
