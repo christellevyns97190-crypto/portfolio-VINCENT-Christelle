@@ -54,8 +54,8 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
                 ) : project.imageUrl.endsWith('.pdf') && project.pdfCover !== false ? (
                   <div className="relative w-full h-full overflow-hidden bg-muted">
                     <iframe
-                      src={`${project.imageUrl}#page=1&toolbar=0&navpanes=0&scrollbar=0&view=FitH`}
-                      className="absolute inset-0 w-[200%] h-[200%] scale-50 origin-top-left pointer-events-none"
+                      src={`${project.imageUrl}#page=1&toolbar=0&navpanes=0&scrollbar=0&zoom=130`}
+                      className="absolute w-[130%] h-[130%] -top-[15%] -left-[15%] pointer-events-none"
                       title={project.title}
                     />
                   </div>
