@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Neon pink custom cursor */
+html {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='8' fill='none' stroke='%23f82f8b' stroke-width='2' /%3E%3Ccircle cx='12' cy='12' r='3' fill='%23f82f8b' /%3E%3C/svg%3E") 12 12, auto;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
