@@ -115,7 +115,7 @@ export const projects: Project[] = [
   },
   {
     id: "carrousel-transformation",
-    title: "Carrousel – Raconte en Réalité",
+    title: "Carrousel – Motivation",
     category: "universitaire",
     subCategory: "exprimer",
     description: "Carrousel sur le thème de la transformation.",
