@@ -275,3 +275,7 @@ nextjs-portal {
   background-size: 200% 200%;
   animation: color-flow 6s ease-in-out infinite;
 }
+
+.light .ue-card {
+  opacity: 0.85 !important;
+}
