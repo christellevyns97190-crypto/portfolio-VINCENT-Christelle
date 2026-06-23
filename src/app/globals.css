@@ -279,3 +279,11 @@ nextjs-portal {
 .light .ue-card {
   opacity: 0.85 !important;
 }
+
+.light .footer-social {
+  color: #05ffe1 !important;
+}
+
+.light .footer-social:hover {
+  color: #f82f8b !important;
+}

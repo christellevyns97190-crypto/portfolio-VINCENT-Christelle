@@ -14,15 +14,15 @@ export default function Footer() {
               href="https://www.instagram.com/serenitys_artwork?igsh=ZXJ6MHZ6aTNxaDlp&utm_source=qr" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-rose hover:text-turquoise transition-colors"
+              className="text-rose hover:text-turquoise transition-colors footer-social"
             >
               <Instagram size={20} />
             </a>
-            <a 
-              href="https://www.linkedin.com/in/christelle-vincent-50b0152bb/" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/in/christelle-vincent-50b0152bb/"
+              target="_blank"
               rel="noopener noreferrer"
-              className="text-rose hover:text-turquoise transition-colors"
+              className="text-rose hover:text-turquoise transition-colors footer-social"
             >
               <Linkedin size={20} />
             </a>
