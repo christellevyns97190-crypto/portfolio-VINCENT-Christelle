@@ -87,7 +87,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         {project.mediaGallery && project.mediaGallery.length > 0 && (
           <div className="mb-8">
             <h2 className="text-lg font-semibold text-foreground/70 mb-4">Galerie</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {project.mediaGallery.map((src, i) => (
                 <motion.div
                   key={i}
@@ -97,11 +97,19 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                   transition={{ delay: i * 0.1 }}
                   className="rounded-xl overflow-hidden bg-muted aspect-[4/3]"
                 >
-                  <img
-                    src={src}
-                    alt={`${project.title} — ${i + 1}`}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
+                  {src.endsWith('.pdf') ? (
+                    <iframe
+                      src={src}
+                      className="w-full h-full"
+                      title={`${project.title} — ${i + 1}`}
+                    />
+                  ) : (
+                    <img
+                      src={src}
+                      alt={`${project.title} — ${i + 1}`}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    />
+                  )}
                 </motion.div>
               ))}
             </div>

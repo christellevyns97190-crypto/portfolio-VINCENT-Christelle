@@ -146,4 +146,19 @@ export const projects: Project[] = [
     ],
     fullDescription: "Ce projet est une démonstration de l&apos;aperçu PDF avec galerie d&apos;images. Le PDF s&apos;affiche directement dans la page avec un aperçu défilable, et les images supplémentaires apparaissent en grille en dessous."
   },
+  {
+    id: "analyse-supports",
+    title: "Analyse de Supports de Communication",
+    category: "universitaire",
+    subCategory: "apprehender",
+    description: "Étude comparative et analyse de supports : flyer avant/après, introduction UX-UI, persona cible.",
+    imageUrl: "/projets/avant-apres-flyer.pdf",
+    pdfUrl: "/projets/avant-apres-flyer.pdf",
+    mediaGallery: [
+      "/projets/avant-apres-flyer.pdf",
+      "/projets/introduction-ux-ui.pdf",
+      "/projets/persona-cible-cocorent.pdf",
+    ],
+    fullDescription: "Ensemble de travaux d&apos;analyse de supports de communication : comparaison avant/après d&apos;un flyer événementiel, introduction aux concepts UX-UI (ergonomie, accessibilité, expérience utilisateur), et création d&apos;une persona cible pour l&apos;agence COCORENT."
+  },
 ];
