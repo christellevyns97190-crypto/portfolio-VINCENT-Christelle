@@ -203,14 +203,17 @@
   content: url('/serenitynoap-02.png');
 }
 
-/* Figurine — dark mode video, light mode image */
+/* Figurine — dark mode GIF, light mode image */
 .figurine-light-img {
   display: none;
 }
 .light .figurine-light-img {
   display: block;
 }
-.light .figurine-dark-video {
+.figurine-dark-img {
+  display: block;
+}
+.light .figurine-dark-img {
   display: none;
 }
 

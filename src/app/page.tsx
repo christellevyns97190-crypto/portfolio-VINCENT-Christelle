@@ -202,14 +202,11 @@ export default function Home() {
               whileHover={{ scale: 1.06 }}
               className="cursor-pointer relative"
             >
-              {/* Video — dark mode only */}
-              <video
-                src="/figurine-dark.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-96 h-auto object-contain drop-shadow-lg rounded-2xl figurine-dark-video"
+              {/* GIF — dark mode only */}
+              <img
+                src="/figurine-dark.gif"
+                alt="Figurine"
+                className="w-96 h-auto object-contain drop-shadow-lg rounded-2xl figurine-dark-img"
               />
               {/* Image — light mode only */}
               <img
