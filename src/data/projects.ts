@@ -120,16 +120,7 @@ export const projects: Project[] = [
     imageUrl: "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2064&auto=format&fit=crop",
     fullDescription: "Conception et développement d&apos;un site web vitrine responsive pour une PME, en intégrant les bonnes pratiques d&apos;accessibilité et de SEO."
   },
-  {
-    id: "9",
-    title: "Analyse de Marché",
-    category: "universitaire",
-    subCategory: "apprehender",
-    description: "Étude de marché et veille concurrentielle.",
-    imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-    fullDescription: "Réalisation d&apos;une analyse approfondie d&apos;un marché numérique : identification des tendances, étude des concurrents et recommandations stratégiques."
-  },
-  {
+    {
     id: "demo-pdf",
     title: "Projet PDF + Galerie (Démo)",
     category: "universitaire",
