@@ -168,7 +168,7 @@ export const projects: Project[] = [
     category: "universitaire",
     subCategory: "entreprendre",
     description: "Projet Intrépide.",
-    imageUrl: "/projets/intrepide.pdf",
+    imageUrl: "/projets/intrepide-icone.png",
     pdfUrl: "/projets/intrepide.pdf",
     fullDescription: "Projet Intrépide réalisé dans le cadre du cursus universitaire."
   },
