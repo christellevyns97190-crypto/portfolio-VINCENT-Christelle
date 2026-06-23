@@ -67,15 +67,6 @@ export const projects: Project[] = [
     fullDescription: "Création d'une affiche pour la vente privée de Génération Mélodie, boutique santé, bien-être & accessoires. Design mettant en avant la réduction de -30% et les informations clés de l'événement."
   },
   {
-    id: "3",
-    title: "Interface Mobile App",
-    category: "universitaire",
-    subCategory: "concevoir",
-    description: "Maquettage UI/UX d&apos;une application de bien-être.",
-    imageUrl: "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1974&auto=format&fit=crop",
-    fullDescription: "Projet universitaire visant à concevoir l&apos;interface d&apos;une application de suivi du bien-être physique et mental."
-  },
-  {
     id: "5",
     title: "Projet Vidéo",
     category: "personnel",
@@ -178,23 +169,6 @@ export const projects: Project[] = [
     fullDescription: "Conception et développement d&apos;un site web vitrine responsive pour une PME, en intégrant les bonnes pratiques d&apos;accessibilité et de SEO."
   },
     {
-    id: "demo-pdf",
-    title: "Projet PDF + Galerie (Démo)",
-    category: "universitaire",
-    subCategory: "concevoir",
-    description: "Exemple de projet avec PDF preview et galerie d'images.",
-    imageUrl: "/softwares/photoshop.png",
-    pdfUrl: "/CV_Christelle_VINCENT.pdf",
-    mediaGallery: [
-      "/softwares/photoshop.png",
-      "/softwares/illustrator.png",
-      "/softwares/canva.png",
-      "/softwares/capcut.png",
-      "/softwares/davinci-resolve.png",
-    ],
-    fullDescription: "Ce projet est une démonstration de l&apos;aperçu PDF avec galerie d&apos;images. Le PDF s&apos;affiche directement dans la page avec un aperçu défilable, et les images supplémentaires apparaissent en grille en dessous."
-  },
-  {
     id: "maquette-jeu",
     title: "Maquette – Jeu",
     category: "universitaire",
