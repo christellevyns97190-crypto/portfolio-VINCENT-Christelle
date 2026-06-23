@@ -128,7 +128,7 @@ export const projects: Project[] = [
     category: "universitaire",
     subCategory: "exprimer",
     description: "Carrousel sur le service après-vente.",
-    imageUrl: "/projets/carrousel-sav.pdf",
+    imageUrl: "/projets/carrousel-sav-couverture.png",
     pdfUrl: "/projets/carrousel-sav.pdf",
     fullDescription: "Création d&apos;un carrousel dédié au service après-vente (SAV) : mise en avant des engagements, des procédures et de la satisfaction client à travers un design clair et engageant."
   },
