@@ -113,15 +113,6 @@ export const projects: Project[] = [
     fullDescription: "Création visuelle pour Serenity for Life : design graphique et motion design pour la marque."
   },
   {
-    id: "6",
-    title: "Identité de Marque",
-    category: "universitaire",
-    subCategory: "exprimer",
-    description: "Projet de branding pour un café local.",
-    imageUrl: "https://images.unsplash.com/photo-1521474332319-72e65a0321aa?q=80&w=2070&auto=format&fit=crop",
-    fullDescription: "Création complète de l&apos;identité d&apos;un café : logo, menu, et packaging."
-  },
-  {
     id: "carrousel-transformation",
     title: "Carrousel – Raconte en Réalité",
     category: "universitaire",
