@@ -10,6 +10,7 @@ export interface Project {
   externalUrl?: string;
   fullDescription: string;
   pdfUrl?: string;
+  pdfCover?: boolean;
   mediaGallery?: string[];
 }
 
@@ -206,6 +207,7 @@ export const projects: Project[] = [
     description: "Maquettage d&apos;un jeu vidéo.",
     imageUrl: "/projets/maquette-jeu.pdf",
     pdfUrl: "/projets/maquette-jeu.pdf",
+    pdfCover: false,
     fullDescription: "Maquettage et conception d&apos;un jeu vidéo : réalisation des wireframes, design des interfaces et des écrans de jeu, organisation des éléments de gameplay et de navigation."
   },
   {

@@ -51,13 +51,22 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
                     playsInline
                     className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
                   />
-                ) : project.imageUrl.endsWith('.pdf') ? (
+                ) : project.imageUrl.endsWith('.pdf') && project.pdfCover !== false ? (
                   <div className="relative w-full h-full overflow-hidden bg-muted">
                     <iframe
                       src={`${project.imageUrl}#page=1&toolbar=0&navpanes=0&scrollbar=0&view=FitH`}
                       className="absolute inset-0 w-[200%] h-[200%] scale-50 origin-top-left pointer-events-none"
                       title={project.title}
                     />
+                  </div>
+                ) : project.imageUrl.endsWith('.pdf') ? (
+                  <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-rose/20 to-turquoise/20">
+                    <div className="text-center">
+                      <svg className="w-10 h-10 md:w-14 md:h-14 mx-auto mb-2 text-rose" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                      </svg>
+                      <span className="text-[10px] md:text-xs text-foreground/50">PDF</span>
+                    </div>
                   </div>
                 ) : (
                   <img
