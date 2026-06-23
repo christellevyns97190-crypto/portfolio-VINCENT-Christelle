@@ -1,11 +1,11 @@
 "use client";
 
-import { use } from "react";
+import { useState, use } from "react";
 import { projects } from "@/data/projects";
 import { notFound } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { ArrowLeft, Download } from "lucide-react";
+import { ArrowLeft, Download, Maximize2, X } from "lucide-react";
 import { useTranslation } from "@/i18n/I18nProvider";
 
 interface ProjectPageProps {
@@ -18,6 +18,8 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   const { t } = useTranslation();
 
   if (!project) notFound();
+
+  const [fullscreenPdf, setFullscreenPdf] = useState<string | null>(null);
 
   return (
     <div className="container mx-auto px-5 py-10 md:py-12 max-w-5xl">
@@ -45,20 +47,36 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <div className="mb-8">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-lg font-semibold text-foreground/70">PDF — Aperçu</h2>
-              <a
-                href={project.pdfUrl}
-                download
-                className="glass inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium border border-rose bg-rose/40 hover:bg-rose/60 transition-colors"
-              >
-                <Download size={16} /> Télécharger le PDF
-              </a>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setFullscreenPdf(project.pdfUrl!)}
+                  className="glass inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium border border-white/10 bg-white/10 hover:bg-white/20 transition-colors cursor-pointer"
+                >
+                  <Maximize2 size={16} /> Plein écran
+                </button>
+                <a
+                  href={project.pdfUrl}
+                  download
+                  className="glass inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium border border-rose bg-rose/40 hover:bg-rose/60 transition-colors"
+                >
+                  <Download size={16} /> Télécharger
+                </a>
+              </div>
             </div>
-            <div className="rounded-2xl overflow-hidden border border-white/10 bg-muted">
+            <div
+              className="rounded-2xl overflow-hidden border border-white/10 bg-muted relative group cursor-pointer"
+              onClick={() => setFullscreenPdf(project.pdfUrl!)}
+            >
               <iframe
                 src={project.pdfUrl}
-                className="w-full h-[80vh] md:h-[90vh]"
+                className="w-full h-[80vh] md:h-[90vh] pointer-events-none"
                 title={project.title}
               />
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/30">
+                <div className="glass px-6 py-3 rounded-full text-white font-medium flex items-center gap-2">
+                  <Maximize2 size={18} /> Plein écran
+                </div>
+              </div>
             </div>
           </div>
         ) : project.videoUrl ? (
@@ -125,6 +143,35 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         </div>
         <p className="text-foreground/70 leading-relaxed text-lg">{project.fullDescription}</p>
       </motion.div>
+
+      {/* Fullscreen PDF Overlay */}
+      <AnimatePresence>
+        {fullscreenPdf && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/95 flex flex-col"
+          >
+            <div className="flex items-center justify-between px-6 py-4">
+              <h2 className="text-white/70 text-lg font-semibold">PDF — Plein écran</h2>
+              <button
+                onClick={() => setFullscreenPdf(null)}
+                className="text-white/70 hover:text-white p-2 rounded-xl hover:bg-white/10 transition-colors cursor-pointer"
+              >
+                <X size={24} />
+              </button>
+            </div>
+            <div className="flex-1 px-4 pb-4">
+              <iframe
+                src={fullscreenPdf}
+                className="w-full h-full rounded-2xl"
+                title="PDF plein écran"
+              />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
