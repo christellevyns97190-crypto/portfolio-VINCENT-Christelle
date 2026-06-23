@@ -225,7 +225,7 @@ export const projects: Project[] = [
     description: "Portfolio actuel de Christelle Vincent – design et développement.",
     imageUrl: "/projets/portfolio-2026-cover.png",
     websiteUrl: "https://3000-59976e89-58c7-4b64-80fe-8d60c17f3257.orchids.cloud/",
-    fullDescription: "Portfolio 2026 de Christelle Vincent, graphiste digital & motion designer. Site développé avec Next.js 15, React 19, Framer Motion et Tailwind CSS, intégrant des fonctionnalités avancées comme les animations parallax, le mode clair/sombre, l'internationalisation, et des aperçus PDF interactifs."
+    fullDescription: "Portfolio 2026 de Christelle Vincent, graphiste digital. Site intégrant des fonctionnalités avancées comme les animations parallax, le mode clair/sombre, l'internationalisation, et des aperçus PDF interactifs."
   },
     {
     id: "maquette-jeu",
