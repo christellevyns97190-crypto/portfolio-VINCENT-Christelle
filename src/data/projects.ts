@@ -138,6 +138,35 @@ export const projects: Project[] = [
     fullDescription: "Ce projet est une démonstration de l&apos;aperçu PDF avec galerie d&apos;images. Le PDF s&apos;affiche directement dans la page avec un aperçu défilable, et les images supplémentaires apparaissent en grille en dessous."
   },
   {
+    id: "maquette-jeu",
+    title: "Maquette – Jeu",
+    category: "universitaire",
+    subCategory: "concevoir",
+    description: "Maquettage d&apos;un jeu vidéo.",
+    imageUrl: "/projets/maquette-jeu.pdf",
+    pdfUrl: "/projets/maquette-jeu.pdf",
+    fullDescription: "Maquettage et conception d&apos;un jeu vidéo : réalisation des wireframes, design des interfaces et des écrans de jeu, organisation des éléments de gameplay et de navigation."
+  },
+  {
+    id: "mindmap-charmy-gps",
+    title: "Mindmap – Charming GPS",
+    category: "universitaire",
+    subCategory: "concevoir",
+    description: "Mindmap pour l&apos;application Charming GPS.",
+    imageUrl: "/projets/mindmap-charmy-gps.png",
+    fullDescription: "Création d&apos;une mindmap (carte mentale) pour l&apos;application Charming GPS, organisant les fonctionnalités, l&apos;architecture de l&apos;information et les parcours utilisateur de l&apos;application de guidage."
+  },
+  {
+    id: "storyboard-documentaire",
+    title: "Storyboard – Documentaire",
+    category: "universitaire",
+    subCategory: "concevoir",
+    description: "Storyboard pour un projet documentaire.",
+    imageUrl: "/projets/storyboard-documentaire.pdf",
+    pdfUrl: "/projets/storyboard-documentaire.pdf",
+    fullDescription: "Réalisation d&apos;un storyboard pour un projet documentaire : séquençage des plans, descriptions visuelles et indications de réalisation pour la production audiovisuelle."
+  },
+  {
     id: "avant-apres-flyer",
     title: "Avant/Après – Flyer Événementiel",
     category: "universitaire",
