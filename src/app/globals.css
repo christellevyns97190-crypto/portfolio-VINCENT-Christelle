@@ -281,7 +281,7 @@ nextjs-portal {
 }
 
 .light .footer-social {
-  color: #05ffe1 !important;
+  color: var(--color-turquoise) !important;
 }
 
 .light .footer-social:hover {
