@@ -11,6 +11,7 @@ export interface Project {
   fullDescription: string;
   pdfUrl?: string;
   youtubeUrl?: string;
+  websiteUrl?: string;
   pdfCover?: boolean;
   mediaGallery?: string[];
 }
@@ -159,6 +160,7 @@ export const projects: Project[] = [
     subCategory: "exprimer",
     description: "Création d&apos;un jeu quizz interactif sur la personnalité.",
     imageUrl: "/projets/jeu-quizz-cover.png",
+    websiteUrl: "https://quizzpersonnalitserenity.lovable.app",
     mediaGallery: [
       "/projets/jeu-quizz-screen.webp",
       "/projets/jeu-quizz-codage.webp",

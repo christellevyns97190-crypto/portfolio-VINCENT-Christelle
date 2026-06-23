@@ -5,7 +5,7 @@ import { projects } from "@/data/projects";
 import { notFound } from "next/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowLeft, Download } from "lucide-react";
+import { ArrowLeft, Download, ExternalLink } from "lucide-react";
 import { useTranslation } from "@/i18n/I18nProvider";
 
 interface ProjectPageProps {
@@ -34,6 +34,24 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           {t("project.back")}
         </Link>
       </motion.div>
+
+      {project.websiteUrl && (
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.05 }}
+          className="mb-6"
+        >
+          <a
+            href={project.websiteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-bold border border-turquoise bg-turquoise/10 text-turquoise hover:bg-turquoise/20 transition-all"
+          >
+            <ExternalLink size={18} /> Accéder au site web
+          </a>
+        </motion.div>
+      )}
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
