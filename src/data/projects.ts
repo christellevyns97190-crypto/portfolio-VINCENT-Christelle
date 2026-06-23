@@ -158,7 +158,7 @@ export const projects: Project[] = [
     category: "universitaire",
     subCategory: "exprimer",
     description: "Création d&apos;un jeu quizz interactif sur la personnalité.",
-    imageUrl: "/projets/jeu-quizz-screen.webp",
+    imageUrl: "/projets/jeu-quizz-cover.png",
     mediaGallery: [
       "/projets/jeu-quizz-screen.webp",
       "/projets/jeu-quizz-codage.webp",
