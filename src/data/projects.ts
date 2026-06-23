@@ -128,16 +128,7 @@ export const projects: Project[] = [
     imageUrl: "https://images.unsplash.com/photo-1521474332319-72e65a0321aa?q=80&w=2070&auto=format&fit=crop",
     fullDescription: "Création complète de l&apos;identité d&apos;un café : logo, menu, et packaging."
   },
-  {
-    id: "7",
-    title: "Stratégie de Communication",
-    category: "universitaire",
-    subCategory: "entreprendre",
-    description: "Élaboration d&apos;un plan de communication pour une association.",
-    imageUrl: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop",
-    fullDescription: "Projet de conception d&apos;une stratégie de communication complète pour une association locale, incluant le budget, les canaux et le calendrier éditorial."
-  },
-  {
+    {
     id: "business-plan-charmy-gps",
     title: "Business Plan – Charming GPS",
     category: "universitaire",
