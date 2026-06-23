@@ -94,6 +94,32 @@ export const projects: Project[] = [
     fullDescription: "Création d'une affiche pour la rencontre Human Design & Hypersensibilité organisée par MP Consulting au Salon de Thé Paris."
   },
   {
+    id: "b24-repair-logotypes",
+    title: "Logotypes – B24 Repair",
+    category: "personnel",
+    description: "Création de logotypes pour B24 Repair Les.",
+    imageUrl: "/projets/b24-repair-logotypes.pdf",
+    pdfUrl: "/projets/b24-repair-logotypes.pdf",
+    fullDescription: "Création de logotypes pour la marque B24 Repair Les : recherche graphique, déclinaisons de logos et charte chromatique."
+  },
+  {
+    id: "retouche-photo",
+    title: "Retouche Photo",
+    category: "personnel",
+    description: "Travail de retouche photographique.",
+    imageUrl: "/projets/retouche-photo.pdf",
+    pdfUrl: "/projets/retouche-photo.pdf",
+    fullDescription: "Travail de retouche photographique : correction des couleurs, recadrage, amélioration de la qualité d'image et effets visuels."
+  },
+  {
+    id: "serenity-for-life",
+    title: "Serenity for Life",
+    category: "personnel",
+    description: "Création visuelle Serenity for Life.",
+    imageUrl: "/projets/serenity-for-life.gif",
+    fullDescription: "Création visuelle pour Serenity for Life : design graphique et motion design pour la marque."
+  },
+  {
     id: "6",
     title: "Identité de Marque",
     category: "universitaire",
