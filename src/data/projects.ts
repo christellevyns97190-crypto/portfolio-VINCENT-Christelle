@@ -119,6 +119,36 @@ export const projects: Project[] = [
     imageUrl: "https://images.unsplash.com/photo-1521474332319-72e65a0321aa?q=80&w=2070&auto=format&fit=crop",
     fullDescription: "Création complète de l&apos;identité d&apos;un café : logo, menu, et packaging."
   },
+  {
+    id: "carrousel-transformation",
+    title: "Carrousel – Raconte en Réalité",
+    category: "universitaire",
+    subCategory: "exprimer",
+    description: "Carrousel sur le thème de la transformation.",
+    imageUrl: "/projets/carrousel-transformation.pdf",
+    pdfUrl: "/projets/carrousel-transformation.pdf",
+    fullDescription: "Création d&apos;un carrousel sur le thème de la transformation : réflexion sur les raisons du relèvement, constat sur le blocage, et message de résilience à travers un storytelling visuel percutant."
+  },
+  {
+    id: "carrousel-sav",
+    title: "Carrousel – SAV",
+    category: "universitaire",
+    subCategory: "exprimer",
+    description: "Carrousel sur le service après-vente.",
+    imageUrl: "/projets/carrousel-sav.pdf",
+    pdfUrl: "/projets/carrousel-sav.pdf",
+    fullDescription: "Création d&apos;un carrousel dédié au service après-vente (SAV) : mise en avant des engagements, des procédures et de la satisfaction client à travers un design clair et engageant."
+  },
+  {
+    id: "identite-visuelle-cocorent",
+    title: "Identité Visuelle – Coco Rent",
+    category: "universitaire",
+    subCategory: "exprimer",
+    description: "Identité visuelle pour Coco Rent.",
+    imageUrl: "/projets/identite-visuelle-cocorent.pdf",
+    pdfUrl: "/projets/identite-visuelle-cocorent.pdf",
+    fullDescription: "Création de l&apos;identité visuelle pour l&apos;agence Coco Rent : logo, charte graphique, palette de couleurs, typographies et déclinaisons sur supports de communication."
+  },
     {
     id: "business-plan-charmy-gps",
     title: "Business Plan – Charming GPS",
