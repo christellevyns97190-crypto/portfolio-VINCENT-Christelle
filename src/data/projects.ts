@@ -158,7 +158,7 @@ export const projects: Project[] = [
     category: "universitaire",
     subCategory: "entreprendre",
     description: "Business plan et identité visuelle pour Charming GPS.",
-    imageUrl: "/projets/business-plan-charmy-gps.pdf",
+    imageUrl: "/projets/charmy-icone.png",
     pdfUrl: "/projets/business-plan-charmy-gps.pdf",
     fullDescription: "Business plan complet et identité visuelle pour le projet Charming GPS, une application de guidage. Travail réalisé dans le cadre du BUT MMI incluant l'étude de marché, le modèle économique et la stratégie de marque."
   },
