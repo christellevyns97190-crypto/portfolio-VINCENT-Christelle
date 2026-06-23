@@ -112,6 +112,46 @@ export const projects: Project[] = [
     fullDescription: "Projet de conception d&apos;une stratégie de communication complète pour une association locale, incluant le budget, les canaux et le calendrier éditorial."
   },
   {
+    id: "business-plan-charmy-gps",
+    title: "Business Plan – Charming GPS",
+    category: "universitaire",
+    subCategory: "entreprendre",
+    description: "Business plan et identité visuelle pour Charming GPS.",
+    imageUrl: "/projets/business-plan-charmy-gps.pdf",
+    pdfUrl: "/projets/business-plan-charmy-gps.pdf",
+    fullDescription: "Business plan complet et identité visuelle pour le projet Charming GPS, une application de guidage. Travail réalisé dans le cadre du BUT MMI incluant l'étude de marché, le modèle économique et la stratégie de marque."
+  },
+  {
+    id: "intrepide",
+    title: "Intrépide",
+    category: "universitaire",
+    subCategory: "entreprendre",
+    description: "Projet Intrépide.",
+    imageUrl: "/projets/intrepide.pdf",
+    pdfUrl: "/projets/intrepide.pdf",
+    fullDescription: "Projet Intrépide réalisé dans le cadre du cursus universitaire."
+  },
+  {
+    id: "ppp-but3-mmi",
+    title: "PPP – Projet Professionnel Personnel",
+    category: "universitaire",
+    subCategory: "entreprendre",
+    description: "Projet Professionnel Personnel – BUT3 MMI.",
+    imageUrl: "/projets/ppp-but3-mmi.pdf",
+    pdfUrl: "/projets/ppp-but3-mmi.pdf",
+    fullDescription: "Projet Professionnel Personnel (PPP) de fin de BUT3 MMI : bilan des compétences, projet professionnel, objectifs de carrière et stratégie de développement dans le domaine du design et du multimédia."
+  },
+  {
+    id: "spot-super-u",
+    title: "Spot Publicitaire – Super U",
+    category: "universitaire",
+    subCategory: "entreprendre",
+    description: "Création d&apos;un spot publicitaire pour Super U.",
+    imageUrl: "/projets/spot-super-u.pdf",
+    pdfUrl: "/projets/spot-super-u.pdf",
+    fullDescription: "Création et conception d&apos;un spot publicitaire pour l&apos;enseigne Super U : storyboard, scénario et direction artistique pour la production audiovisuelle."
+  },
+  {
     id: "8",
     title: "Site Web Vitrine",
     category: "universitaire",
