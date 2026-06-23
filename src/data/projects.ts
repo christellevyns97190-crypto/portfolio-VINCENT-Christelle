@@ -147,18 +147,33 @@ export const projects: Project[] = [
     fullDescription: "Ce projet est une démonstration de l&apos;aperçu PDF avec galerie d&apos;images. Le PDF s&apos;affiche directement dans la page avec un aperçu défilable, et les images supplémentaires apparaissent en grille en dessous."
   },
   {
-    id: "analyse-supports",
-    title: "Analyse de Supports de Communication",
+    id: "avant-apres-flyer",
+    title: "Avant/Après – Flyer Événementiel",
     category: "universitaire",
     subCategory: "apprehender",
-    description: "Étude comparative et analyse de supports : flyer avant/après, introduction UX-UI, persona cible.",
+    description: "Analyse comparative avant/après d&apos;un flyer événementiel.",
     imageUrl: "/projets/avant-apres-flyer.pdf",
     pdfUrl: "/projets/avant-apres-flyer.pdf",
-    mediaGallery: [
-      "/projets/avant-apres-flyer.pdf",
-      "/projets/introduction-ux-ui.pdf",
-      "/projets/persona-cible-cocorent.pdf",
-    ],
-    fullDescription: "Ensemble de travaux d&apos;analyse de supports de communication : comparaison avant/après d&apos;un flyer événementiel, introduction aux concepts UX-UI (ergonomie, accessibilité, expérience utilisateur), et création d&apos;une persona cible pour l&apos;agence COCORENT."
+    fullDescription: "Analyse comparative avant/après d&apos;un flyer événementiel : étude des améliorations graphiques, de la hiérarchie visuelle, de la typographie et de l&apos;impact communicationnel."
+  },
+  {
+    id: "introduction-ux-ui",
+    title: "Introduction UX-UI – BUT MMI",
+    category: "universitaire",
+    subCategory: "apprehender",
+    description: "Introduction aux concepts d&apos;UX et d&apos;UI design.",
+    imageUrl: "/projets/introduction-ux-ui.pdf",
+    pdfUrl: "/projets/introduction-ux-ui.pdf",
+    fullDescription: "Travail d&apos;introduction aux concepts d&apos;UX (expérience utilisateur) et d&apos;UI (interface utilisateur) réalisé dans le cadre du BUT MMI. Exploration des principes d&apos;ergonomie, d&apos;accessibilité et de design d&apos;interaction."
+  },
+  {
+    id: "persona-cocorent",
+    title: "Persona Cible – COCORENT",
+    category: "universitaire",
+    subCategory: "apprehender",
+    description: "Création d&apos;une persona cible pour l&apos;agence COCORENT.",
+    imageUrl: "/projets/persona-cible-cocorent.pdf",
+    pdfUrl: "/projets/persona-cible-cocorent.pdf",
+    fullDescription: "Création d&apos;une persona cible pour l&apos;agence COCORENT : analyse du public visé, définition des caractéristiques démographiques, comportements, objectifs et points de friction pour une stratégie de communication ciblée."
   },
 ];
