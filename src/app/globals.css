@@ -287,3 +287,7 @@ nextjs-portal {
 .light .footer-social:hover {
   color: #f82f8b !important;
 }
+
+.light .hero-welcome {
+  color: #000000 !important;
+}

@@ -123,7 +123,7 @@ export default function Home() {
               {t("home.subtitle")}
             </motion.span>
           </h1>
-          <p className="text-foreground/40 mt-4 italic" style={{ fontSize: "clamp(1rem, 4vw, 1.5rem)" }}>
+          <p className="text-foreground/40 mt-4 italic hero-welcome" style={{ fontSize: "clamp(1rem, 4vw, 1.5rem)" }}>
             {t("home.welcome")}
           </p>
         </motion.div>
