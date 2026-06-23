@@ -20,7 +20,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   if (!project) notFound();
 
   return (
-    <div className="container mx-auto px-5 py-10 md:py-12 max-w-5xl">
+    <div className="container mx-auto px-5 py-10 md:py-12 pb-20 md:pb-32 max-w-5xl">
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
@@ -56,7 +56,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             <div className="rounded-2xl overflow-hidden border border-white/10 bg-muted">
               <iframe
                 src={project.pdfUrl}
-                className="w-full h-[80vh] md:h-[90vh]"
+                className="w-full h-[100vh]"
                 title={project.title}
               />
             </div>
