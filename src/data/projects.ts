@@ -207,16 +207,7 @@ export const projects: Project[] = [
     pdfUrl: "/projets/spot-super-u.pdf",
     fullDescription: "Création et conception d&apos;un spot publicitaire pour l&apos;enseigne Super U : storyboard, scénario et direction artistique pour la production audiovisuelle."
   },
-  {
-    id: "8",
-    title: "Site Web Vitrine",
-    category: "universitaire",
-    subCategory: "developper",
-    description: "Développement d&apos;un site vitrine en HTML/CSS/JS.",
-    imageUrl: "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2064&auto=format&fit=crop",
-    fullDescription: "Conception et développement d&apos;un site web vitrine responsive pour une PME, en intégrant les bonnes pratiques d&apos;accessibilité et de SEO."
-  },
-  {
+    {
     id: "ancien-portfolio",
     title: "Ancien Portfolio",
     category: "universitaire",
