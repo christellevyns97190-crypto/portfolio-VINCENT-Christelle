@@ -217,6 +217,16 @@ export const projects: Project[] = [
     pdfUrl: "/projets/ancien-portfolio.pdf",
     fullDescription: "Ancienne version du portfolio réalisée en développement, illustrée par un projet Pong. Travail de conception et d'intégration web."
   },
+  {
+    id: "portfolio-2026",
+    title: "Portfolio 2026",
+    category: "universitaire",
+    subCategory: "developper",
+    description: "Portfolio actuel de Christelle Vincent – design et développement.",
+    imageUrl: "/projets/portfolio-2026-cover.png",
+    websiteUrl: "https://3000-59976e89-58c7-4b64-80fe-8d60c17f3257.orchids.cloud/",
+    fullDescription: "Portfolio 2026 de Christelle Vincent, graphiste digital & motion designer. Site développé avec Next.js 15, React 19, Framer Motion et Tailwind CSS, intégrant des fonctionnalités avancées comme les animations parallax, le mode clair/sombre, l'internationalisation, et des aperçus PDF interactifs."
+  },
     {
     id: "maquette-jeu",
     title: "Maquette – Jeu",
