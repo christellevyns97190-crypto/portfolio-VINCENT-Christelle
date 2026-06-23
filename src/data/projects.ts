@@ -157,7 +157,7 @@ export const projects: Project[] = [
     id: "jeu-quizz-personnalite",
     title: "Jeu Quizz de la Personnalité",
     category: "universitaire",
-    subCategory: "exprimer",
+    subCategory: "developper",
     description: "Création d&apos;un jeu quizz interactif sur la personnalité.",
     imageUrl: "/projets/jeu-quizz-cover.png",
     websiteUrl: "https://quizzpersonnalitserenity.lovable.app",
