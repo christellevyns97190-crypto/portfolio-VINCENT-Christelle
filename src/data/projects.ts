@@ -152,6 +152,19 @@ export const projects: Project[] = [
     youtubeUrl: "https://www.youtube.com/embed/1w7oSRg1dE4",
     fullDescription: "Documentaire « Vivre avec la mer » réalisé en 2026 avec un iPhone 14 Pro Max. Un projet de conception et de réalisation audiovisuelle explorant le lien entre l'homme et l'environnement maritime."
   },
+  {
+    id: "jeu-quizz-personnalite",
+    title: "Jeu Quizz de la Personnalité",
+    category: "universitaire",
+    subCategory: "exprimer",
+    description: "Création d&apos;un jeu quizz interactif sur la personnalité.",
+    imageUrl: "/projets/jeu-quizz-screen.webp",
+    mediaGallery: [
+      "/projets/jeu-quizz-screen.webp",
+      "/projets/jeu-quizz-codage.webp",
+    ],
+    fullDescription: "Conception et développement d&apos;un jeu quizz interactif sur la personnalité. Projet alliant design graphique et logique de programmation pour une expérience utilisateur engageante et ludique."
+  },
     {
     id: "business-plan-charmy-gps",
     title: "Business Plan – Charming GPS",
