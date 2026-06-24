@@ -49,7 +49,7 @@ export default function Navbar() {
                 key={item.name}
                 href={item.path}
                 className={`text-sm font-medium transition-colors hover:text-turquoise ${
-                  pathname === item.path ? "text-turquoise" : "text-foreground/80"
+                  pathname === item.path ? "text-turquoise" : pathname === "/" ? "text-white" : "text-foreground/80"
                 }`}
               >
                 {item.name}
