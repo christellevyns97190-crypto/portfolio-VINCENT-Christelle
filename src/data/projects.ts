@@ -165,7 +165,7 @@ export const projects: Project[] = [
       "/projets/jeu-quizz-screen.webp",
       "/projets/jeu-quizz-codage.webp",
     ],
-    fullDescription: "Conception et développement d&apos;un jeu quizz interactif sur la personnalité. Projet alliant design graphique et logique de programmation pour une expérience utilisateur engageante et ludique."
+    fullDescription: "Conception et développement d'un jeu quizz interactif sur la personnalité. Projet alliant design graphique et logique de programmation pour une expérience utilisateur engageante et ludique."
   },
     {
     id: "business-plan-charmy-gps",
