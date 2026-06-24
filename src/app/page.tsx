@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center">
       {/* Hero Section */}
-      <section className="relative min-h-[130svh] md:min-h-[110vh] flex flex-col justify-center items-center text-center px-5 md:px-6 w-full pt-20 md:pt-0">
+      <section className="relative min-h-[130svh] md:min-h-[110vh] flex flex-col justify-center items-center text-center px-5 md:px-6 w-full">
         {/* Cheetah background */}
         <div className="absolute inset-x-0 -top-24 bottom-0 -z-10 hero-bg" />
         {/* Vignette */}
@@ -96,7 +96,7 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="space-y-4 md:space-y-6 flex flex-col items-center -mt-16 md:-mt-32"
+          className="space-y-4 md:space-y-6 flex flex-col items-center"
         >
           <h1 className="flex flex-col items-center gap-1 md:gap-2">
             <motion.span
