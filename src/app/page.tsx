@@ -154,6 +154,7 @@ export default function Home() {
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
             style={{ backgroundImage: "url('/parallax-bg.png')" }}
           />
+          <div className="absolute inset-0 about-dark-overlay" />
           <div className="absolute inset-0 bg-background/60" />
         </motion.div>
 

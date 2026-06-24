@@ -185,6 +185,9 @@ html {
 .light .hero-subtitle {
   color: #ffffff !important;
 }
+.about-dark-overlay {
+  background: rgba(248, 47, 139, 0.55);
+}
 .light .about-dark-overlay {
   background: rgba(248, 47, 139, 0.55) !important;
 }
