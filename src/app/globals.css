@@ -180,7 +180,7 @@ html {
   background: none;
 }
 .light .hero-name {
-  color: #ff66ac;
+  color: #ffbcdf !important;
 }
 .light .hero-subtitle {
   color: #ffffff !important;
