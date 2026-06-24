@@ -36,11 +36,11 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center">
       {/* Hero Section */}
-      <section className="relative min-h-[130svh] md:min-h-[110vh] flex flex-col justify-center items-center text-center px-5 md:px-6 overflow-hidden w-full pt-20 md:pt-0">
+      <section className="relative min-h-[130svh] md:min-h-[110vh] flex flex-col justify-center items-center text-center px-5 md:px-6 w-full pt-20 md:pt-0">
         {/* Cheetah background */}
-        <div className="absolute inset-0 -z-10 hero-bg" />
+        <div className="absolute inset-x-0 -top-20 bottom-0 -z-10 hero-bg" />
         {/* Vignette */}
-        <div className="absolute inset-0 -z-10 pointer-events-none hero-vignette" />
+        <div className="absolute inset-x-0 -top-20 bottom-0 -z-10 pointer-events-none hero-vignette" />
 
         {/* Stickers — desktop only */}
         <div className="absolute inset-0 pointer-events-none hidden md:block">
