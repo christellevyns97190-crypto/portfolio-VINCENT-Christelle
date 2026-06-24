@@ -215,10 +215,10 @@ html {
 
 /* Section background — tools & creations area */
 .section-tools-bg {
-  background-color: #000;
+  background-color: transparent;
 }
 .light .section-tools-bg {
-  background-color: #ffffff;
+  background-color: transparent;
 }
 
 /* Infinite scroll animation for software skills */
