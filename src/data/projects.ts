@@ -107,7 +107,7 @@ export const projects: Project[] = [
   },
   {
     id: "serenity-for-life",
-    title: "Serenity for Life",
+    title: "Serenity",
     category: "personnel",
     description: "Création visuelle Serenity for Life.",
     imageUrl: "/projets/serenity-for-life.gif",
