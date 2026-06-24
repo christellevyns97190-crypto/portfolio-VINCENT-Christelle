@@ -119,7 +119,7 @@ export const projects: Project[] = [
     category: "universitaire",
     subCategory: "exprimer",
     description: "Carrousel sur le thème de la transformation.",
-    imageUrl: "/projets/carrousel-transformation-cover.png",
+    imageUrl: "/projets/carrousel-motivation-cover.png",
     pdfUrl: "/projets/carrousel-transformation.pdf",
     fullDescription: "Création d&apos;un carrousel sur le thème de la transformation : réflexion sur les raisons du relèvement, constat sur le blocage, et message de résilience à travers un storytelling visuel percutant."
   },
