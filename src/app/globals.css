@@ -186,7 +186,7 @@ html {
   color: #ffffff !important;
 }
 .light .about-dark-overlay {
-  background: none !important;
+  background: rgba(248, 47, 139, 0.55) !important;
 }
 
 /* CV button — default (dark mode) */
