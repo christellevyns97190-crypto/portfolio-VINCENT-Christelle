@@ -302,7 +302,7 @@ export default function Home() {
               <Link href={category.path} className="group block h-full">
                 <div className="relative overflow-hidden rounded-2xl w-full md:w-80 h-64 md:h-80 flex flex-col justify-end p-6 md:p-8 border border-border/40 hover:border-turquoise/40 transition-all bg-white/5 shadow-sm group-hover:shadow-md">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <h3 className="text-3xl md:text-4xl font-bold text-foreground group-hover:text-turquoise transition-colors z-10">
+                  <h3 className="text-3xl md:text-4xl font-bold text-foreground group-hover:text-turquoise transition-colors z-10 cat-card-title">
                     {t(`cat.${category.id}`)}
                   </h3>
                   <p className="text-foreground/60 mt-2 text-base md:text-lg z-10">

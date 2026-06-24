@@ -302,3 +302,7 @@ nextjs-portal {
   color: #000000 !important;
 }
 
+.light .group:hover .cat-card-title {
+  color: #fe719e !important;
+}
+
