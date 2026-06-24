@@ -169,7 +169,7 @@ html {
 
 /* Hero section — light mode */
 .light .hero-bg {
-  background-image: url('/lighterpinkleopard.png') !important;
+  background-image: url('/turquoise-bg.png') !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -183,7 +183,7 @@ html {
   color: #ff66ac;
 }
 .light .hero-subtitle {
-  color: var(--color-turquoise);
+  color: #ffffff !important;
 }
 .light .about-dark-overlay {
   background: rgba(248, 47, 139, 0.55) !important;
