@@ -59,12 +59,13 @@ export default function Contact() {
             animate={{ opacity: 1, scale: 1 }}
             className="flex flex-col items-center justify-center gap-4 py-12 text-center"
           >
-            <CheckCircle size={56} className="text-[#FFE0E7]" />
+            <CheckCircle size={56} className="text-[#FFE0E7]" aria-hidden="true" />
             <h2 className="text-2xl font-bold">{t("contact.successTitle")}</h2>
             <p className="text-foreground/60">{t("contact.successText")}</p>
             <button
               onClick={() => setStatus('idle')}
               className="mt-4 px-6 py-2 rounded-xl border border-[#FFE0E7]/40 text-[#FFE0E7] hover:bg-[#FFE0E7]/10 transition-colors"
+              aria-label={t("contact.sendAnother")}
             >
               {t("contact.sendAnother")}
             </button>
@@ -136,7 +137,7 @@ export default function Contact() {
 
             {status === 'error' && (
               <div className="flex items-center gap-2 text-red-400 text-sm">
-                <AlertCircle size={16} />
+                <AlertCircle size={16} aria-hidden="true" />
                 <span>{t("contact.error")}</span>
               </div>
             )}
@@ -145,8 +146,9 @@ export default function Contact() {
               type="submit"
               disabled={status === 'loading'}
               className="w-full py-4 rounded-xl font-bold flex items-center justify-center gap-2 bg-[#FFE0E7]/10 border border-[#FFE0E7]/40 text-[#FFE0E7] hover:bg-[#FFE0E7]/20 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              aria-label={status === 'loading' ? t("contact.sending") : t("contact.send")}
             >
-              {status === 'loading' ? t("contact.sending") : <>{t("contact.send")} <Send size={18} /></>}
+              {status === 'loading' ? t("contact.sending") : <>{t("contact.send")} <Send size={18} aria-hidden="true" /></>}
             </button>
             <p className="text-sm text-center text-foreground/40 mt-4">
               {t("contact.footerHint")}

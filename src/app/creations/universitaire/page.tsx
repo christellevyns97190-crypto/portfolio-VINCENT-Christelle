@@ -24,7 +24,7 @@ export default function UniversitairePage() {
         className="mb-12"
       >
         <Link href="/#creations" className="text-foreground/40 hover:text-[#FFE0E7] flex items-center gap-2 transition-colors mb-6 group">
-          <ArrowLeft size={18} className="transition-transform group-hover:-translate-x-1" /> {t("univ.back")}
+          <ArrowLeft size={18} className="transition-transform group-hover:-translate-x-1" aria-hidden="true" /> {t("univ.back")}
         </Link>
         <h1 className="text-3xl md:text-5xl font-bold mb-3">{t("univ.title")}</h1>
         <p className="text-base md:text-xl text-foreground/50">{t("univ.desc")}</p>
@@ -71,12 +71,12 @@ export default function UniversitairePage() {
                 <div className="absolute inset-0 bg-black/20" />
                 {/* Content */}
                 <div className="relative z-10">
-                  <span className="text-4xl mb-4 block">{ue.icon}</span>
+                  <span className="text-4xl mb-4 block" aria-hidden="true">{ue.icon}</span>
                   <h2 className="text-2xl font-bold text-white mb-3">{t(`ue.${ue.id}`)}</h2>
                   <p className="text-white/60 text-sm leading-relaxed">{t(`ue.${ue.id}.desc`)}</p>
                 </div>
                 <div className="relative z-10 mt-6 flex items-center gap-2 text-[#FFE0E7]/70 text-sm font-medium group-hover:gap-3 transition-all">
-                  {t("univ.voir")} <ArrowRight size={16} />
+                  {t("univ.voir")} <ArrowRight size={16} aria-hidden="true" />
                 </div>
               </div>
             </Link>

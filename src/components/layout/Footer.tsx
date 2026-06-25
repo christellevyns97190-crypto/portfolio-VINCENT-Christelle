@@ -10,21 +10,23 @@ export default function Footer() {
     <footer className="py-12 border-t border-border/40">
       <div className="container mx-auto px-6 flex flex-col items-center gap-6">
           <div className="flex gap-6">
-            <a 
-              href="https://www.instagram.com/serenitys_artwork?igsh=ZXJ6MHZ6aTNxaDlp&utm_source=qr" 
-              target="_blank" 
+            <a
+              href="https://www.instagram.com/serenitys_artwork?igsh=ZXJ6MHZ6aTNxaDlp&utm_source=qr"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-rose hover:text-turquoise transition-colors footer-social"
+              aria-label="Instagram"
             >
-              <Instagram size={20} />
+              <Instagram size={20} aria-hidden="true" />
             </a>
             <a
               href="https://www.linkedin.com/in/christelle-vincent-50b0152bb/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-rose hover:text-turquoise transition-colors footer-social"
+              aria-label="LinkedIn"
             >
-              <Linkedin size={20} />
+              <Linkedin size={20} aria-hidden="true" />
             </a>
           </div>
         

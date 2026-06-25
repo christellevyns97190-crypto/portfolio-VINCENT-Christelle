@@ -42,11 +42,11 @@ export default function UEPage({ params }: UEPageProps) {
           href="/creations/universitaire"
           className="text-foreground/40 hover:text-[#FFE0E7] flex items-center gap-2 transition-colors mb-6 group"
         >
-          <ArrowLeft size={18} className="transition-transform group-hover:-translate-x-1" />
+          <ArrowLeft size={18} className="transition-transform group-hover:-translate-x-1" aria-hidden="true" />
           {t("ue.back")}
         </Link>
         <div className="flex items-center gap-4 mb-3">
-          <span className="text-4xl">{meta.icon}</span>
+          <span className="text-4xl" aria-hidden="true">{meta.icon}</span>
           <h1 className="text-4xl md:text-5xl font-bold">{t(`ue.${ue}`)}</h1>
         </div>
         <p className="text-xl text-foreground/50">{t(`ue.${ue}.desc`)}</p>

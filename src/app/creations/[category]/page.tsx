@@ -36,7 +36,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
         className="mb-12"
       >
         <Link href="/#creations" className="text-foreground/40 hover:text-turquoise flex items-center gap-2 transition-colors mb-6 group">
-          <ArrowLeft size={18} className="transition-transform group-hover:-translate-x-1" /> {t("category.back")}
+          <ArrowLeft size={18} className="transition-transform group-hover:-translate-x-1" aria-hidden="true" /> {t("category.back")}
         </Link>
         <h1 className="text-3xl md:text-5xl font-bold mb-3">{t(`cat.${category.id}`)}</h1>
         <p className="text-base md:text-xl text-foreground/60">{t(`cat.${category.id}.desc`)}</p>

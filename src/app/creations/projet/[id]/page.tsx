@@ -30,7 +30,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           href={`/creations/${project.category}`}
           className="text-foreground/40 hover:text-turquoise flex items-center gap-2 transition-colors group"
         >
-          <ArrowLeft size={18} className="transition-transform group-hover:-translate-x-1" />
+          <ArrowLeft size={18} className="transition-transform group-hover:-translate-x-1" aria-hidden="true" />
           {t("project.back")}
         </Link>
       </motion.div>
@@ -48,7 +48,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-bold border border-turquoise bg-turquoise/10 text-turquoise hover:bg-turquoise/20 transition-all"
           >
-            <ExternalLink size={18} /> Accéder au site web
+            <ExternalLink size={18} aria-hidden="true" /> Accéder au site web
           </a>
         </motion.div>
       )}
@@ -102,6 +102,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               playsInline
               controls
               className="w-full object-contain max-h-[80vh]"
+              aria-label={project.title}
             />
           </div>
         ) : (

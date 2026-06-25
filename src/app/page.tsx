@@ -63,7 +63,7 @@ export default function Home() {
             />
           ))}
           {/* Phone sticker cliquable */}
-          <Link href="/contact" style={{ position:"absolute", top:"58%", right:"6%", pointerEvents:"auto", display:"block" }}>
+          <Link href="/contact" style={{ position:"absolute", top:"58%", right:"6%", pointerEvents:"auto", display:"block" }} aria-label="Me contacter">
             <motion.img
               src="/s-phone.png"
               alt="Me contacter"
@@ -205,7 +205,7 @@ export default function Home() {
               {/* Figurine — same in both modes */}
               <img
                 src="/figurine-off.png"
-                alt="Figurine"
+                alt="Figurine Christelle Vincent"
                 className="w-96 h-auto object-contain drop-shadow-lg rounded-2xl"
               />
             </motion.div>
@@ -222,7 +222,7 @@ export default function Home() {
           >
             <img
               src="/figurine-off.png"
-              alt="Figurine"
+              alt="Figurine Christelle Vincent"
               className="w-52 h-auto object-contain drop-shadow-lg rounded-2xl"
             />
           </motion.div>
@@ -309,7 +309,7 @@ export default function Home() {
                     {t(`cat.${category.id}.desc`)}
                   </p>
                   <div className="mt-4 flex items-center text-turquoise text-base md:text-lg font-medium opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0 z-10">
-                    {t("home.decouvrir")} <ArrowRight size={18} className="ml-1" />
+                    {t("home.decouvrir")} <ArrowRight size={18} className="ml-1" aria-hidden="true" />
                   </div>
                 </div>
               </Link>
