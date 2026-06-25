@@ -228,8 +228,9 @@ export const projects: Project[] = [
     mediaGallery: [
       "/projets/portfolio-screen1.webp",
       "/projets/portfolio-screen2.webp",
+      "/projets/portfolio-lighthouse.webp",
     ],
-    fullDescription: "Portfolio 2026 de Christelle Vincent, graphiste digital. Site intégrant des fonctionnalités avancées comme les animations parallax, le mode clair/sombre, l'internationalisation, et des aperçus PDF interactifs."
+    fullDescription: "Portfolio 2026 de Christelle Vincent, graphiste digital. Site intégrant des fonctionnalités avancées comme les animations parallax, le mode clair/sombre, l'internationalisation, et des aperçus PDF interactifs. Des tests d'accessibilité ont été réalisés avec Lighthouse pour garantir une expérience optimale à tous les utilisateurs, avec un score de 96/100 en accessibilité."
   },
     {
     id: "maquette-jeu",
