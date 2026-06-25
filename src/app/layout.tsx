@@ -50,6 +50,10 @@ export default function RootLayout({
               gtag('config', 'G-6NKJ876Y87');
             `}
           </Script>
+          <Script
+            src="https://t.contentsquare.net/uxa/c6a968e0bfd57.js"
+            strategy="afterInteractive"
+          />
         </head>
         <body
               className={`${geistSans.variable} ${geistMono.variable} ${dancingScript.variable} antialiased font-sans`}
