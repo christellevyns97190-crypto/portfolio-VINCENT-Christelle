@@ -18,14 +18,17 @@ export default function Contact() {
     e.preventDefault();
     setStatus('loading');
 
-    const res = await fetch('/api/contact', {
+    const formData = new FormData();
+    formData.append('nom', form.nom);
+    formData.append('prenom', form.prenom);
+    formData.append('email', form.email);
+    formData.append('sujet', form.sujet);
+    formData.append('message', form.message);
+
+    const res = await fetch('https://formspree.io/f/mlgyjova', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        name: `${form.nom} ${form.prenom}`,
-        email: form.email,
-        message: `Sujet : ${form.sujet}\n\n${form.message}`,
-      }),
+      body: formData,
+      headers: { 'Accept': 'application/json' },
     });
 
     if (res.ok) {
