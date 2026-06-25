@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Dancing_Script } from "next/font/google";
 import "./globals.css";
-import { VisualEditsMessenger } from "orchids-visual-edits";
-
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { I18nProvider } from "@/i18n/I18nProvider";
@@ -49,7 +47,6 @@ export default function RootLayout({
             <Footer />
             </I18nProvider>
             </ThemeProvider>
-            <VisualEditsMessenger />
           </body>
       </html>
     );
